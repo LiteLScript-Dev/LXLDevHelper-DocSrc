@@ -27,7 +27,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "获取方块的BlockState",
+      "Description": "获取方块的BlockState\r\n方便函数，协助解析方块BlockState并转换为Object，方便读取与解析\r\n等价于脚本执行block.getNbt().getTag(\"states\").toObject()",
       "FuncName": "getBlockState",
       "ReturnName": "obj",
       "ReturnDescription": "方块的BlockState",
