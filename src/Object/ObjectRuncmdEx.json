@@ -1,0 +1,22 @@
+{
+  "ClassName": "ObjectRuncmdEx",
+  "AllFunc": [],
+  "AllProperty": [
+    {
+      "PropertyName": "success",
+      "Description": "是否执行成功",
+      "PropertyType": "Boolean",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "output",
+      "Description": "BDS执行命令后的输出结果",
+      "PropertyType": "String",
+      "IsReadonly": false,
+      "IsStatic": false
+    }
+  ],
+  "IsStatic": false,
+  "Description": "mc.runcmdEx的返回结果"
+}

@@ -64,7 +64,7 @@
       "Description": "执行一条后台命令（强化版）",
       "FuncName": "runcmdEx",
       "ReturnName": "命令执行结果",
-      "ReturnDescription": "",
+      "ReturnDescription": "命令执行结果Object",
       "IsStatic": true,
       "Params": [
         {
@@ -74,7 +74,7 @@
           "Optional": false
         }
       ],
-      "ReturnType": "Object"
+      "ReturnType": "ObjectRuncmdEx"
     }
   ],
   "AllProperty": [],
