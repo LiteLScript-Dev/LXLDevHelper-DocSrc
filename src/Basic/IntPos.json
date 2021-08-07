@@ -1,7 +1,43 @@
 {
   "ClassName": "IntPos",
   "AllFunc": [],
-  "AllProperty": [],
+  "AllProperty": [
+    {
+      "PropertyName": "x",
+      "Description": "x 坐标",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "y",
+      "Description": "y 坐标",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "z",
+      "Description": "z 坐标",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "dim",
+      "Description": "维度文字名",
+      "PropertyType": "String",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "dimid",
+      "Description": "维度ID",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    }
+  ],
   "IsStatic": false,
-  "Description": ""
+  "Description": "🎯 坐标对象"
 }
