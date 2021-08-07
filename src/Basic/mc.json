@@ -43,6 +43,38 @@
       "IsStatic": true,
       "Params": [],
       "ReturnType": "String"
+    },
+    {
+      "Description": "执行一条后台命令",
+      "FuncName": "runcmd",
+      "ReturnName": "result",
+      "ReturnDescription": "是否执行成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "待执行的命令",
+          "ParamType": "String",
+          "ParamName": "cmd",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "执行一条后台命令（强化版）",
+      "FuncName": "runcmdEx",
+      "ReturnName": "命令执行结果",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "cmd",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Object"
     }
   ],
   "AllProperty": [],
