@@ -187,6 +187,62 @@
         }
       ],
       "ReturnType": "Boolean"
+    },
+    {
+      "Description": "在指定位置生成粒子效果",
+      "FuncName": "spawnParticle",
+      "ReturnName": "result",
+      "ReturnDescription": "是否成功生成",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "目标方块位置",
+          "ParamType": "IntPos",
+          "ParamName": "pos",
+          "Optional": false
+        },
+        {
+          "Description": "要生成的粒子效果名称（可查阅wiki得知）",
+          "ParamType": "String",
+          "ParamName": "type",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "在指定位置生成粒子效果",
+      "FuncName": "spawnParticle",
+      "ReturnName": "result",
+      "ReturnDescription": "是否成功生成",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "方块x坐标",
+          "ParamType": "Integer",
+          "ParamName": "x",
+          "Optional": false
+        },
+        {
+          "Description": "方块y坐标",
+          "ParamType": "Integer",
+          "ParamName": "y",
+          "Optional": false
+        },
+        {
+          "Description": "方块z坐标",
+          "ParamType": "Integer",
+          "ParamName": "z",
+          "Optional": false
+        },
+        {
+          "Description": "要生成的粒子效果名称（可查阅wiki得知）",
+          "ParamType": "String",
+          "ParamName": "type",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
     }
   ],
   "AllProperty": [],
