@@ -39,5 +39,6 @@
     }
   ],
   "IsStatic": false,
+  "IsInterface": false,
   "Description": "🎯 坐标对象\r\n多用来表示方块坐标等用整数表示的位置"
 }

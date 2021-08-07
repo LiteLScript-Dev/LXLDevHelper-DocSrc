@@ -18,5 +18,6 @@
     }
   ],
   "IsStatic": false,
+  "IsInterface": true,
   "Description": "mc.runcmdEx的返回结果"
 }

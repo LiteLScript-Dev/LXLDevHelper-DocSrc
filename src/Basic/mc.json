@@ -79,5 +79,6 @@
   ],
   "AllProperty": [],
   "IsStatic": true,
+  "IsInterface": false,
   "Description": "mc通用接口"
 }
