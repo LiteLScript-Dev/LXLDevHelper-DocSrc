@@ -1,8 +1,72 @@
 {
   "ClassName": "Block",
-  "AllFunc": [],
-  "AllProperty": [],
+  "AllFunc": [
+    {
+      "Description": "获取方块对应的NBT对象",
+      "FuncName": "getNbt",
+      "ReturnName": "nbt",
+      "ReturnDescription": "方块的NBT对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "写入方块对应的NBT对象",
+      "FuncName": "setNbt",
+      "ReturnName": "result",
+      "ReturnDescription": "是否成功写入",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "NBT对象",
+          "ParamType": "NbtCompound",
+          "ParamName": "nbt",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取方块的BlockState",
+      "FuncName": "getBlockState",
+      "ReturnName": "obj",
+      "ReturnDescription": "方块的BlockState",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Object"
+    }
+  ],
+  "AllProperty": [
+    {
+      "PropertyName": "name",
+      "Description": "游戏内显示的方块名称",
+      "PropertyType": "String",
+      "IsReadonly": true,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "type",
+      "Description": "方块标准类型名\t",
+      "PropertyType": "String",
+      "IsReadonly": true,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "id",
+      "Description": "方块的游戏内id",
+      "PropertyType": "Integer",
+      "IsReadonly": true,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "pos",
+      "Description": "方块所在坐标",
+      "PropertyType": "IntPos",
+      "IsReadonly": true,
+      "IsStatic": false
+    }
+  ],
   "IsStatic": false,
   "IsInterface": false,
-  "Description": ""
+  "Description": "方块对象"
 }
