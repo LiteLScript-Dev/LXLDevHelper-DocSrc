@@ -4,7 +4,7 @@
     {
       "Description": "生成一个浮点数坐标对象",
       "FuncName": "newFloatPos",
-      "ReturnName": "一个浮点数坐标对象",
+      "ReturnName": "pos",
       "ReturnDescription": "一个浮点数坐标对象",
       "IsStatic": true,
       "Params": [
@@ -34,6 +34,15 @@
         }
       ],
       "ReturnType": "FloatPos"
+    },
+    {
+      "Description": "获取BDS服务端版本号",
+      "FuncName": "getBDSVersion",
+      "ReturnName": "version",
+      "ReturnDescription": "服务端版本号字符串，格式形如v1.17.10",
+      "IsStatic": true,
+      "Params": [],
+      "ReturnType": "String"
     }
   ],
   "AllProperty": [],
