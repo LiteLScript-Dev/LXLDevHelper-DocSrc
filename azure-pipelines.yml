@@ -36,5 +36,4 @@ steps:
     releaseNotesInline: '构建'
     assets: 'rawout/*'
     isPreRelease: true
-    changeLogCompareToRelease: 'lastFullRelease'
-    changeLogType: 'commitBased'
+    addChangeLog: false
