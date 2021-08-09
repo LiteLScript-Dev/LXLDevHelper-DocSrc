@@ -10,6 +10,10 @@ trigger:
 pool:
   vmImage: windows-latest
 
+variables:
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  
 steps:
 - task: CmdLine@2
   inputs:
