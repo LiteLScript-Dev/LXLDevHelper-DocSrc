@@ -19,5 +19,5 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: 'rawout'
-    artifact: 'raw.json'
+    artifact: 'rawout'
     publishLocation: 'pipeline'
