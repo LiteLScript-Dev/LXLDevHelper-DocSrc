@@ -11,7 +11,6 @@ pool:
   vmImage: windows-latest
 
 variables:
-  buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   
 steps:
@@ -25,3 +24,18 @@ steps:
     targetPath: 'rawout'
     artifact: 'rawout'
     publishLocation: 'pipeline'
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'github lxldoc'
+    repositoryName: '$(Build.Repository.Name)'
+    action: 'edit'
+    target: '$(Build.SourceVersion)'
+    tag: 'v0.build0'
+    title: '构建'
+    releaseNotesSource: 'inline'
+    releaseNotesInline: '构建'
+    assets: 'rawout/*'
+    assetUploadMode: 'replace'
+    isDraft: true
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
