@@ -16,3 +16,8 @@ steps:
     script: |
       echo start build
       cmd /C build.cmd
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: 'rawout'
+    artifact: 'raw.json'
+    publishLocation: 'pipeline'
