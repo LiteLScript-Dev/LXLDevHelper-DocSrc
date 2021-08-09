@@ -9,7 +9,6 @@
             {
               "Description": "获取方块对应的NBT对象",
               "FuncName": "getNbt",
-              "ReturnName": "nbt",
               "ReturnDescription": "方块的NBT对象",
               "IsStatic": false,
               "Params": [],
@@ -18,7 +17,6 @@
             {
               "Description": "写入方块对应的NBT对象",
               "FuncName": "setNbt",
-              "ReturnName": "result",
               "ReturnDescription": "是否成功写入",
               "IsStatic": false,
               "Params": [
@@ -34,7 +32,6 @@
             {
               "Description": "获取方块的BlockState\r\n方便函数，协助解析方块BlockState并转换为Object，方便读取与解析\r\n等价于脚本执行block.getNbt().getTag(\"states\").toObject()",
               "FuncName": "getBlockState",
-              "ReturnName": "obj",
               "ReturnDescription": "方块的BlockState",
               "IsStatic": false,
               "Params": [],
@@ -185,7 +182,6 @@
             {
               "Description": "生成一个浮点数坐标对象",
               "FuncName": "newFloatPos",
-              "ReturnName": "pos",
               "ReturnDescription": "一个浮点数坐标对象",
               "IsStatic": true,
               "Params": [
@@ -219,7 +215,6 @@
             {
               "Description": "获取BDS服务端版本号",
               "FuncName": "getBDSVersion",
-              "ReturnName": "version",
               "ReturnDescription": "服务端版本号字符串，格式形如v1.17.10",
               "IsStatic": true,
               "Params": [],
@@ -228,7 +223,6 @@
             {
               "Description": "执行一条后台命令",
               "FuncName": "runcmd",
-              "ReturnName": "result",
               "ReturnDescription": "是否执行成功",
               "IsStatic": true,
               "Params": [
@@ -244,7 +238,6 @@
             {
               "Description": "执行一条后台命令（强化版）",
               "FuncName": "runcmdEx",
-              "ReturnName": "命令执行结果",
               "ReturnDescription": "命令执行结果Object",
               "IsStatic": true,
               "Params": [
@@ -260,7 +253,6 @@
             {
               "Description": "通过方块坐标手动生成方块对象\r\n通过此函数来手动生成对象，注意，你要获取的方块必须处于已被加载的范围中，否则会出现问题",
               "FuncName": "getBlock",
-              "ReturnName": "targetblock",
               "ReturnDescription": "如返回值为 Null 则表示获取方块失败\r\n注意：不要长期保存一个方块对象\r\n当方块对象对应的方块被销毁时，对应的方块对象将变得无效。因此，如果有长期操作某个方块的需要，请通过上述途径获取实时的方块对象",
               "IsStatic": true,
               "Params": [
@@ -276,7 +268,6 @@
             {
               "Description": "通过方块坐标手动生成方块对象\r\n通过此函数来手动生成对象，注意，你要获取的方块必须处于已被加载的范围中，否则会出现问题",
               "FuncName": "getBlock",
-              "ReturnName": "targetblock",
               "ReturnDescription": "如返回值为 Null 则表示获取方块失败\r\n注意：不要长期保存一个方块对象\r\n当方块对象对应的方块被销毁时，对应的方块对象将变得无效。因此，如果有长期操作某个方块的需要，请通过上述途径获取实时的方块对象",
               "IsStatic": true,
               "Params": [
@@ -310,7 +301,6 @@
             {
               "Description": "设置指定位置的方块",
               "FuncName": "setBlock",
-              "ReturnName": "result",
               "ReturnDescription": "是否成功设置",
               "IsStatic": true,
               "Params": [
@@ -332,7 +322,6 @@
             {
               "Description": "设置指定位置的方块\r\n通过此函数，将一个坐标对应的方块设置成另一个，类似于命令 /setblock\r\n如果使用方块名称，则方块名称须为标准类型名，且首字母大写，类似于 Stone\r\n否则，函数将执行失败",
               "FuncName": "setBlock",
-              "ReturnName": "result",
               "ReturnDescription": "是否成功设置",
               "IsStatic": true,
               "Params": [
@@ -372,7 +361,6 @@
             {
               "Description": "在指定位置生成粒子效果",
               "FuncName": "spawnParticle",
-              "ReturnName": "result",
               "ReturnDescription": "是否成功生成",
               "IsStatic": true,
               "Params": [
@@ -394,7 +382,6 @@
             {
               "Description": "在指定位置生成粒子效果",
               "FuncName": "spawnParticle",
-              "ReturnName": "result",
               "ReturnDescription": "是否成功生成",
               "IsStatic": true,
               "Params": [
