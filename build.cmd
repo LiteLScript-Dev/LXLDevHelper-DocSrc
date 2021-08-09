@@ -1,1 +1,1 @@
-LXLDevHelperBuilder.exe src Full_Data.json tsout
+LXLDevHelperBuilder.exe src rawout\raw.json tsout
