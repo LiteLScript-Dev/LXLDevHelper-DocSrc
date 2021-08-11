@@ -233,6 +233,552 @@
         }
       ],
       "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家开始连接服务器",
+          "ParamType": "\"onPreJoin\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家进入游戏（加载世界完成）",
+          "ParamType": "\"onJoin\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家离开游戏",
+          "ParamType": "\"onLeft\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家重生",
+          "ParamType": "\"onRespawn\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家死亡",
+          "ParamType": "\"onPlayerDie\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家执行命令",
+          "ParamType": "\"onPlayerCmd\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"String\",\"ParamName\":\"cmd\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家发送聊天信息",
+          "ParamType": "\"onChat\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"String\",\"ParamName\":\"msg\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家切换维度",
+          "ParamType": "\"onChangeDim\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家跳跃",
+          "ParamType": "\"onJump\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家切换潜行状态",
+          "ParamType": "\"onSneak\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Boolean\",\"ParamName\":\"isSneaking\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家攻击实体",
+          "ParamType": "\"onAttack\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Entity\",\"ParamName\":\"entity\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家使用物品",
+          "ParamType": "\"onUseItem\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家对方块使用物品（点击右键）",
+          "ParamType": "\"onUseItemOn\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家捡起物品",
+          "ParamType": "\"onTakeItem\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Entity\",\"ParamName\":\"entity\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家丢出物品",
+          "ParamType": "\"onDropItem\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家食用食物",
+          "ParamType": "\"onEat\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家开始破坏方块 / 点击左键",
+          "ParamType": "\"onStartDestroyBlock\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家破坏方块完成",
+          "ParamType": "\"onDestroyBlock\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家放置方块",
+          "ParamType": "\"onPlaceBlock\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家打开容器方块",
+          "ParamType": "\"onOpenContainer\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家关闭容器方块",
+          "ParamType": "\"onCloseContainer\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家物品栏变化",
+          "ParamType": "\"onInventoryChange\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"slotNum\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"oldItem\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"newItem\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家移动",
+          "ParamType": "\"onMove\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"FloatPos\",\"ParamName\":\"pos\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家改变盔甲栏",
+          "ParamType": "\"onSetArmor\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"slotNum\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家使用重生锚",
+          "ParamType": "\"onUseRespawnAnchor\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"IntPos\",\"ParamName\":\"pos\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家打开容器类GUI",
+          "ParamType": "\"onOpenContainerScreen\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
     }
   ],
   "AllProperty": [],
