@@ -1,6 +1,82 @@
 {
   "ClassName": "Global",
-  "AllFunc": [],
+  "AllFunc": [
+    {
+      "Description": "输出信息到控制台\\n这是为了方便输出信息而设计的便捷函数",
+      "FuncName": "log",
+      "ReturnDescription": "",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "Any",
+          "ParamName": "data1",
+          "Optional": true
+        },
+        {
+          "Description": "",
+          "ParamType": "Any",
+          "ParamName": "data2",
+          "Optional": true
+        },
+        {
+          "Description": "",
+          "ParamType": "",
+          "ParamName": "data3",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Null"
+    },
+    {
+      "Description": "输出带颜色文本",
+      "FuncName": "colorLog",
+      "ReturnDescription": "",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "此行输出的颜色",
+          "ParamType": "String",
+          "ParamName": "color",
+          "Optional": false
+        },
+        {
+          "Description": "",
+          "ParamType": "Any",
+          "ParamName": "data1",
+          "Optional": true
+        },
+        {
+          "Description": "",
+          "ParamType": "Any",
+          "ParamName": "data2",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Null"
+    },
+    {
+      "Description": "推迟一段时间执行函数",
+      "FuncName": "setTimeout",
+      "ReturnDescription": "此任务ID",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "待执行的函数",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"\",\"ParamName\":\"\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "func",
+          "Optional": false
+        },
+        {
+          "Description": "推迟执行的时间（毫秒）",
+          "ParamType": "Integer",
+          "ParamName": "msec",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Integer"
+    }
+  ],
   "AllProperty": [],
   "IsStatic": false,
   "IsInterface": false,
