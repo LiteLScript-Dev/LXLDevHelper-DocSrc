@@ -1,0 +1,59 @@
+{
+  "ClassName": "logger",
+  "AllFunc": [
+    {
+      "Description": "设置日志是否输出到控制台",
+      "FuncName": "setConsole",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "设置日志是否输出到控制台",
+          "ParamType": "Boolean",
+          "ParamName": "isOpen",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）控制台的日志输出等级，默认为4",
+          "ParamType": "Integer",
+          "ParamName": "logLevel",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "设置日志是否输出到文件",
+      "FuncName": "setFile",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "设置日志输出到的文件路径",
+          "ParamType": "String",
+          "ParamName": "filepath",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）文件的最小日志输出等级，默认为4",
+          "ParamType": "Integer",
+          "ParamName": "logLevel",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "",
+      "FuncName": "",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [],
+      "ReturnType": ""
+    }
+  ],
+  "AllProperty": [],
+  "IsStatic": true,
+  "IsInterface": false,
+  "Description": "📅 通用日志 API"
+}

@@ -779,6 +779,80 @@
         }
       ],
       "ReturnType": "Boolean"
+    },
+    {
+      "Description": "注册一个新的玩家命令",
+      "FuncName": "regPlayerCmd",
+      "ReturnDescription": "是否成功注册",
+      "IsStatic": true,
+        {
+          "Description": "待注册的命令",
+          "ParamType": "String",
+          "ParamName": "cmd",
+          "Optional": false
+        },
+        {
+          "Description": "命令描述文本",
+          "ParamType": "String",
+          "ParamName": "description",
+          "Optional": false
+        },
+        {
+          "Description": "注册的这个命令被执行时，接口自动调用的回调函数",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Array@String\",\"ParamName\":\"args\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）命令的注册等级，默认为 0 ，即所有人都可以执行",
+          "ParamType": "Integer",
+          "ParamName": "level",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "注册一个新的后台控制台命令",
+      "FuncName": "regConsoleCmd",
+      "ReturnDescription": "是否成功注册",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "待注册的命令",
+          "ParamType": "String",
+          "ParamName": "cmd",
+          "Optional": false
+        },
+        {
+          "Description": "命令描述文本",
+          "ParamType": "String",
+          "ParamName": "description",
+          "Optional": false
+        },
+        {
+          "Description": "注册的这个命令被执行时，接口自动调用的回调函数",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Array@String\",\"ParamName\":\"args\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "模拟产生一个控制台命令输出",
+      "FuncName": "sendCmdOutput",
+      "ReturnDescription": "是否成功执行",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "模拟产生的命令输出",
+          "ParamType": "String",
+          "ParamName": "output",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
     }
   ],
   "AllProperty": [],
