@@ -2,10 +2,10 @@
   "ClassName": "Global",
   "AllFunc": [
     {
-      "Description": "输出信息到控制台\\n这是为了方便输出信息而设计的便捷函数",
+      "Description": "输出信息到控制台\r\n这是为了方便输出信息而设计的便捷函数",
       "FuncName": "log",
       "ReturnDescription": "",
-      "IsStatic": false,
+      "IsStatic": true,
       "Params": [
         {
           "Description": "",
@@ -32,7 +32,7 @@
       "Description": "输出带颜色文本",
       "FuncName": "colorLog",
       "ReturnDescription": "",
-      "IsStatic": false,
+      "IsStatic": true,
       "Params": [
         {
           "Description": "此行输出的颜色",
@@ -59,11 +59,11 @@
       "Description": "推迟一段时间执行函数",
       "FuncName": "setTimeout",
       "ReturnDescription": "此任务ID",
-      "IsStatic": false,
+      "IsStatic": true,
       "Params": [
         {
           "Description": "待执行的函数",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"\",\"ParamName\":\"\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"\",\"ParamName\":\"\",\"Optional\":false}],\"ReturnType\":\"Any\"}}",
           "ParamName": "func",
           "Optional": false
         },
@@ -75,10 +75,88 @@
         }
       ],
       "ReturnType": "Integer"
+    },
+    {
+      "Description": "推迟一段时间执行代码段（eval）",
+      "FuncName": "setTimeout",
+      "ReturnDescription": "此任务ID",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "待执行的代码段",
+          "ParamType": "String",
+          "ParamName": "code",
+          "Optional": false
+        },
+        {
+          "Description": "推迟执行的时间（毫秒）",
+          "ParamType": "Integer",
+          "ParamName": "msec",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Integer"
+    },
+    {
+      "Description": "设置周期执行函数",
+      "FuncName": "setInterval",
+      "ReturnDescription": "此任务ID",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "待执行的函数",
+          "ParamType": "Function@{\"Func\":{\"Params\":[],\"ReturnType\":\"Any\"}}",
+          "ParamName": "func",
+          "Optional": false
+        },
+        {
+          "Description": "执行间隔周期（毫秒）",
+          "ParamType": "Integer",
+          "ParamName": "msec",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Integer"
+    },
+    {
+      "Description": "设置周期执行代码段（eval）",
+      "FuncName": "setInterval",
+      "ReturnDescription": "此任务ID",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "待执行的代码段",
+          "ParamType": "String",
+          "ParamName": "code",
+          "Optional": false
+        },
+        {
+          "Description": "执行间隔周期（毫秒）",
+          "ParamType": "Integer",
+          "ParamName": "msec",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Integer"
+    },
+    {
+      "Description": "取消延时 / 周期执行项",
+      "FuncName": "clearInterval",
+      "ReturnDescription": "是否取消成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "由前几个函数返回的任务ID",
+          "ParamType": "Integer",
+          "ParamName": "timerid",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean|Null"
     }
   ],
   "AllProperty": [],
-  "IsStatic": false,
+  "IsStatic": true,
   "IsInterface": false,
   "Description": "全局方法、属性"
 }
