@@ -248,7 +248,7 @@
         },
         {
           "Description": "事件回调",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }
@@ -269,7 +269,7 @@
         },
         {
           "Description": "事件回调",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }
@@ -290,7 +290,7 @@
         },
         {
           "Description": "事件回调",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }
@@ -311,7 +311,7 @@
         },
         {
           "Description": "事件回调",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }
@@ -332,7 +332,7 @@
         },
         {
           "Description": "事件回调",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }
@@ -395,7 +395,7 @@
         },
         {
           "Description": "事件回调",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }
@@ -416,7 +416,7 @@
         },
         {
           "Description": "事件回调",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }
@@ -437,7 +437,7 @@
         },
         {
           "Description": "事件回调",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Boolean\",\"ParamName\":\"isSneaking\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Boolean\",\"ParamName\":\"isSneaking\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }
@@ -563,7 +563,7 @@
         },
         {
           "Description": "事件回调",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }
@@ -584,7 +584,7 @@
         },
         {
           "Description": "事件回调",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }
@@ -689,7 +689,7 @@
         },
         {
           "Description": "事件回调",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"slotNum\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"oldItem\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"newItem\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"slotNum\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"oldItem\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"newItem\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }
@@ -710,7 +710,7 @@
         },
         {
           "Description": "事件回调",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"FloatPos\",\"ParamName\":\"pos\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"FloatPos\",\"ParamName\":\"pos\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }
@@ -731,7 +731,7 @@
         },
         {
           "Description": "事件回调",
-          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"slotNum\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"slotNum\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }
