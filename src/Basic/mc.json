@@ -785,6 +785,7 @@
       "FuncName": "regPlayerCmd",
       "ReturnDescription": "是否成功注册",
       "IsStatic": true,
+      "Params": [
         {
           "Description": "待注册的命令",
           "ParamType": "String",
