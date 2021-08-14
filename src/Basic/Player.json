@@ -356,7 +356,7 @@
         },
         {
           "Description": "侧边栏对象内容对象",
-          "ParamType": "Array@<String,Integer>",
+          "ParamType": "Object@<String,Integer>",
           "ParamName": "data",
           "Optional": false
         }
@@ -452,7 +452,7 @@
       "ReturnDescription": "玩家所有能力信息的键 - 值对列表对象",
       "IsStatic": false,
       "Params": [],
-      "ReturnType": "Array@<String,Any>"
+      "ReturnType": "Object@<String,Any>"
     },
     {
       "Description": "",
