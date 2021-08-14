@@ -308,6 +308,50 @@
         }
       ],
       "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取一个玩家对象",
+      "FuncName": "getPlayer",
+      "ReturnDescription": "生成的玩家对象",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家的名字或者Xuid",
+          "ParamType": "String",
+          "ParamName": "info",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Player"
+    },
+    {
+      "Description": "获取所有在线玩家的列表",
+      "FuncName": "getOnlinePlayers",
+      "ReturnDescription": "在线的玩家对象列表",
+      "IsStatic": true,
+      "Params": [],
+      "ReturnType": "Array@Player"
+    },
+    {
+      "Description": "广播一个文本消息给所有玩家",
+      "FuncName": "broadcast",
+      "ReturnDescription": "是否成功发送",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "待发送的文本",
+          "ParamType": "String",
+          "ParamName": "msg",
+          "Optional": false
+        },
+        {
+          "Description": "发送的文本消息类型，默认为0",
+          "ParamType": "Integer",
+          "ParamName": "type",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Boolean"
     }
   ],
   "AllProperty": [],

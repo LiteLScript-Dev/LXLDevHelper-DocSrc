@@ -1,8 +1,570 @@
 {
   "ClassName": "Player",
-  "AllFunc": [],
-  "AllProperty": [],
+  "AllFunc": [
+    {
+      "Description": "判断玩家是否为OP",
+      "FuncName": "isOP",
+      "ReturnDescription": "玩家是否为OP",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "断开玩家连接",
+      "FuncName": "kick",
+      "ReturnDescription": "是否成功断开连接",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "（可选参数）被踢出玩家出显示的断开原因",
+          "ParamType": "String",
+          "ParamName": "msg",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "断开玩家连接",
+      "FuncName": "disconnect",
+      "ReturnDescription": "是否成功断开连接",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "（可选参数）被踢出玩家出显示的断开原因",
+          "ParamType": "String",
+          "ParamName": "msg",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "发送一个文本消息给玩家",
+      "FuncName": "tell",
+      "ReturnDescription": "是否成功发送",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "待发送的文本",
+          "ParamType": "String",
+          "ParamName": "msg",
+          "Optional": false
+        },
+        {
+          "Description": "发送的文本消息类型，默认为0",
+          "ParamType": "Integer",
+          "ParamName": "type",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "发送一个文本消息给玩家",
+      "FuncName": "sendText",
+      "ReturnDescription": "是否成功发送",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "待发送的文本",
+          "ParamType": "String",
+          "ParamName": "msg",
+          "Optional": false
+        },
+        {
+          "Description": "发送的文本消息类型，默认为0",
+          "ParamType": "Integer",
+          "ParamName": "type",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "以某个玩家身份执行一条命令",
+      "FuncName": "runcmd",
+      "ReturnDescription": "是否执行成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "待执行的命令",
+          "ParamType": "String",
+          "ParamName": "cmd",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "传送玩家至指定位置",
+      "FuncName": "teleport",
+      "ReturnDescription": "是否成功传送",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "目标位置坐标 （或者使用x, y, z, dimid来确定玩家位置）",
+          "ParamType": "FloatPos",
+          "ParamName": "pos",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "传送玩家至指定位置",
+      "FuncName": "teleport",
+      "ReturnDescription": "是否成功传送",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "x",
+          "ParamType": "Integer",
+          "ParamName": "x",
+          "Optional": false
+        },
+        {
+          "Description": "y",
+          "ParamType": "Integer",
+          "ParamName": "y",
+          "Optional": false
+        },
+        {
+          "Description": "z",
+          "ParamType": "Integer",
+          "ParamName": "z",
+          "Optional": false
+        },
+        {
+          "Description": "dimid",
+          "ParamType": "Integer",
+          "ParamName": "dimid",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "杀死玩家",
+      "FuncName": "kill",
+      "ReturnDescription": "是否成功执行",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "使指定玩家着火",
+      "FuncName": "setOnFire",
+      "ReturnDescription": "是否成功着火",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "着火时长，单位秒",
+          "ParamType": "Integer",
+          "ParamName": "time",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "重命名玩家",
+      "FuncName": "rename",
+      "ReturnDescription": "是否重命名成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "玩家的新名字",
+          "ParamType": "String",
+          "ParamName": "newname",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取玩家对应的设备信息对象",
+      "FuncName": "getDevice",
+      "ReturnDescription": "玩家对应的设备信息对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Device"
+    },
+    {
+      "Description": "获取玩家主手中的物品对象",
+      "FuncName": "getHand",
+      "ReturnDescription": "玩家主手中的物品对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Item"
+    },
+    {
+      "Description": "获取玩家副手的物品对象",
+      "FuncName": "getOffHand",
+      "ReturnDescription": "玩家副手中的物品对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Item"
+    },
+    {
+      "Description": "获取玩家物品栏的容器对象",
+      "FuncName": "getInventory",
+      "ReturnDescription": "玩家物品栏对应的容器对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Container"
+    },
+    {
+      "Description": "获取玩家盔甲栏的容器对象",
+      "FuncName": "getArmor ",
+      "ReturnDescription": "玩家盔甲栏对应的容器对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Container"
+    },
+    {
+      "Description": "获取玩家末影箱的容器对象",
+      "FuncName": "getEnderChest",
+      "ReturnDescription": "玩家末影箱对应的容器对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Container"
+    },
+    {
+      "Description": "给予玩家一个物品",
+      "FuncName": "giveItem",
+      "ReturnDescription": "是否成功给予",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "给予的物品对象",
+          "ParamType": "Item",
+          "ParamName": "item",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "清除玩家背包中所有指定类型的物品",
+      "FuncName": "clearItem",
+      "ReturnDescription": "清除的物品个数",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要清除的物品对象类型名",
+          "ParamType": "String",
+          "ParamName": "type",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Integer"
+    },
+    {
+      "Description": "刷新玩家所有物品",
+      "FuncName": "refreshItems",
+      "ReturnDescription": "是否成功刷新",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "修改玩家操作权限",
+      "FuncName": "setPermLevel",
+      "ReturnDescription": "是否成功修改",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "目标操作权限等级",
+          "ParamType": "Integer",
+          "ParamName": "level",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "修改玩家游戏模式",
+      "FuncName": "setGameMode",
+      "ReturnDescription": "是否成功修改",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "目标游戏模式，0为生存模式，1为创造模式，2为极限模式",
+          "ParamType": "Integer",
+          "ParamName": "mode",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "提高玩家经验等级",
+      "FuncName": "addLevel",
+      "ReturnDescription": "是否设置成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要提升的经验等级",
+          "ParamType": "Integer",
+          "ParamName": "count",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "传送玩家至指定服务器",
+      "FuncName": "transServer",
+      "ReturnDescription": "是否成功传送",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "目标服务器IP / 域名",
+          "ParamType": "String",
+          "ParamName": "server",
+          "Optional": false
+        },
+        {
+          "Description": "目标服务器端口",
+          "ParamType": "String",
+          "ParamName": "port",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "使玩家客户端崩溃",
+      "FuncName": "crash",
+      "ReturnDescription": "是否成功执行",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "设置玩家自定义侧边栏(暂时弃用)",
+      "FuncName": "setSidebar",
+      "ReturnDescription": "是否成功设置",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "侧边栏标题",
+          "ParamType": "String",
+          "ParamName": "title",
+          "Optional": false
+        },
+        {
+          "Description": "侧边栏对象内容对象",
+          "ParamType": "Array@<String,Integer>",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "移除玩家自定义侧边栏",
+      "FuncName": "removeSidebar",
+      "ReturnDescription": "是否成功移除",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "设置玩家看到的自定义Boss血条",
+      "FuncName": "setBossBar",
+      "ReturnDescription": "是否成功设置",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "自定义血条标题",
+          "ParamType": "String",
+          "ParamName": "title",
+          "Optional": false
+        },
+        {
+          "Description": "血条中的血量百分比，有效范围为0~100。0为空血条，100为满",
+          "ParamType": "Integer",
+          "ParamName": "percent",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "移除玩家的自定义Boss血条",
+      "FuncName": "removeBossBar",
+      "ReturnDescription": "是否成功移除",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取玩家对应的NBT对象",
+      "FuncName": "getNbt",
+      "ReturnDescription": "玩家的NBT对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "为玩家增加一个Tag",
+      "FuncName": "addTag",
+      "ReturnDescription": "是否设置成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要增加的tag字符串",
+          "ParamType": "String",
+          "ParamName": "tag",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "为玩家移除一个Tag",
+      "FuncName": "removeTag",
+      "ReturnDescription": "是否移除成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要移除的tag字符串",
+          "ParamType": "String",
+          "ParamName": "tag",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取玩家拥有的所有Tag列表",
+      "FuncName": "getAllTags",
+      "ReturnDescription": "玩家所有的 tag 字符串列表",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Array@String"
+    },
+    {
+      "Description": "获取玩家的Abilities能力列表（来自玩家NBT）",
+      "FuncName": "getAbilities",
+      "ReturnDescription": "玩家所有能力信息的键 - 值对列表对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Array@<String,Any>"
+    },
+    {
+      "Description": "",
+      "FuncName": "",
+      "ReturnDescription": "",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": ""
+    },
+    {
+      "Description": "",
+      "FuncName": "",
+      "ReturnDescription": "",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": ""
+    }
+  ],
+  "AllProperty": [
+    {
+      "PropertyName": "name",
+      "Description": "玩家名",
+      "PropertyType": "String",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "pos",
+      "Description": "玩家所在坐标",
+      "PropertyType": "FloatPos",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "realName",
+      "Description": "玩家的真实名字",
+      "PropertyType": "String",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "xuid",
+      "Description": "玩家Xuid字符串",
+      "PropertyType": "String",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "uuid",
+      "Description": "玩家Uuid字符串",
+      "PropertyType": "String",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "permLevel",
+      "Description": "玩家的操作权限等级（0 - 4）",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "gameMode",
+      "Description": "玩家的游戏模式（0 - 3",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "maxHealth",
+      "Description": "玩家最大生命值",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "health",
+      "Description": "玩家当前生命值",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "inAir",
+      "Description": "玩家当前是否悬空",
+      "PropertyType": "Boolean",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "sneaking ",
+      "Description": "玩家当前是否正在潜行",
+      "PropertyType": "Boolean",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "speed",
+      "Description": "玩家当前速度",
+      "PropertyType": "Float",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "direction",
+      "Description": "玩家当前朝向（0 - 4）",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    }
+  ],
   "IsStatic": false,
   "IsInterface": false,
-  "Description": ""
+  "Description": "玩家对象"
 }
