@@ -453,22 +453,6 @@
       "IsStatic": false,
       "Params": [],
       "ReturnType": "Object@<String,Any>"
-    },
-    {
-      "Description": "",
-      "FuncName": "",
-      "ReturnDescription": "",
-      "IsStatic": false,
-      "Params": [],
-      "ReturnType": ""
-    },
-    {
-      "Description": "",
-      "FuncName": "",
-      "ReturnDescription": "",
-      "IsStatic": false,
-      "Params": [],
-      "ReturnType": ""
     }
   ],
   "AllProperty": [
