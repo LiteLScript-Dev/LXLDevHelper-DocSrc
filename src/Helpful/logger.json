@@ -38,18 +38,151 @@
           "Description": "（可选参数）文件的最小日志输出等级，默认为4",
           "ParamType": "Integer",
           "ParamName": "logLevel",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "设置日志是否输出到某个玩家",
+      "FuncName": "setPlayer",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "设置日志输出到的目标玩家对象",
+          "ParamType": "Player",
+          "ParamName": "player",
+          "Optional": false
+        },
+        {
+          "Description": "玩家的最小日志输出等级，默认为4",
+          "ParamType": "Integer",
+          "ParamName": "logLevel",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "输出普通文本",
+      "FuncName": "log",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "待输出的变量或者数据",
+          "ParamType": "ParamArray@Any",
+          "ParamName": "data",
           "Optional": false
         }
       ],
       "ReturnType": "Any"
     },
     {
-      "Description": "",
-      "FuncName": "",
+      "Description": " 输出调试信息",
+      "FuncName": "debug",
       "ReturnDescription": "",
       "IsStatic": true,
-      "Params": [],
-      "ReturnType": ""
+      "Params": [
+        {
+          "Description": "待输出的变量或者数据",
+          "ParamType": "ParamArray@Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": " 输出提示信息",
+      "FuncName": "info",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "待输出的变量或者数据",
+          "ParamType": "ParamArray@Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "输出警告信息",
+      "FuncName": "warn",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "待输出的变量或者数据",
+          "ParamType": "ParamArray@Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "输出错误信息",
+      "FuncName": "error",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "待输出的变量或者数据",
+          "ParamType": "ParamArray@Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": " 输出严重错误信息",
+      "FuncName": "fatal",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "待输出的变量或者数据",
+          "ParamType": "ParamArray@Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "设置自定义日志消息标头",
+      "FuncName": "setTitle",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "设置的自定义标头",
+          "ParamType": "String",
+          "ParamName": "title ",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "统一修改日志输出等级",
+      "FuncName": "setLogLevel",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "日志输出等级",
+          "ParamType": "Integer",
+          "ParamName": "level",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
     }
   ],
   "AllProperty": [],

@@ -1,0 +1,37 @@
+{
+  "ClassName": "ObjectVersion",
+  "AllFunc": [],
+  "AllProperty": [
+    {
+      "PropertyName": "major",
+      "Description": "主版本号（如 1.0.2 里的 1）",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "minor",
+      "Description": "次版本号（如 1.0.2 里的 0）",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "revision",
+      "Description": "修订版本号（如 1.0.2 里的 2）",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "isBeta",
+      "Description": "当前版本是否为测试版",
+      "PropertyType": "Boolean",
+      "IsReadonly": false,
+      "IsStatic": true
+    }
+  ],
+  "IsStatic": true,
+  "IsInterface": false,
+  "Description": "加载器版本对象"
+}

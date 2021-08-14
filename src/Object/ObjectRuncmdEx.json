@@ -7,17 +7,17 @@
       "Description": "是否执行成功",
       "PropertyType": "Boolean",
       "IsReadonly": true,
-      "IsStatic": false
+      "IsStatic": true
     },
     {
       "PropertyName": "output",
       "Description": "BDS执行命令后的输出结果",
       "PropertyType": "String",
       "IsReadonly": true,
-      "IsStatic": false
+      "IsStatic": true
     }
   ],
-  "IsStatic": false,
-  "IsInterface": true,
+  "IsStatic": true,
+  "IsInterface": false,
   "Description": "mc.runcmdEx的返回结果"
 }

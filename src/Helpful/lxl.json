@@ -1,0 +1,124 @@
+{
+  "ClassName": "lxl",
+  "AllFunc": [
+    {
+      "Description": "获取LiteXLoader加载器版本",
+      "FuncName": "version",
+      "ReturnDescription": "加载器版本对象",
+      "IsStatic": true,
+      "Params": [],
+      "ReturnType": "ObjectVersion"
+    },
+    {
+      "Description": "检查LiteXLoader加载器版本",
+      "FuncName": "requireVersion",
+      "ReturnDescription": "检查结果\r\n如果检测发现当前安装的LXL版本低于传入的数值，将返回false。\r\n你可以选择根据结果判断并报错，提醒用户升级自己的LXL版本",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "检查当前已安装LXL的主版本号是否 >= 此值",
+          "ParamType": "Integer",
+          "ParamName": "major",
+          "Optional": false
+        },
+        {
+          "Description": "检查当前已安装LXL的次版本号是否 >= 此值",
+          "ParamType": "Integer",
+          "ParamName": "minor",
+          "Optional": true
+        },
+        {
+          "Description": "检查当前已安装LXL的修订版本号是否 >= 此值",
+          "ParamType": "Integer",
+          "ParamName": "revision",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "列出所有已加载的插件",
+      "FuncName": "listPlugins",
+      "ReturnDescription": "已加载的所有的插件名字列表",
+      "IsStatic": true,
+      "Params": [],
+      "ReturnType": "Array@String"
+    },
+    {
+      "Description": "导出函数",
+      "FuncName": "export",
+      "ReturnDescription": "是否成功导出",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "要导出的函数",
+          "ParamType": "Function@{\"Func\":{\"Params\":[],\"ReturnType\":\"Any\"}}",
+          "ParamName": "func",
+          "Optional": false
+        },
+        {
+          "Description": "函数的导出名称。其他插件根据导出名称来调用这个函数",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "导入函数",
+      "FuncName": "import",
+      "ReturnDescription": "导入的函数",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "要导入的函数使用的导出名称",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Function@{\"Func\":{\"Params\":[],\"ReturnType\":\"Any\"}}"
+    },
+    {
+      "Description": "设置插件依赖库",
+      "FuncName": "require",
+      "ReturnDescription": "是否加载依赖库成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "依赖库文件名（如addplugin.js)",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）查找并装载依赖库的路径",
+          "ParamType": "String",
+          "ParamName": "remotePath",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "将字符串作为脚本代码执行",
+      "FuncName": "eval",
+      "ReturnDescription": "执行结果",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "要作为脚本代码执行的字符串",
+          "ParamType": "String",
+          "ParamName": "str",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    }
+  ],
+  "AllProperty": [],
+  "IsStatic": true,
+  "IsInterface": false,
+  "Description": "💡 插件加载相关 API"
+}
