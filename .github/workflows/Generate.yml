@@ -16,7 +16,7 @@ jobs:
     
     - name: Calculate MD5
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: build.cmd
+      run: ./LXLDevHelperBuilder.exe
       shell: bash
 
     - name: Add & Commit
