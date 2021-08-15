@@ -5,7 +5,7 @@ name: Generate LibraryCode
 
 on:
   release:
-   types: [edited]
+   types: [published]
 
 jobs:
   generate:
