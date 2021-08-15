@@ -15,7 +15,9 @@ jobs:
     
     - name: test
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: echo test
+      run: |
+        cmd /C build.cmd
+        dir
       shell: bash
       
   generate:
