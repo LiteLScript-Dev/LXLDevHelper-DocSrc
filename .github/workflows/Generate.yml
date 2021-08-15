@@ -4,21 +4,10 @@
 name: Generate LibraryCode
 
 on:
-  push:
-    branches: [ main ]
+  release:
+    types: [edited]
 
 jobs:
-  build:
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    
-    - name: Rawout
-      working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: ./LXLDevHelperBuilder.exe src rawout\raw.json tsout
-      shell: bash
-  
   generate:
     runs-on: ubuntu-latest
 
