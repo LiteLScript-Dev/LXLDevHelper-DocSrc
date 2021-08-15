@@ -19,6 +19,7 @@ steps:
     script: |
       echo start build
       cmd /C build.cmd
+      cmd copy rawout/* ..
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: 'rawout'
@@ -30,7 +31,6 @@ steps:
     repositoryName: '$(Build.Repository.Name)'
     action: 'create'
     target: '$(Build.SourceVersion)'
-    tag: 'v0.build0'
     title: '构建'
     releaseNotesSource: 'inline'
     releaseNotesInline: '构建'
