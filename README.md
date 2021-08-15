@@ -1,4 +1,5 @@
 # LXLDevHelper-DocSrc
+[![Generate LibraryCode](https://github.com/LiteLDev-LXL/LXLDevHelper-DocSrc/actions/workflows/Generate.yml/badge.svg)](https://github.com/LiteLDev-LXL/LXLDevHelper-DocSrc/actions/workflows/Generate.yml)
 - 文档源码
 - 使用[LXLDevHelper-InterfaceEditor](https://github.com/LiteLDev-LXL/LXLDevHelper-InterfaceEditor)编辑
 ### 如何编写？
