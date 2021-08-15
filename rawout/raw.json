@@ -1,0 +1,2262 @@
+{
+  "DirCollection": [
+    {
+      "DirName": "Basic",
+      "AllClass": [
+        {
+          "ClassName": "Block",
+          "AllFunc": [
+            {
+              "Description": "获取方块对应的NBT对象",
+              "FuncName": "getNbt",
+              "ReturnDescription": "方块的NBT对象",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "NbtCompound"
+            },
+            {
+              "Description": "写入方块对应的NBT对象",
+              "FuncName": "setNbt",
+              "ReturnDescription": "是否成功写入",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "NBT对象",
+                  "ParamType": "NbtCompound",
+                  "ParamName": "nbt",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "获取方块的BlockState\r\n方便函数，协助解析方块BlockState并转换为Object，方便读取与解析\r\n等价于脚本执行block.getNbt().getTag(\"states\").toObject()",
+              "FuncName": "getBlockState",
+              "ReturnDescription": "方块的BlockState",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Object"
+            }
+          ],
+          "AllProperty": [
+            {
+              "PropertyName": "name",
+              "Description": "游戏内显示的方块名称",
+              "PropertyType": "String",
+              "IsReadonly": true,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "type",
+              "Description": "方块标准类型名\t",
+              "PropertyType": "String",
+              "IsReadonly": true,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "id",
+              "Description": "方块的游戏内id",
+              "PropertyType": "Integer",
+              "IsReadonly": true,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "pos",
+              "Description": "方块所在坐标",
+              "PropertyType": "IntPos",
+              "IsReadonly": true,
+              "IsStatic": false
+            }
+          ],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "方块对象"
+        },
+        {
+          "ClassName": "Entity",
+          "AllFunc": [],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": ""
+        },
+        {
+          "ClassName": "FloatPos",
+          "AllFunc": [],
+          "AllProperty": [
+            {
+              "PropertyName": "x",
+              "Description": "x 坐标",
+              "PropertyType": "Float",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "y",
+              "Description": "y 坐标",
+              "PropertyType": "Float",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "z",
+              "Description": "z 坐标",
+              "PropertyType": "Float",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "dim",
+              "Description": "维度文字名",
+              "PropertyType": "String",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "dimid",
+              "Description": "维度ID",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": false
+            }
+          ],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "🎯 坐标对象\r\n多用来表示实体坐标等用无法用整数表示的位置"
+        },
+        {
+          "ClassName": "IntPos",
+          "AllFunc": [],
+          "AllProperty": [
+            {
+              "PropertyName": "x",
+              "Description": "x 坐标",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "y",
+              "Description": "y 坐标",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "z",
+              "Description": "z 坐标",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "dim",
+              "Description": "维度文字名",
+              "PropertyType": "String",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "dimid",
+              "Description": "维度ID",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": false
+            }
+          ],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "🎯 坐标对象\r\n多用来表示方块坐标等用整数表示的位置"
+        },
+        {
+          "ClassName": "Item",
+          "AllFunc": [],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": ""
+        },
+        {
+          "ClassName": "mc",
+          "AllFunc": [
+            {
+              "Description": "生成一个浮点数坐标对象",
+              "FuncName": "newFloatPos",
+              "ReturnDescription": "一个浮点数坐标对象",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "x 坐标",
+                  "ParamType": "Float",
+                  "ParamName": "x",
+                  "Optional": false
+                },
+                {
+                  "Description": "y 坐标",
+                  "ParamType": "Float",
+                  "ParamName": "y",
+                  "Optional": false
+                },
+                {
+                  "Description": "z 坐标",
+                  "ParamType": "Float",
+                  "ParamName": "z",
+                  "Optional": false
+                },
+                {
+                  "Description": "维度ID：0 代表主世界，1 代表下界，2 代表末地",
+                  "ParamType": "Integer",
+                  "ParamName": "dimid ",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "FloatPos"
+            },
+            {
+              "Description": "获取BDS服务端版本号",
+              "FuncName": "getBDSVersion",
+              "ReturnDescription": "服务端版本号字符串，格式形如v1.17.10",
+              "IsStatic": true,
+              "Params": [],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "执行一条后台命令",
+              "FuncName": "runcmd",
+              "ReturnDescription": "是否执行成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待执行的命令",
+                  "ParamType": "String",
+                  "ParamName": "cmd",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "执行一条后台命令（强化版）",
+              "FuncName": "runcmdEx",
+              "ReturnDescription": "命令执行结果Object",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "指令内容",
+                  "ParamType": "String",
+                  "ParamName": "cmd",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "ObjectRuncmdEx"
+            },
+            {
+              "Description": "通过方块坐标手动生成方块对象\r\n通过此函数来手动生成对象，注意，你要获取的方块必须处于已被加载的范围中，否则会出现问题",
+              "FuncName": "getBlock",
+              "ReturnDescription": "如返回值为 Null 则表示获取方块失败\r\n注意：不要长期保存一个方块对象\r\n当方块对象对应的方块被销毁时，对应的方块对象将变得无效。因此，如果有长期操作某个方块的需要，请通过上述途径获取实时的方块对象",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "方块坐标对象（或者使用x, y, z, dimid来确定方块位置）",
+                  "ParamType": "IntPos",
+                  "ParamName": "pos",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Block|Null"
+            },
+            {
+              "Description": "通过方块坐标手动生成方块对象\r\n通过此函数来手动生成对象，注意，你要获取的方块必须处于已被加载的范围中，否则会出现问题",
+              "FuncName": "getBlock",
+              "ReturnDescription": "如返回值为 Null 则表示获取方块失败\r\n注意：不要长期保存一个方块对象\r\n当方块对象对应的方块被销毁时，对应的方块对象将变得无效。因此，如果有长期操作某个方块的需要，请通过上述途径获取实时的方块对象",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "方块x坐标",
+                  "ParamType": "Integer",
+                  "ParamName": "x",
+                  "Optional": false
+                },
+                {
+                  "Description": "方块y坐标",
+                  "ParamType": "Integer",
+                  "ParamName": "y",
+                  "Optional": false
+                },
+                {
+                  "Description": "方块z坐标",
+                  "ParamType": "Integer",
+                  "ParamName": "z",
+                  "Optional": false
+                },
+                {
+                  "Description": "方块维度",
+                  "ParamType": "Integer",
+                  "ParamName": "dimid",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Block|Null"
+            },
+            {
+              "Description": "设置指定位置的方块",
+              "FuncName": "setBlock",
+              "ReturnDescription": "是否成功设置",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "目标方块位置",
+                  "ParamType": "IntPos",
+                  "ParamName": "pos",
+                  "Optional": false
+                },
+                {
+                  "Description": "要设置成的方块对象或者方块名",
+                  "ParamType": "Block|String",
+                  "ParamName": "block",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "设置指定位置的方块\r\n通过此函数，将一个坐标对应的方块设置成另一个，类似于命令 /setblock\r\n如果使用方块名称，则方块名称须为标准类型名，且首字母大写，类似于 Stone\r\n否则，函数将执行失败",
+              "FuncName": "setBlock",
+              "ReturnDescription": "是否成功设置",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "方块x坐标",
+                  "ParamType": "Integer",
+                  "ParamName": "x",
+                  "Optional": false
+                },
+                {
+                  "Description": "方块y坐标",
+                  "ParamType": "Integer",
+                  "ParamName": "y",
+                  "Optional": false
+                },
+                {
+                  "Description": "方块z坐标",
+                  "ParamType": "Integer",
+                  "ParamName": "z",
+                  "Optional": false
+                },
+                {
+                  "Description": "方块维度",
+                  "ParamType": "Integer",
+                  "ParamName": "dimid",
+                  "Optional": false
+                },
+                {
+                  "Description": "要设置成的方块对象或者方块名",
+                  "ParamType": "Block|String",
+                  "ParamName": "block",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "在指定位置生成粒子效果",
+              "FuncName": "spawnParticle",
+              "ReturnDescription": "是否成功生成",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "目标方块位置",
+                  "ParamType": "IntPos",
+                  "ParamName": "pos",
+                  "Optional": false
+                },
+                {
+                  "Description": "要生成的粒子效果名称（可查阅wiki得知）",
+                  "ParamType": "String",
+                  "ParamName": "type",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "在指定位置生成粒子效果",
+              "FuncName": "spawnParticle",
+              "ReturnDescription": "是否成功生成",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "方块x坐标",
+                  "ParamType": "Integer",
+                  "ParamName": "x",
+                  "Optional": false
+                },
+                {
+                  "Description": "方块y坐标",
+                  "ParamType": "Integer",
+                  "ParamName": "y",
+                  "Optional": false
+                },
+                {
+                  "Description": "方块z坐标",
+                  "ParamType": "Integer",
+                  "ParamName": "z",
+                  "Optional": false
+                },
+                {
+                  "Description": "要生成的粒子效果名称（可查阅wiki得知）",
+                  "ParamType": "String",
+                  "ParamName": "type",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "注册一个新的玩家命令",
+              "FuncName": "regPlayerCmd",
+              "ReturnDescription": "是否成功注册",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待注册的命令",
+                  "ParamType": "String",
+                  "ParamName": "cmd",
+                  "Optional": false
+                },
+                {
+                  "Description": "命令描述文本",
+                  "ParamType": "String",
+                  "ParamName": "description",
+                  "Optional": false
+                },
+                {
+                  "Description": "注册的这个命令被执行时，接口自动调用的回调函数",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Array@String\",\"ParamName\":\"args\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）命令的注册等级，默认为 0 ，即所有人都可以执行",
+                  "ParamType": "Integer",
+                  "ParamName": "level",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "注册一个新的后台控制台命令",
+              "FuncName": "regConsoleCmd",
+              "ReturnDescription": "是否成功注册",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待注册的命令",
+                  "ParamType": "String",
+                  "ParamName": "cmd",
+                  "Optional": false
+                },
+                {
+                  "Description": "命令描述文本",
+                  "ParamType": "String",
+                  "ParamName": "description",
+                  "Optional": false
+                },
+                {
+                  "Description": "注册的这个命令被执行时，接口自动调用的回调函数",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Array@String\",\"ParamName\":\"args\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "模拟产生一个控制台命令输出",
+              "FuncName": "sendCmdOutput",
+              "ReturnDescription": "是否成功执行",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "模拟产生的命令输出",
+                  "ParamType": "String",
+                  "ParamName": "output",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "获取一个玩家对象",
+              "FuncName": "getPlayer",
+              "ReturnDescription": "生成的玩家对象",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家的名字或者Xuid",
+                  "ParamType": "String",
+                  "ParamName": "info",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Player"
+            },
+            {
+              "Description": "获取所有在线玩家的列表",
+              "FuncName": "getOnlinePlayers",
+              "ReturnDescription": "在线的玩家对象列表",
+              "IsStatic": true,
+              "Params": [],
+              "ReturnType": "Array@Player"
+            },
+            {
+              "Description": "广播一个文本消息给所有玩家",
+              "FuncName": "broadcast",
+              "ReturnDescription": "是否成功发送",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待发送的文本",
+                  "ParamType": "String",
+                  "ParamName": "msg",
+                  "Optional": false
+                },
+                {
+                  "Description": "发送的文本消息类型，默认为0",
+                  "ParamType": "Integer",
+                  "ParamName": "type",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Boolean"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": "mc通用接口"
+        },
+        {
+          "ClassName": "Player",
+          "AllFunc": [
+            {
+              "Description": "判断玩家是否为OP",
+              "FuncName": "isOP",
+              "ReturnDescription": "玩家是否为OP",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "断开玩家连接",
+              "FuncName": "kick",
+              "ReturnDescription": "是否成功断开连接",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "（可选参数）被踢出玩家出显示的断开原因",
+                  "ParamType": "String",
+                  "ParamName": "msg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "断开玩家连接",
+              "FuncName": "disconnect",
+              "ReturnDescription": "是否成功断开连接",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "（可选参数）被踢出玩家出显示的断开原因",
+                  "ParamType": "String",
+                  "ParamName": "msg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "发送一个文本消息给玩家",
+              "FuncName": "tell",
+              "ReturnDescription": "是否成功发送",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "待发送的文本",
+                  "ParamType": "String",
+                  "ParamName": "msg",
+                  "Optional": false
+                },
+                {
+                  "Description": "发送的文本消息类型，默认为0",
+                  "ParamType": "Integer",
+                  "ParamName": "type",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "发送一个文本消息给玩家",
+              "FuncName": "sendText",
+              "ReturnDescription": "是否成功发送",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "待发送的文本",
+                  "ParamType": "String",
+                  "ParamName": "msg",
+                  "Optional": false
+                },
+                {
+                  "Description": "发送的文本消息类型，默认为0",
+                  "ParamType": "Integer",
+                  "ParamName": "type",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "以某个玩家身份执行一条命令",
+              "FuncName": "runcmd",
+              "ReturnDescription": "是否执行成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "待执行的命令",
+                  "ParamType": "String",
+                  "ParamName": "cmd",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "传送玩家至指定位置",
+              "FuncName": "teleport",
+              "ReturnDescription": "是否成功传送",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "目标位置坐标 （或者使用x, y, z, dimid来确定玩家位置）",
+                  "ParamType": "FloatPos",
+                  "ParamName": "pos",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "传送玩家至指定位置",
+              "FuncName": "teleport",
+              "ReturnDescription": "是否成功传送",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "x",
+                  "ParamType": "Integer",
+                  "ParamName": "x",
+                  "Optional": false
+                },
+                {
+                  "Description": "y",
+                  "ParamType": "Integer",
+                  "ParamName": "y",
+                  "Optional": false
+                },
+                {
+                  "Description": "z",
+                  "ParamType": "Integer",
+                  "ParamName": "z",
+                  "Optional": false
+                },
+                {
+                  "Description": "dimid",
+                  "ParamType": "Integer",
+                  "ParamName": "dimid",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "杀死玩家",
+              "FuncName": "kill",
+              "ReturnDescription": "是否成功执行",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "使指定玩家着火",
+              "FuncName": "setOnFire",
+              "ReturnDescription": "是否成功着火",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "着火时长，单位秒",
+                  "ParamType": "Integer",
+                  "ParamName": "time",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "重命名玩家",
+              "FuncName": "rename",
+              "ReturnDescription": "是否重命名成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "玩家的新名字",
+                  "ParamType": "String",
+                  "ParamName": "newname",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "获取玩家对应的设备信息对象",
+              "FuncName": "getDevice",
+              "ReturnDescription": "玩家对应的设备信息对象",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Device"
+            },
+            {
+              "Description": "获取玩家主手中的物品对象",
+              "FuncName": "getHand",
+              "ReturnDescription": "玩家主手中的物品对象",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Item"
+            },
+            {
+              "Description": "获取玩家副手的物品对象",
+              "FuncName": "getOffHand",
+              "ReturnDescription": "玩家副手中的物品对象",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Item"
+            },
+            {
+              "Description": "获取玩家物品栏的容器对象",
+              "FuncName": "getInventory",
+              "ReturnDescription": "玩家物品栏对应的容器对象",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Container"
+            },
+            {
+              "Description": "获取玩家盔甲栏的容器对象",
+              "FuncName": "getArmor ",
+              "ReturnDescription": "玩家盔甲栏对应的容器对象",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Container"
+            },
+            {
+              "Description": "获取玩家末影箱的容器对象",
+              "FuncName": "getEnderChest",
+              "ReturnDescription": "玩家末影箱对应的容器对象",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Container"
+            },
+            {
+              "Description": "给予玩家一个物品",
+              "FuncName": "giveItem",
+              "ReturnDescription": "是否成功给予",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "给予的物品对象",
+                  "ParamType": "Item",
+                  "ParamName": "item",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "清除玩家背包中所有指定类型的物品",
+              "FuncName": "clearItem",
+              "ReturnDescription": "清除的物品个数",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要清除的物品对象类型名",
+                  "ParamType": "String",
+                  "ParamName": "type",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "刷新玩家所有物品",
+              "FuncName": "refreshItems",
+              "ReturnDescription": "是否成功刷新",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "修改玩家操作权限",
+              "FuncName": "setPermLevel",
+              "ReturnDescription": "是否成功修改",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "目标操作权限等级",
+                  "ParamType": "Integer",
+                  "ParamName": "level",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "修改玩家游戏模式",
+              "FuncName": "setGameMode",
+              "ReturnDescription": "是否成功修改",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "目标游戏模式，0为生存模式，1为创造模式，2为极限模式",
+                  "ParamType": "Integer",
+                  "ParamName": "mode",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "提高玩家经验等级",
+              "FuncName": "addLevel",
+              "ReturnDescription": "是否设置成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要提升的经验等级",
+                  "ParamType": "Integer",
+                  "ParamName": "count",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "传送玩家至指定服务器",
+              "FuncName": "transServer",
+              "ReturnDescription": "是否成功传送",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "目标服务器IP / 域名",
+                  "ParamType": "String",
+                  "ParamName": "server",
+                  "Optional": false
+                },
+                {
+                  "Description": "目标服务器端口",
+                  "ParamType": "String",
+                  "ParamName": "port",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "使玩家客户端崩溃",
+              "FuncName": "crash",
+              "ReturnDescription": "是否成功执行",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "设置玩家自定义侧边栏(暂时弃用)",
+              "FuncName": "setSidebar",
+              "ReturnDescription": "是否成功设置",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "侧边栏标题",
+                  "ParamType": "String",
+                  "ParamName": "title",
+                  "Optional": false
+                },
+                {
+                  "Description": "侧边栏对象内容对象",
+                  "ParamType": "Object@<String,Integer>",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "移除玩家自定义侧边栏",
+              "FuncName": "removeSidebar",
+              "ReturnDescription": "是否成功移除",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "设置玩家看到的自定义Boss血条",
+              "FuncName": "setBossBar",
+              "ReturnDescription": "是否成功设置",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "自定义血条标题",
+                  "ParamType": "String",
+                  "ParamName": "title",
+                  "Optional": false
+                },
+                {
+                  "Description": "血条中的血量百分比，有效范围为0~100。0为空血条，100为满",
+                  "ParamType": "Integer",
+                  "ParamName": "percent",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "移除玩家的自定义Boss血条",
+              "FuncName": "removeBossBar",
+              "ReturnDescription": "是否成功移除",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "获取玩家对应的NBT对象",
+              "FuncName": "getNbt",
+              "ReturnDescription": "玩家的NBT对象",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "NbtCompound"
+            },
+            {
+              "Description": "为玩家增加一个Tag",
+              "FuncName": "addTag",
+              "ReturnDescription": "是否设置成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要增加的tag字符串",
+                  "ParamType": "String",
+                  "ParamName": "tag",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "为玩家移除一个Tag",
+              "FuncName": "removeTag",
+              "ReturnDescription": "是否移除成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要移除的tag字符串",
+                  "ParamType": "String",
+                  "ParamName": "tag",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "获取玩家拥有的所有Tag列表",
+              "FuncName": "getAllTags",
+              "ReturnDescription": "玩家所有的 tag 字符串列表",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Array@String"
+            },
+            {
+              "Description": "获取玩家的Abilities能力列表（来自玩家NBT）",
+              "FuncName": "getAbilities",
+              "ReturnDescription": "玩家所有能力信息的键 - 值对列表对象",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Object@<String,Any>"
+            }
+          ],
+          "AllProperty": [
+            {
+              "PropertyName": "name",
+              "Description": "玩家名",
+              "PropertyType": "String",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "pos",
+              "Description": "玩家所在坐标",
+              "PropertyType": "FloatPos",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "realName",
+              "Description": "玩家的真实名字",
+              "PropertyType": "String",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "xuid",
+              "Description": "玩家Xuid字符串",
+              "PropertyType": "String",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "uuid",
+              "Description": "玩家Uuid字符串",
+              "PropertyType": "String",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "permLevel",
+              "Description": "玩家的操作权限等级（0 - 4）",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "gameMode",
+              "Description": "玩家的游戏模式（0 - 3",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "maxHealth",
+              "Description": "玩家最大生命值",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "health",
+              "Description": "玩家当前生命值",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "inAir",
+              "Description": "玩家当前是否悬空",
+              "PropertyType": "Boolean",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "sneaking ",
+              "Description": "玩家当前是否正在潜行",
+              "PropertyType": "Boolean",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "speed",
+              "Description": "玩家当前速度",
+              "PropertyType": "Float",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "direction",
+              "Description": "玩家当前朝向（0 - 4）",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": false
+            }
+          ],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "玩家对象"
+        }
+      ]
+    },
+    {
+      "DirName": "Event",
+      "AllClass": [
+        {
+          "ClassName": "mc",
+          "AllFunc": [
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家开始连接服务器",
+                  "ParamType": "\"onPreJoin\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家进入游戏（加载世界完成）",
+                  "ParamType": "\"onJoin\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家离开游戏",
+                  "ParamType": "\"onLeft\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家重生",
+                  "ParamType": "\"onRespawn\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家死亡",
+                  "ParamType": "\"onPlayerDie\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家执行命令",
+                  "ParamType": "\"onPlayerCmd\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"String\",\"ParamName\":\"cmd\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家发送聊天信息",
+                  "ParamType": "\"onChat\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"String\",\"ParamName\":\"msg\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家切换维度",
+                  "ParamType": "\"onChangeDim\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家跳跃",
+                  "ParamType": "\"onJump\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家切换潜行状态",
+                  "ParamType": "\"onSneak\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Boolean\",\"ParamName\":\"isSneaking\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家攻击实体",
+                  "ParamType": "\"onAttack\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Entity\",\"ParamName\":\"entity\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家使用物品",
+                  "ParamType": "\"onUseItem\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家对方块使用物品（点击右键）",
+                  "ParamType": "\"onUseItemOn\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家捡起物品",
+                  "ParamType": "\"onTakeItem\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Entity\",\"ParamName\":\"entity\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家丢出物品",
+                  "ParamType": "\"onDropItem\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家食用食物",
+                  "ParamType": "\"onEat\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家开始破坏方块 / 点击左键",
+                  "ParamType": "\"onStartDestroyBlock\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家破坏方块完成",
+                  "ParamType": "\"onDestroyBlock\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家放置方块",
+                  "ParamType": "\"onPlaceBlock\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家打开容器方块",
+                  "ParamType": "\"onOpenContainer\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家关闭容器方块",
+                  "ParamType": "\"onCloseContainer\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家物品栏变化",
+                  "ParamType": "\"onInventoryChange\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"slotNum\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"oldItem\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"newItem\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家移动",
+                  "ParamType": "\"onMove\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"FloatPos\",\"ParamName\":\"pos\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家改变盔甲栏",
+                  "ParamType": "\"onSetArmor\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"slotNum\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"item\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家使用重生锚",
+                  "ParamType": "\"onUseRespawnAnchor\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"IntPos\",\"ParamName\":\"pos\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+              "FuncName": "listen",
+              "ReturnDescription": "是否添加成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "玩家打开容器类GUI",
+                  "ParamType": "\"onOpenContainerScreen\"",
+                  "ParamName": "event",
+                  "Optional": false
+                },
+                {
+                  "Description": "事件回调",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": "mc通用接口"
+        }
+      ]
+    },
+    {
+      "DirName": "Global",
+      "AllClass": [
+        {
+          "ClassName": "Global",
+          "AllFunc": [
+            {
+              "Description": "输出信息到控制台\r\n这是为了方便输出信息而设计的便捷函数",
+              "FuncName": "log",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "Any",
+                  "ParamName": "data1",
+                  "Optional": true
+                },
+                {
+                  "Description": "",
+                  "ParamType": "Any",
+                  "ParamName": "data2",
+                  "Optional": true
+                },
+                {
+                  "Description": "",
+                  "ParamType": "",
+                  "ParamName": "data3",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Null"
+            },
+            {
+              "Description": "输出带颜色文本",
+              "FuncName": "colorLog",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "此行输出的颜色",
+                  "ParamType": "String",
+                  "ParamName": "color",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "Any",
+                  "ParamName": "data1",
+                  "Optional": true
+                },
+                {
+                  "Description": "",
+                  "ParamType": "Any",
+                  "ParamName": "data2",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Null"
+            },
+            {
+              "Description": "推迟一段时间执行函数",
+              "FuncName": "setTimeout",
+              "ReturnDescription": "此任务ID",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待执行的函数",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"\",\"ParamName\":\"\",\"Optional\":false}],\"ReturnType\":\"Any\"}}",
+                  "ParamName": "func",
+                  "Optional": false
+                },
+                {
+                  "Description": "推迟执行的时间（毫秒）",
+                  "ParamType": "Integer",
+                  "ParamName": "msec",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "推迟一段时间执行代码段（eval）",
+              "FuncName": "setTimeout",
+              "ReturnDescription": "此任务ID",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待执行的代码段",
+                  "ParamType": "String",
+                  "ParamName": "code",
+                  "Optional": false
+                },
+                {
+                  "Description": "推迟执行的时间（毫秒）",
+                  "ParamType": "Integer",
+                  "ParamName": "msec",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "设置周期执行函数",
+              "FuncName": "setInterval",
+              "ReturnDescription": "此任务ID",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待执行的函数",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[],\"ReturnType\":\"Any\"}}",
+                  "ParamName": "func",
+                  "Optional": false
+                },
+                {
+                  "Description": "执行间隔周期（毫秒）",
+                  "ParamType": "Integer",
+                  "ParamName": "msec",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "设置周期执行代码段（eval）",
+              "FuncName": "setInterval",
+              "ReturnDescription": "此任务ID",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待执行的代码段",
+                  "ParamType": "String",
+                  "ParamName": "code",
+                  "Optional": false
+                },
+                {
+                  "Description": "执行间隔周期（毫秒）",
+                  "ParamType": "Integer",
+                  "ParamName": "msec",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "取消延时 / 周期执行项",
+              "FuncName": "clearInterval",
+              "ReturnDescription": "是否取消成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "由前几个函数返回的任务ID",
+                  "ParamType": "Integer",
+                  "ParamName": "timerid",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean|Null"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": "全局方法、属性"
+        }
+      ]
+    },
+    {
+      "DirName": "Helpful",
+      "AllClass": [
+        {
+          "ClassName": "logger",
+          "AllFunc": [
+            {
+              "Description": "设置日志是否输出到控制台",
+              "FuncName": "setConsole",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "设置日志是否输出到控制台",
+                  "ParamType": "Boolean",
+                  "ParamName": "isOpen",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）控制台的日志输出等级，默认为4",
+                  "ParamType": "Integer",
+                  "ParamName": "logLevel",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "设置日志是否输出到文件",
+              "FuncName": "setFile",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "设置日志输出到的文件路径",
+                  "ParamType": "String",
+                  "ParamName": "filepath",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）文件的最小日志输出等级，默认为4",
+                  "ParamType": "Integer",
+                  "ParamName": "logLevel",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "设置日志是否输出到某个玩家",
+              "FuncName": "setPlayer",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "设置日志输出到的目标玩家对象",
+                  "ParamType": "Player",
+                  "ParamName": "player",
+                  "Optional": false
+                },
+                {
+                  "Description": "玩家的最小日志输出等级，默认为4",
+                  "ParamType": "Integer",
+                  "ParamName": "logLevel",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "输出普通文本",
+              "FuncName": "log",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待输出的变量或者数据",
+                  "ParamType": "ParamArray@Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": " 输出调试信息",
+              "FuncName": "debug",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待输出的变量或者数据",
+                  "ParamType": "ParamArray@Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": " 输出提示信息",
+              "FuncName": "info",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待输出的变量或者数据",
+                  "ParamType": "ParamArray@Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "输出警告信息",
+              "FuncName": "warn",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待输出的变量或者数据",
+                  "ParamType": "ParamArray@Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "输出错误信息",
+              "FuncName": "error",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待输出的变量或者数据",
+                  "ParamType": "ParamArray@Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": " 输出严重错误信息",
+              "FuncName": "fatal",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "待输出的变量或者数据",
+                  "ParamType": "ParamArray@Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "设置自定义日志消息标头",
+              "FuncName": "setTitle",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "设置的自定义标头",
+                  "ParamType": "String",
+                  "ParamName": "title ",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "统一修改日志输出等级",
+              "FuncName": "setLogLevel",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "日志输出等级",
+                  "ParamType": "Integer",
+                  "ParamName": "level",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": "📅 通用日志 API"
+        },
+        {
+          "ClassName": "lxl",
+          "AllFunc": [
+            {
+              "Description": "获取LiteXLoader加载器版本",
+              "FuncName": "version",
+              "ReturnDescription": "加载器版本对象",
+              "IsStatic": true,
+              "Params": [],
+              "ReturnType": "ObjectVersion"
+            },
+            {
+              "Description": "检查LiteXLoader加载器版本",
+              "FuncName": "requireVersion",
+              "ReturnDescription": "检查结果\r\n如果检测发现当前安装的LXL版本低于传入的数值，将返回false。\r\n你可以选择根据结果判断并报错，提醒用户升级自己的LXL版本",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "检查当前已安装LXL的主版本号是否 >= 此值",
+                  "ParamType": "Integer",
+                  "ParamName": "major",
+                  "Optional": false
+                },
+                {
+                  "Description": "检查当前已安装LXL的次版本号是否 >= 此值",
+                  "ParamType": "Integer",
+                  "ParamName": "minor",
+                  "Optional": true
+                },
+                {
+                  "Description": "检查当前已安装LXL的修订版本号是否 >= 此值",
+                  "ParamType": "Integer",
+                  "ParamName": "revision",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "列出所有已加载的插件",
+              "FuncName": "listPlugins",
+              "ReturnDescription": "已加载的所有的插件名字列表",
+              "IsStatic": true,
+              "Params": [],
+              "ReturnType": "Array@String"
+            },
+            {
+              "Description": "导出函数",
+              "FuncName": "export",
+              "ReturnDescription": "是否成功导出",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "要导出的函数",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[],\"ReturnType\":\"Any\"}}",
+                  "ParamName": "func",
+                  "Optional": false
+                },
+                {
+                  "Description": "函数的导出名称。其他插件根据导出名称来调用这个函数",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "导入函数",
+              "FuncName": "import",
+              "ReturnDescription": "导入的函数",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "要导入的函数使用的导出名称",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Function@{\"Func\":{\"Params\":[],\"ReturnType\":\"Any\"}}"
+            },
+            {
+              "Description": "设置插件依赖库",
+              "FuncName": "require",
+              "ReturnDescription": "是否加载依赖库成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "依赖库文件名（如addplugin.js)",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）查找并装载依赖库的路径",
+                  "ParamType": "String",
+                  "ParamName": "remotePath",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "将字符串作为脚本代码执行",
+              "FuncName": "eval",
+              "ReturnDescription": "执行结果",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "要作为脚本代码执行的字符串",
+                  "ParamType": "String",
+                  "ParamName": "str",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": "💡 插件加载相关 API"
+        }
+      ]
+    },
+    {
+      "DirName": "Object",
+      "AllClass": [
+        {
+          "ClassName": "Device",
+          "AllFunc": [],
+          "AllProperty": [
+            {
+              "PropertyName": "ip",
+              "Description": "玩家设备的IP地址",
+              "PropertyType": "String",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "avgPing",
+              "Description": "玩家的平均网络延迟时间（ms）",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "avgPacketLoss",
+              "Description": "玩家的平均网络丢包率（%）",
+              "PropertyType": "Float",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "os",
+              "Description": "玩家设备的操作系统类型",
+              "PropertyType": "String",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "clientId",
+              "Description": "玩家客户端的识别码ID",
+              "PropertyType": "String",
+              "IsReadonly": false,
+              "IsStatic": false
+            }
+          ],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "获取一个设备信息对象"
+        },
+        {
+          "ClassName": "Float",
+          "AllFunc": [],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "float"
+        },
+        {
+          "ClassName": "ObjectRuncmdEx",
+          "AllFunc": [],
+          "AllProperty": [
+            {
+              "PropertyName": "success",
+              "Description": "是否执行成功",
+              "PropertyType": "Boolean",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "output",
+              "Description": "BDS执行命令后的输出结果",
+              "PropertyType": "String",
+              "IsReadonly": true,
+              "IsStatic": true
+            }
+          ],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": "mc.runcmdEx的返回结果"
+        },
+        {
+          "ClassName": "ObjectVersion",
+          "AllFunc": [],
+          "AllProperty": [
+            {
+              "PropertyName": "major",
+              "Description": "主版本号（如 1.0.2 里的 1）",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "minor",
+              "Description": "次版本号（如 1.0.2 里的 0）",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "revision",
+              "Description": "修订版本号（如 1.0.2 里的 2）",
+              "PropertyType": "Integer",
+              "IsReadonly": false,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "isBeta",
+              "Description": "当前版本是否为测试版",
+              "PropertyType": "Boolean",
+              "IsReadonly": false,
+              "IsStatic": true
+            }
+          ],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": "加载器版本对象"
+        }
+      ]
+    }
+  ]
+}
