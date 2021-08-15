@@ -4,9 +4,7 @@
 name: Generate LibraryCode
 
 on:
-  release:
-    types: 
-      - prereleased
+  release
 
 jobs:
   generate:
