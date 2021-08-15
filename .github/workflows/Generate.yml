@@ -16,7 +16,7 @@ jobs:
     - name: test
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: |
-        cmd /C build.cmd
+        ./LXLDevHelperBuilder.exe src rawout\raw.json tsout
         dir
       shell: bash
       
