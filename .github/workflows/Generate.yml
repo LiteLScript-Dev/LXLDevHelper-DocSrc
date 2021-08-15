@@ -6,7 +6,7 @@ name: Generate LibraryCode
 on:
   release:
     types: 
-      - published
+      - prereleased
 
 jobs:
   generate:
