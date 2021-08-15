@@ -36,4 +36,4 @@ steps:
     releaseNotesInline: '构建'
     assets: 'rawout/*'
     isPreRelease: false
-    addChangeLog: false
+    addChangeLog: true
