@@ -16,11 +16,8 @@ jobs:
     
     - name: Rawout
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: ./LXLDevHelperBuilder.exe src rawout\raw.json tsout
+      run: ./LXLDevHelperBuilder.exe src rawout\raw.json
       shell: bash
-
-    - name: Add & Commit
-      uses: stefanzweifel/git-auto-commit-action@v4
   
   generate:
     runs-on: ubuntu-latest
