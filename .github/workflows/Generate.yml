@@ -14,9 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Calculate MD5
+    - name: Rawout
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: ./LXLDevHelperBuilder.exe
+      run: ./LXLDevHelperBuilder.exe src rawout\raw.json tsout
       shell: bash
 
     - name: Add & Commit
