@@ -13,11 +13,10 @@ jobs:
    steps:
     - uses: actions/checkout@v2
     
-    - name: test
+    - name: Generate Rawout
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: |
         ./LXLDevHelperBuilder.exe src rawout//raw.json tsout
-        dir
       shell: bash
     - name: Add & Commit
       uses: stefanzweifel/git-auto-commit-action@v4
@@ -41,6 +40,8 @@ jobs:
     - name: Run jar
       run: |
         rm -rf Library/*
+        mv rawout\raw.json raw.json
+        rm -rf rawout
         java -jar Generate.jar
     - name: ls
       run: ls
