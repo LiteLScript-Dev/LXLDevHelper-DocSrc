@@ -16,7 +16,7 @@ jobs:
     
     - name: Rawout
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: ./LXLDevHelperBuilder.exe src rawout\raw.json
+      run: ./LXLDevHelperBuilder.exe src rawout\raw.json tsout
       shell: bash
   
   generate:
