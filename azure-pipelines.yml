@@ -28,6 +28,14 @@ steps:
   inputs:
     gitHubConnection: 'github lxldoc'
     repositoryName: '$(Build.Repository.Name)'
+    action: 'delete'
+    target: '$(Build.SourceVersion)'
+    tag: 'v0.build0'
+
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'github lxldoc'
+    repositoryName: '$(Build.Repository.Name)'
     action: 'create'
     target: '$(Build.SourceVersion)'
     tag: 'v0.build0'
@@ -35,6 +43,6 @@ steps:
     releaseNotesSource: 'inline'
     releaseNotesInline: '构建'
     assets: 'rawout/*'
-    isDraft: true
+    isDraft: false
     isPreRelease: false
     addChangeLog: true
