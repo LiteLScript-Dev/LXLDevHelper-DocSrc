@@ -31,6 +31,37 @@
       "IsStatic": false,
       "Params": [],
       "ReturnType": "Object"
+    },
+    {
+      "Description": "写入方块对应的NBT对象",
+      "FuncName": "setNbt",
+      "ReturnDescription": "是否成功写入",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "NBT对象",
+          "ParamType": "NbtCompound",
+          "ParamName": "nbt",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "判断方块是否拥有容器",
+      "FuncName": "hasContainer",
+      "ReturnDescription": "这个方块是否拥有容器",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取方块所拥有的容器对象",
+      "FuncName": "getContainer",
+      "ReturnDescription": "这个方块所拥有的容器对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Container"
     }
   ],
   "AllProperty": [

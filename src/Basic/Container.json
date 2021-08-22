@@ -1,0 +1,122 @@
+{
+  "ClassName": "Container",
+  "AllFunc": [
+    {
+      "Description": "放入物品对象到容器中 ",
+      "FuncName": "addItem",
+      "ReturnDescription": "是否成功增加",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "待增加的物品对象",
+          "ParamType": "Item",
+          "ParamName": "item",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "放入物品对象到容器的第一个空格子",
+      "FuncName": "addItemToFirstEmptySlot",
+      "ReturnDescription": "是否成功增加",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "待增加的物品对象",
+          "ParamType": "Item",
+          "ParamName": "item",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "检查容器中是否（有空间）可以放入此物品 ",
+      "FuncName": "hasRoomFor",
+      "ReturnDescription": "是否可以放入",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "待放入的物品对象",
+          "ParamType": "Item",
+          "ParamName": "item",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "减少容器中的某个物品对象",
+      "FuncName": "removeItem",
+      "ReturnDescription": "是否成功减少",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "减少的物品对象所在的格子序号",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        },
+        {
+          "Description": "减少的数量。如果大于等于此格子物品堆叠的数量，则物品堆将被整个清除",
+          "ParamType": "Integer",
+          "ParamName": "count",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取容器某个格子的物品对象",
+      "FuncName": "getItem",
+      "ReturnDescription": "格子位置的物品对象",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "待获取的格子序号",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Item"
+    },
+    {
+      "Description": "获取容器所有格子的物品对象列表",
+      "FuncName": "getAllItems",
+      "ReturnDescription": "容器中所有的物品对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Array@Item"
+    },
+    {
+      "Description": "清空容器",
+      "FuncName": "removeAllItems",
+      "ReturnDescription": "是否成功清空",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "判断容器是否为空",
+      "FuncName": "isEmpty",
+      "ReturnDescription": "当前容器是否为空",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    }
+  ],
+  "AllProperty": [
+    {
+      "PropertyName": "size",
+      "Description": "容器拥有的格子总数",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    }
+  ],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "👜 容器对象 API\r\n在LXL中，使用「容器对象」来操作拥有格子、可以储存和放置物品的容器的相关信息。  \n此处的 **容器** 是一种宽泛的概念，除了箱子、桶这些传统的容器之外，如玩家物品栏、羊驼携带的箱子等这些也统统可以作为「容器」处理，获取并使用容器对应的API"
+}

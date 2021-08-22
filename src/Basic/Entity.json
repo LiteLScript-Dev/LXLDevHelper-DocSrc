@@ -1,8 +1,260 @@
 {
   "ClassName": "Entity",
-  "AllFunc": [],
-  "AllProperty": [],
+  "AllFunc": [
+    {
+      "Description": "传送实体至指定位置",
+      "FuncName": "teleport",
+      "ReturnDescription": "是否成功传送",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "目标位置坐标 （或者使用x, y, z, dimid来确定玩家位置）",
+          "ParamType": "FloatPos",
+          "ParamName": "pos",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "传送实体至指定位置",
+      "FuncName": "teleport",
+      "ReturnDescription": "是否成功传送",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "x",
+          "ParamType": "Integer",
+          "ParamName": "x",
+          "Optional": false
+        },
+        {
+          "Description": "y",
+          "ParamType": "Integer",
+          "ParamName": "y",
+          "Optional": false
+        },
+        {
+          "Description": "z",
+          "ParamType": "Integer",
+          "ParamName": "z",
+          "Optional": false
+        },
+        {
+          "Description": "dimid",
+          "ParamType": "Integer",
+          "ParamName": "dimid",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "杀死指定实体 ",
+      "FuncName": "kill",
+      "ReturnDescription": "是否成功执行",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "使指定实体着火",
+      "FuncName": "setOnFire",
+      "ReturnDescription": "是否成功着火",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "着火时长，单位秒",
+          "ParamType": "Integer",
+          "ParamName": "time",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "判断一个实体对象是不是玩家",
+      "FuncName": "isPlayer",
+      "ReturnDescription": "当前实体对象是不是玩家",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "将实体对象转换玩家对象",
+      "FuncName": "toPlayer",
+      "ReturnDescription": "转换成的玩家对象\r\n如果此实体对象指向的不是某个玩家，或者转换失败，则返回 `Null`",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Player|Null"
+    },
+    {
+      "Description": "获取生物盔甲栏的容器对象  ",
+      "FuncName": "getArmor",
+      "ReturnDescription": "此实体盔甲栏对应的容器对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Container"
+    },
+    {
+      "Description": "判断生物是否拥有容器（盔甲栏除外）",
+      "FuncName": "hasContainer",
+      "ReturnDescription": "个生物实体是否拥有容器",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取生物所拥有的容器对象（盔甲栏除外）",
+      "FuncName": "getContainer",
+      "ReturnDescription": "这个生物实体所拥有的容器对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Container"
+    },
+    {
+      "Description": "为实体增加一个Tag",
+      "FuncName": "addTag",
+      "ReturnDescription": "是否设置成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要增加的tag字符串",
+          "ParamType": "String",
+          "ParamName": "tag",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "为实体移除一个Tag",
+      "FuncName": "removeTag",
+      "ReturnDescription": "是否移除成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要移除的tag字符串",
+          "ParamType": "String",
+          "ParamName": "tag",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "实体拥有的所有Tag列表",
+      "FuncName": "getAllTags",
+      "ReturnDescription": "实体所有的 tag 字符串列表",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Array@String"
+    },
+    {
+      "Description": "检查实体是否拥有某个Tag",
+      "FuncName": "hasTag",
+      "ReturnDescription": "是否拥有这个Tag",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要检查的tag字符串",
+          "ParamType": "String",
+          "ParamName": "tag",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取实体对应的NBT对象",
+      "FuncName": "getNbt",
+      "ReturnDescription": "玩家的NBT对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "写入实体对应的NBT对象",
+      "FuncName": "setNbt",
+      "ReturnDescription": "是否成功写入",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "NBT对象",
+          "ParamType": "NbtCompound",
+          "ParamName": "nbt",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    }
+  ],
+  "AllProperty": [
+    {
+      "PropertyName": "name",
+      "Description": "实体名称",
+      "PropertyType": "String",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "type",
+      "Description": "实体标准类型名",
+      "PropertyType": "String",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "id",
+      "Description": "实体的游戏内id",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "pos",
+      "Description": "实体所在坐标",
+      "PropertyType": "FloatPos",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "blockPos",
+      "Description": "实体所在的方块坐标",
+      "PropertyType": "IntPos",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "maxHealth",
+      "Description": "实体最大生命值",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "health",
+      "Description": "实体当前生命值",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "inAir",
+      "Description": "实体当前是否悬空",
+      "PropertyType": "Boolean",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "speed",
+      "Description": "实体当前速度",
+      "PropertyType": "Float",
+      "IsReadonly": false,
+      "IsStatic": false
+    }
+  ],
   "IsStatic": false,
   "IsInterface": false,
-  "Description": ""
+  "Description": "🎈 实体对象 API\r\n在LXL中，使用「实体对象」来操作和获取某一个实体的相关信息。"
 }

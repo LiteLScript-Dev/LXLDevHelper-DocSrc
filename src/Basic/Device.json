@@ -1,0 +1,53 @@
+{
+  "ClassName": "Device",
+  "AllFunc": [
+    {
+      "Description": "",
+      "FuncName": "",
+      "ReturnDescription": "",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": ""
+    }
+  ],
+  "AllProperty": [
+    {
+      "PropertyName": "ip",
+      "Description": "玩家设备的IP地址",
+      "PropertyType": "String",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "avgPing",
+      "Description": "玩家的平均网络延迟时间（ms）",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "avgPacketLoss",
+      "Description": "玩家的平均网络丢包率（%）",
+      "PropertyType": "Float",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "os",
+      "Description": "玩家设备的操作系统类型",
+      "PropertyType": "String",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "clientId",
+      "Description": "玩家客户端的识别码ID",
+      "PropertyType": "String",
+      "IsReadonly": false,
+      "IsStatic": false
+    }
+  ],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "📱 设备信息对象 API\r\n在LXL中，使用「设备信息对象」来操作和获取某一个玩家使用的游戏设备的相关信息"
+}

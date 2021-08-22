@@ -453,6 +453,44 @@
       "IsStatic": false,
       "Params": [],
       "ReturnType": "Object@<String,Any>"
+    },
+    {
+      "Description": "获取玩家的Attributes属性列表（来自玩家NBT）",
+      "FuncName": "getAttributes",
+      "ReturnDescription": "玩家所有属性对象的数组",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Array@Attributes"
+    },
+    {
+      "Description": "检查玩家是否拥有某个Tag",
+      "FuncName": "hasTag",
+      "ReturnDescription": "是否拥有这个Tag",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要检查的tag字符串",
+          "ParamType": "String",
+          "ParamName": "tag",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "写入玩家对应的NBT对象",
+      "FuncName": "setNbt",
+      "ReturnDescription": "是否成功写入",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "NBT对象",
+          "ParamType": "NbtCompound",
+          "ParamName": "nbt",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
     }
   ],
   "AllProperty": [

@@ -1,0 +1,58 @@
+{
+  "ClassName": "Attributes",
+  "AllFunc": [],
+  "AllProperty": [
+    {
+      "PropertyName": "Base",
+      "Description": "",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "Current",
+      "Description": "",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "DefaultMax",
+      "Description": "",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "DefaultMin",
+      "Description": "",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "Max",
+      "Description": "",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "Min",
+      "Description": "",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "Name",
+      "Description": "",
+      "PropertyType": "String",
+      "IsReadonly": false,
+      "IsStatic": false
+    }
+  ],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "Attributes属性"
+}
