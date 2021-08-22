@@ -148,6 +148,88 @@ class mc {
  */
  static broadcast(msg,type)
 
+/**
+ * 设置指定位置的方块
+ * @param {IntPos} pos 目标方块位置（或者使用x, y, z, dimid来确定方块位置）
+ * @param {Block|string} block 要设置成的方块对象或者方块名
+ * @returns {boolean} 是否成功设置
+ */
+ static setBlock(pos,block)
+
+/**
+ * 设置指定位置的方块
+ * @param {number} x x
+ * @param {number} y y
+ * @param {number} z z
+ * @param {number} dimid dimid
+ * @param {Block|string} block 要设置成的方块对象或者方块名
+ * @returns {boolean} 是否成功设置
+ */
+ static setBlock(x,y,z,dimid,block)
+
+/**
+ * 在指定位置生成粒子效果
+ * @param {IntPos|FloatPos} pos 目标生成位置（或者使用x, y, z, dimid来确定方块位置）
+ * @param {string} type 要生成的粒子效果名称（可查阅wiki得知）
+ * @returns {boolean} 是否成功生成
+ */
+ static spawnParticle(pos,type)
+
+/**
+ * 在指定位置生成粒子效果
+ * @param {number} x x
+ * @param {number} y y
+ * @param {number} z z
+ * @param {number} dimid dimid
+ * @param {string} type 要生成的粒子效果名称（可查阅wiki得知）
+ * @returns {boolean} 是否成功生成
+ */
+ static spawnParticle(x,y,z,dimid,type)
+
+/**
+ * 在指定位置制造一次爆炸
+ * @param {IntPos|FloatPos} pos 目标生成位置（或者使用x, y, z, dimid来确定方块位置）
+ * @param {Entity} source 设置爆炸来源的实体对象，可以为`null
+ * @param {Float} power 爆炸的威力值，影响爆炸的伤害大小和破坏范围
+ * @param {Float} range 爆炸的范围半径，影响爆炸的波及范围
+ * @param {boolean} isDestroy 爆炸是否破坏方块
+ * @param {boolean} isFire 爆炸结束后是否留下燃烧的火焰
+ * @returns {boolean} 是否成功制造爆炸
+ */
+ static explode(pos,source,power,range,isDestroy,isFire)
+
+/**
+ * 在指定位置制造一次爆炸
+ * @param {number} x x
+ * @param {number} y y
+ * @param {number} z z
+ * @param {number} dimid dimid
+ * @param {Entity} source 设置爆炸来源的实体对象，可以为`null
+ * @param {Float} power 爆炸的威力值，影响爆炸的伤害大小和破坏范围
+ * @param {Float} range 爆炸的范围半径，影响爆炸的波及范围
+ * @param {boolean} isDestroy 爆炸是否破坏方块
+ * @param {boolean} isFire 爆炸结束后是否留下燃烧的火焰
+ * @returns {boolean} 是否成功制造爆炸
+ */
+ static explode(x,y,z,dimid,source,power,range,isDestroy,isFire)
+
+/**
+ * 生成物品对象  
+ * @param {string} name 物品的标准类型名，如`minecraft:bread`
+ * @param {number} count 物品堆叠数量
+ * @returns {Item} 生成的物品对象
+如返回值为 `null` 则表示生成失败
+ */
+ static newItem(name,count)
+
+/**
+ * 生成物品对象  
+ * @param {NbtCompound} nbt 生成物品对象所使用的物品NBT
+ * @returns {Item} 生成的物品对象
+如返回值为 `null` 则表示生成失败
+ */
+ static newItem(nbt)
+
 
 
 

@@ -125,3 +125,77 @@ end
 ---@return boolean 是否成功发送
 function mc.broadcast(msg,type)
 end
+
+---设置指定位置的方块
+---@param pos IntPos 目标方块位置（或者使用x, y, z, dimid来确定方块位置）
+---@param block Block|string 要设置成的方块对象或者方块名
+---@return boolean 是否成功设置
+function mc.setBlock(pos,block)
+end
+
+---设置指定位置的方块
+---@param x number x
+---@param y number y
+---@param z number z
+---@param dimid number dimid
+---@param block Block|string 要设置成的方块对象或者方块名
+---@return boolean 是否成功设置
+function mc.setBlock(x,y,z,dimid,block)
+end
+
+---在指定位置生成粒子效果
+---@param pos IntPos|FloatPos 目标生成位置（或者使用x, y, z, dimid来确定方块位置）
+---@param type string 要生成的粒子效果名称（可查阅wiki得知）
+---@return boolean 是否成功生成
+function mc.spawnParticle(pos,type)
+end
+
+---在指定位置生成粒子效果
+---@param x number x
+---@param y number y
+---@param z number z
+---@param dimid number dimid
+---@param type string 要生成的粒子效果名称（可查阅wiki得知）
+---@return boolean 是否成功生成
+function mc.spawnParticle(x,y,z,dimid,type)
+end
+
+---在指定位置制造一次爆炸
+---@param pos IntPos|FloatPos 目标生成位置（或者使用x, y, z, dimid来确定方块位置）
+---@param source Entity 设置爆炸来源的实体对象，可以为`nil
+---@param power Float 爆炸的威力值，影响爆炸的伤害大小和破坏范围
+---@param range Float 爆炸的范围半径，影响爆炸的波及范围
+---@param isDestroy boolean 爆炸是否破坏方块
+---@param isFire boolean 爆炸结束后是否留下燃烧的火焰
+---@return boolean 是否成功制造爆炸
+function mc.explode(pos,source,power,range,isDestroy,isFire)
+end
+
+---在指定位置制造一次爆炸
+---@param x number x
+---@param y number y
+---@param z number z
+---@param dimid number dimid
+---@param source Entity 设置爆炸来源的实体对象，可以为`nil
+---@param power Float 爆炸的威力值，影响爆炸的伤害大小和破坏范围
+---@param range Float 爆炸的范围半径，影响爆炸的波及范围
+---@param isDestroy boolean 爆炸是否破坏方块
+---@param isFire boolean 爆炸结束后是否留下燃烧的火焰
+---@return boolean 是否成功制造爆炸
+function mc.explode(x,y,z,dimid,source,power,range,isDestroy,isFire)
+end
+
+---生成物品对象  
+---@param name string 物品的标准类型名，如`minecraft:bread`
+---@param count number 物品堆叠数量
+---@return Item 生成的物品对象
+---如返回值为 `nil` 则表示生成失败
+function mc.newItem(name,count)
+end
+
+---生成物品对象  
+---@param nbt NbtCompound 生成物品对象所使用的物品NBT
+---@return Item 生成的物品对象
+---如返回值为 `nil` 则表示生成失败
+function mc.newItem(nbt)
+end

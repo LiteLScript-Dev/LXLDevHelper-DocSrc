@@ -46,7 +46,26 @@ class Block {
 等价于脚本执行block.getNbt().getTag("states").toObject()
  * @returns {Object} 方块的BlockState
  */
- getBlockState()  
+ getBlockState()
+
+/**
+ * 写入方块对应的NBT对象
+ * @param {NbtCompound} nbt NBT对象
+ * @returns {boolean} 是否成功写入
+ */
+ setNbt(nbt)
+
+/**
+ * 判断方块是否拥有容器
+ * @returns {boolean} 这个方块是否拥有容器
+ */
+ hasContainer()
+
+/**
+ * 获取方块所拥有的容器对象
+ * @returns {Container} 这个方块所拥有的容器对象
+ */
+ getContainer()  
 
 
 

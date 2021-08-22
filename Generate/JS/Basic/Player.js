@@ -301,7 +301,27 @@ class Player {
  * 获取玩家的Abilities能力列表（来自玩家NBT）
  * @returns {<string,any>[]} 玩家所有能力信息的键 - 值对列表对象
  */
- getAbilities()  
+ getAbilities()
+
+/**
+ * 获取玩家的Attributes属性列表（来自玩家NBT）
+ * @returns {Attributes[]} 玩家所有属性对象的数组
+ */
+ getAttributes()
+
+/**
+ * 检查玩家是否拥有某个Tag
+ * @param {string} tag 要检查的tag字符串
+ * @returns {boolean} 是否拥有这个Tag
+ */
+ hasTag(tag)
+
+/**
+ * 写入玩家对应的NBT对象
+ * @param {NbtCompound} nbt NBT对象
+ * @returns {boolean} 是否成功写入
+ */
+ setNbt(nbt)  
 
 
 

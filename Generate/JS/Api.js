@@ -1,5 +1,7 @@
 
 /// <reference path="./Basic/Block.js" />
+/// <reference path="./Basic/Container.js" />
+/// <reference path="./Basic/Device.js" />
 /// <reference path="./Basic/Entity.js" />
 /// <reference path="./Basic/FloatPos.js" />
 /// <reference path="./Basic/IntPos.js" />
@@ -8,6 +10,7 @@
 /// <reference path="./Global/Global.js" />
 /// <reference path="./Helpful/logger.js" />
 /// <reference path="./Helpful/lxl.js" />
+/// <reference path="./Object/Attributes.js" />
 /// <reference path="./Object/Device.js" />
 /// <reference path="./Object/Float.js" />
 /// <reference path="./Object/ObjectRuncmdEx.js" />

@@ -211,3 +211,20 @@ end
 ---@return table<string,any>[] 玩家所有能力信息的键 - 值对列表对象
 function Player:getAbilities()
 end
+
+---获取玩家的Attributes属性列表（来自玩家NBT）
+---@return Attributes[] 玩家所有属性对象的数组
+function Player:getAttributes()
+end
+
+---检查玩家是否拥有某个Tag
+---@param tag string 要检查的tag字符串
+---@return boolean 是否拥有这个Tag
+function Player:hasTag(tag)
+end
+
+---写入玩家对应的NBT对象
+---@param nbt NbtCompound NBT对象
+---@return boolean 是否成功写入
+function Player:setNbt(nbt)
+end

@@ -23,3 +23,19 @@ end
 ---@return Object 方块的BlockState
 function Block:getBlockState()
 end
+
+---写入方块对应的NBT对象
+---@param nbt NbtCompound NBT对象
+---@return boolean 是否成功写入
+function Block:setNbt(nbt)
+end
+
+---判断方块是否拥有容器
+---@return boolean 这个方块是否拥有容器
+function Block:hasContainer()
+end
+
+---获取方块所拥有的容器对象
+---@return Container 这个方块所拥有的容器对象
+function Block:getContainer()
+end
