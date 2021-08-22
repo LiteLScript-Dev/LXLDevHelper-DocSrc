@@ -40,7 +40,7 @@ jobs:
     - name: Run jar
       run: |
         rm -rf Library/*
-        mv rawout/raw.json raw.json
+        mv rawout/* .
         rm -rf rawout
         java -jar Generate.jar
     - name: ls
