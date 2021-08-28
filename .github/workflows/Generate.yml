@@ -37,12 +37,16 @@ jobs:
       with:
        file-url: "https://github.com/LiteLDev-LXL/LXLDevHelper-generate/raw/master/Generate.jar"
        file-name: "Generate.jar"
+    - name: Get raw.json
+      uses: carlosperate/download-file-action@v1.0.3
+      with:
+       file-url: "https://github.com/LiteLDev-LXL/LXLDevHelper-DocSrc/blob/main/raw.json"
+       file-name: raw.json"
     - name: Run jar
       run: |
-        ls
         rm -rf Library/
         java -jar Generate.jar
-    - name: zip
+    - name: Zip
       uses: papeloto/action-zip@v1
       with:
         files: Library
