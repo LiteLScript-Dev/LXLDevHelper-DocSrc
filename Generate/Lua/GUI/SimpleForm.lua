@@ -3,9 +3,8 @@
  SimpleForm = {}
 
 ---设置表单的标题
----@param text string 标题
 ---@return SimpleForm 处理完毕的表单对象（便于连锁进行其他操作）
-function SimpleForm:setTitle(text)
+function SimpleForm:setTitle()
 end
 
 ---设置表单的内容

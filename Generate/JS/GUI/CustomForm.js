@@ -9,10 +9,9 @@ class CustomForm {
 
 /**
  * 设置表单的标题
- * @param {string} text 标题
  * @returns {CustomForm} 处理完毕的表单对象（便于连锁进行其他操作）
  */
- setTitle(text)
+ setTitle()
 
 /**
  * 向表单内增加一行文本
