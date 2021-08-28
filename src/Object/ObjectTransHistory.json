@@ -1,0 +1,44 @@
+{
+  "ClassName": "ObjectTransHistory",
+  "AllFunc": [],
+  "AllProperty": [
+    {
+      "PropertyName": "from",
+      "Description": "",
+      "PropertyType": "",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "to",
+      "Description": "",
+      "PropertyType": "",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "money",
+      "Description": "",
+      "PropertyType": "",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "time",
+      "Description": "",
+      "PropertyType": "",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "note",
+      "Description": "",
+      "PropertyType": "",
+      "IsReadonly": false,
+      "IsStatic": false
+    }
+  ],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "历史账单"
+}

@@ -1,0 +1,76 @@
+{
+  "ClassName": "DB",
+  "AllFunc": [
+    {
+      "Description": "写入数据项",
+      "FuncName": "set",
+      "ReturnDescription": "",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        },
+        {
+          "Description": "",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "读取数据项",
+      "FuncName": "get",
+      "ReturnDescription": "",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "删除数据项",
+      "FuncName": "delete",
+      "ReturnDescription": "",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取所有数据项名字",
+      "FuncName": "listKey",
+      "ReturnDescription": "",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Array@String"
+    },
+    {
+      "Description": "关闭数据库",
+      "FuncName": "close",
+      "ReturnDescription": "是否成功关闭",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": ""
+    }
+  ],
+  "AllProperty": [],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "获取所有数据项名字"
+}

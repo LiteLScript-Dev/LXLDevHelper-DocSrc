@@ -6,14 +6,7 @@
       "FuncName": "setTitle",
       "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
       "IsStatic": false,
-      "Params": [
-        {
-          "Description": "标题",
-          "ParamType": "String",
-          "ParamName": "text",
-          "Optional": false
-        }
-      ],
+      "Params": [],
       "ReturnType": "CustomForm"
     },
     {
