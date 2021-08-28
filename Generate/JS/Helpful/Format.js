@@ -1,123 +1,123 @@
 /**
  * 格式化代码实用工具
  */ 
-class Text {
+class Format {
   
 /**
  * 接下来的文字为 黑色 §0
- * @type 
+ * @type String
  */ 
- Black;
+ static Black;
 /**
  * 接下来的文字为 深蓝色 §1
- * @type 
+ * @type String
  */ 
- DarkBlue;
+ static DarkBlue;
 /**
  * 接下来的文字为 深绿色 §2
- * @type 
+ * @type String
  */ 
- DarkGreen;
+ static DarkGreen;
 /**
  * 接下来的文字为 湖蓝色 §3
- * @type 
+ * @type String
  */ 
- DarkAqua;
+ static DarkAqua;
 /**
  * 接下来的文字为 深红色 §4
- * @type 
+ * @type String
  */ 
- DarkRed;
+ static DarkRed;
 /**
  * 接下来的文字为 紫色 §5
- * @type 
+ * @type String
  */ 
- DarkPurple;
+ static DarkPurple;
 /**
  * 接下来的文字为 金色 §6
- * @type 
+ * @type String
  */ 
- Gold;
+ static Gold;
 /**
  * 接下来的文字为 灰色 §7
- * @type 
+ * @type String
  */ 
- Gray;
+ static Gray;
 /**
  * 接下来的文字为 深灰色 §8
- * @type 
+ * @type String
  */ 
- DarkGray;
+ static DarkGray;
 /**
  * 接下来的文字为 蓝色§9
- * @type 
+ * @type String
  */ 
- Blue;
+ static Blue;
 /**
  * 接下来的文字为 浅绿色 §a
- * @type 
+ * @type String
  */ 
- Green;
+ static Green;
 /**
  * 接下来的文字为 天蓝色 §b
- * @type 
+ * @type String
  */ 
- Aqua;
+ static Aqua;
 /**
  * 接下来的文字为 浅红色 §c
- * @type 
+ * @type String
  */ 
- Red;
+ static Red;
 /**
  * 接下来的文字为 浅紫色 §d
- * @type 
+ * @type String
  */ 
- LightPurple;
+ static LightPurple;
 /**
  * 接下来的文字为 浅黄色 §e
- * @type 
+ * @type String
  */ 
- Yellow;
+ static Yellow;
 /**
  * 接下来的文字为 白色 §f
- * @type 
+ * @type String
  */ 
- White;
+ static White;
 /**
  * 接下来的文字为 硬币金色 §g
- * @type 
+ * @type String
  */ 
- MinecoinGold ;
+ static MinecoinGold ;
 /**
  * 接下来的文字 加粗 §l
- * @type 
+ * @type String
  */ 
- Bold;
+ static Bold;
 /**
  * 接下来的文字 意大利体（俗称斜体）§o
- * @type 
+ * @type String
  */ 
- Italics;
+ static Italics;
 /**
  * 接下来的文字 下划线 §n
- * @type 
+ * @type String
  */ 
- Underline;
+ static Underline;
 /**
  * 接下来的文字 删除线 §m
- * @type 
+ * @type String
  */ 
- StrikeThrough;
+ static StrikeThrough;
 /**
  * 接下来的文字 随机闪烁的乱码字符 §k
- * @type 
+ * @type String
  */ 
- Random;
+ static Random;
 /**
  * 接下来的文字 清除所有格式§r
- * @type 
+ * @type String
  */ 
- Clear;
+ static Clear;
   
   
   

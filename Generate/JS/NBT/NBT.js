@@ -7,57 +7,57 @@ class NBT {
  * NbtValue
  * @type NbtValue
  */ 
- End;
+ static End;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- Byte;
+ static Byte;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- Short;
+ static Short;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- Int;
+ static Int;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- Long;
+ static Long;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- Float;
+ static Float;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- Double;
+ static Double;
 /**
  * ByteArray
  * @type NbtValue
  */ 
- ByteArray;
+ static ByteArray;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- String;
+ static String;
 /**
  * NbtList
  * @type NbtList
  */ 
- List;
+ static List;
 /**
  * NbtCompound
  * @type NbtCompound
  */ 
- Compound;
+ static Compound;
   
   
 
