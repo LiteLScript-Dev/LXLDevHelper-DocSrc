@@ -52,7 +52,7 @@
         {
           "Description": "（可选参数）输入框中默认存在的内容",
           "ParamType": "String",
-          "ParamName": "default_text",
+          "ParamName": "Defaultext",
           "Optional": true
         }
       ],
@@ -73,7 +73,7 @@
         {
           "Description": "（可选参数）开关的默认状态 开 / 关",
           "ParamType": "Boolean",
-          "ParamName": "default",
+          "ParamName": "Default",
           "Optional": true
         }
       ],
@@ -100,7 +100,7 @@
         {
           "Description": "可选参数）下拉菜单默认选中的列表项序号。",
           "ParamType": "Integer",
-          "ParamName": "default",
+          "ParamName": "Default",
           "Optional": true
         }
       ],
@@ -139,7 +139,7 @@
         {
           "Description": "（可选参数）游标滑块默认初始格数，数值必须在最小和最大格数之间。",
           "ParamType": "Integer",
-          "ParamName": "default",
+          "ParamName": "Default",
           "Optional": true
         }
       ],
@@ -166,7 +166,7 @@
         {
           "Description": "（可选参数）步进滑块默认初始选项。序号从0开始编号",
           "ParamType": "Integer",
-          "ParamName": "default",
+          "ParamName": "Default",
           "Optional": true
         }
       ],
