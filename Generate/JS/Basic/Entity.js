@@ -49,6 +49,11 @@ class Entity {
  * @type Float
  */ 
  speed;
+/**
+ * 实体当前是否在水中
+ * @type Boolean
+ */ 
+ inWater;
   
   
 
@@ -152,7 +157,21 @@ class Entity {
  * @param {NbtCompound} nbt NBT对象
  * @returns {boolean} 是否成功写入
  */
- setNbt(nbt)  
+ setNbt(nbt)
+
+/**
+ * 对实体造成伤害
+注意，此处造成的伤害为真实伤害，无法被盔甲等保护装备减免
+ * @param {number} damage 对实体造成的伤害数值
+ * @returns {boolean} 是否造成伤害
+ */
+ hurt(damage)
+
+/**
+ * 刷新生物物品栏、盔甲栏
+ * @returns {boolean} 
+ */
+ refreshItems()  
 
 
 

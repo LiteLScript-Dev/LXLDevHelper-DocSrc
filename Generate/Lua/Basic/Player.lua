@@ -13,6 +13,8 @@
 ---@field sneaking  Boolean Boolean
 ---@field speed Float Float
 ---@field direction Integer Integer
+---@field blockPos IntPos IntPos
+---@field inWater Boolean Boolean
  Player = {}
 
 ---判断玩家是否为OP
@@ -227,4 +229,50 @@ end
 ---@param nbt NbtCompound NBT对象
 ---@return boolean 是否成功写入
 function Player:setNbt(nbt)
+end
+
+---向玩家发送模式表单，模式表单包含一个标题、一个文本显示框以及两个按钮
+---@param title string 表单标题
+---@param content string 表单内容
+---@param button1 string 按钮1文本的字符串
+---@param button2 string 按钮2文本的字符串
+---@param callback fun(player:Player,id:number):void 玩家点击按钮之后被调用的回调函数。
+---@return number 发送的表单ID
+function Player:sendModalForm(title,content,button1,button2,callback)
+end
+
+---向玩家发送普通表单
+---普通表单包含一个标题、一个文本显示框以及若干按钮，可以设置按钮上显示的图标
+---@param title string 表单标题
+---@param content string 表单内容
+---@param buttons string[] 各个按钮文本的字符串数组
+---@param images string[] 各个按钮对应的图片路径
+对于表单上的每个按钮，如下设置对应的图标
+ 1. 如果使用材质包路径，图片路径应该形如 textures/items/apple
+ 2. 如果使用URL路径，那么在这里放入完整的URL即可，形如 https://www.baidu.com/img/flexible/logo/pc/result.png
+ 3. 如果这个按钮你不需要显示图片，那将对应的图片路径设置为空字符串即可
+---@param callback fun(player:Player,id:number):void 玩家点击按钮之后被调用的回调函数
+---@return number 发送的表单ID
+function Player:sendSimpleForm(title,content,buttons,images,callback)
+end
+
+---向玩家发送自定义表单（Json格式）
+---@param json_data string 自定义表单json字符串
+---@param callback fun(player:Player,data:{}@any):void 玩家提交表单之后被调用的回调函数。
+---@return number 发送的表单ID
+function Player:sendCustomForm(json_data,callback)
+end
+
+---
+---@param form SimpleForm 配置好的表单对象
+---@param callback fun(player:Player,id:nil): 玩家提交表单之后被调用的回调函数。
+---@return  
+function Player:sendForm(form,callback)
+end
+
+---
+---@param form CustomForm 配置好的表单对象
+---@param callback fun(player:Player,data:any[]): 玩家提交表单之后被调用的回调函数。
+---@return  
+function Player:sendForm(form,callback)
 end

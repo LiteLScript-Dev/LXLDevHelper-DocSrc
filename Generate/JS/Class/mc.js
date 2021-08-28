@@ -230,6 +230,85 @@ class mc {
  */
  static newItem(nbt)
 
+/**
+ * 生成一个整数类型坐标对象
+ * @param {number} x x 坐标
+ * @param {number} y y 坐标
+ * @param {number} z z 坐标
+ * @param {number} dimid  维度ID：0 代表主世界，1 代表下界，2 代表末地
+ * @returns {IntPos} 整数坐标对象
+ */
+ static newIntPos(x,y,z,dimid )
+
+/**
+ * 生成新生物并获取
+ * @param {string} name 生物的命名空间名称，如 minectaft:creeper
+ * @param {IntPos} pos 生成生物的位置的坐标对象（或者使用x, y, z, dimid来确定生成位置）
+ * @returns {Entity} 生成的实体对象，如返回值为 null 则表示生成失败
+ */
+ static spawnMob(name,pos)
+
+/**
+ * 生成新生物并获取
+ * @param {string} name 
+ * @param {Float} x 
+ * @param {Float} y 
+ * @param {Float} z 
+ * @param {number} dimid 
+ * @returns {Entity} 生成的实体对象，如返回值为 null 则表示生成失败
+ */
+ static spawnMob(name,x,y,z,dimid)
+
+/**
+ * 生成新生物并获取
+ * @param {string} name 生物的命名空间名称，如 minectaft:creeper
+ * @param {FloatPos} pos 生成生物的位置的坐标对象（或者使用x, y, z, dimid来确定生成位置）
+ * @returns {Entity} 生成的实体对象，如返回值为 null 则表示生成失败
+ */
+ static spawnMob(name,pos)
+
+/**
+ * 创建一个新的计分项
+ * @param {string} name 计分项名称
+ * @param {string} displayName 计分项显示名称
+ * @returns {Objective} 新增创建的计分项对象，如果返回null，则代表创建失败
+ */
+ static newScoreObjective(name,displayName)
+
+/**
+ * 获取某个已存在的计分项
+ * @param {string} name 要获取的计分项名称
+ * @returns {Objective} 对应的计分项对象，如果返回null，则代表计分项不存在
+ */
+ static getScoreObjective(name)
+
+/**
+ * 获取所有计分项
+ * @returns {Array<Objective>} 计分板系统记录的所有计分项的对象数组
+ */
+ static getAllScoreObjectives()
+
+/**
+ * 移除一个已存在的计分项
+ * @param {string} name 计分项名称
+ * @returns {boolean} 是否移除成功
+ */
+ static removeScoreObjective(name)
+
+/**
+ * 获取某个处于显示状态的计分项
+ * @param {string} slot 显示槽位名称字符串，可以为"sidebar"/"belowname"/"list"
+ * @returns {Objective} 
+ */
+ static getDisplayObjectives(slot)
+
+/**
+ * 使计分项停止显示
+ * @param {string} solt 显示槽位名称字符串，可以为"sidebar"/"belowname"/"list"
+ * @returns {boolean} 
+ */
+ static clearDisplayObjective(solt)
+
 
 
 
@@ -647,7 +726,22 @@ class mc {
  * @param {(player:Player)boolean} callback 事件回调
  * @returns {boolean} 是否添加成功
  */
- static listen(event,callback)  
+ static listen(event,callback)
+
+
+
+
+/**
+ * 创建表单对象
+ * @returns {CustomForm} 新创建的空白表单对象
+ */
+ static newCustomForm()
+
+/**
+ * 创建表单对象
+ * @returns {SimpleForm} 新创建的空白表单对象
+ */
+ static newSimpleForm()  
 
 
 

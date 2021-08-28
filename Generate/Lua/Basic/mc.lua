@@ -199,3 +199,72 @@ end
 ---如返回值为 `nil` 则表示生成失败
 function mc.newItem(nbt)
 end
+
+---生成一个整数类型坐标对象
+---@param x number x 坐标
+---@param y number y 坐标
+---@param z number z 坐标
+---@param dimid  number 维度ID：0 代表主世界，1 代表下界，2 代表末地
+---@return IntPos 整数坐标对象
+function mc.newIntPos(x,y,z,dimid )
+end
+
+---生成新生物并获取
+---@param name string 生物的命名空间名称，如 minectaft:creeper
+---@param pos IntPos 生成生物的位置的坐标对象（或者使用x, y, z, dimid来确定生成位置）
+---@return Entity 生成的实体对象，如返回值为 nil 则表示生成失败
+function mc.spawnMob(name,pos)
+end
+
+---生成新生物并获取
+---@param name string 
+---@param x Float 
+---@param y Float 
+---@param z Float 
+---@param dimid number 
+---@return Entity 生成的实体对象，如返回值为 nil 则表示生成失败
+function mc.spawnMob(name,x,y,z,dimid)
+end
+
+---生成新生物并获取
+---@param name string 生物的命名空间名称，如 minectaft:creeper
+---@param pos FloatPos 生成生物的位置的坐标对象（或者使用x, y, z, dimid来确定生成位置）
+---@return Entity 生成的实体对象，如返回值为 nil 则表示生成失败
+function mc.spawnMob(name,pos)
+end
+
+---创建一个新的计分项
+---@param name string 计分项名称
+---@param displayName string 计分项显示名称
+---@return Objective 新增创建的计分项对象，如果返回nil，则代表创建失败
+function mc.newScoreObjective(name,displayName)
+end
+
+---获取某个已存在的计分项
+---@param name string 要获取的计分项名称
+---@return Objective 对应的计分项对象，如果返回nil，则代表计分项不存在
+function mc.getScoreObjective(name)
+end
+
+---获取所有计分项
+---@return {}<Objective> 计分板系统记录的所有计分项的对象数组
+function mc.getAllScoreObjectives()
+end
+
+---移除一个已存在的计分项
+---@param name string 计分项名称
+---@return boolean 是否移除成功
+function mc.removeScoreObjective(name)
+end
+
+---获取某个处于显示状态的计分项
+---@param slot string 显示槽位名称字符串，可以为"sidebar"/"belowname"/"list"
+---@return Objective 
+function mc.getDisplayObjectives(slot)
+end
+
+---使计分项停止显示
+---@param solt string 显示槽位名称字符串，可以为"sidebar"/"belowname"/"list"
+---@return boolean 
+function mc.clearDisplayObjective(solt)
+end

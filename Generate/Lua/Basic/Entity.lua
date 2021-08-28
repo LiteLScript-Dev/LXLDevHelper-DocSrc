@@ -10,6 +10,7 @@
 ---@field health Integer Integer
 ---@field inAir Boolean Boolean
 ---@field speed Float Float
+---@field inWater Boolean Boolean
  Entity = {}
 
 ---传送实体至指定位置
@@ -96,4 +97,16 @@ end
 ---@param nbt NbtCompound NBT对象
 ---@return boolean 是否成功写入
 function Entity:setNbt(nbt)
+end
+
+---对实体造成伤害
+---注意，此处造成的伤害为真实伤害，无法被盔甲等保护装备减免
+---@param damage number 对实体造成的伤害数值
+---@return boolean 是否造成伤害
+function Entity:hurt(damage)
+end
+
+---刷新生物物品栏、盔甲栏
+---@return boolean 
+function Entity:refreshItems()
 end
