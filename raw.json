@@ -4119,6 +4119,176 @@
       "DirName": "Helpful",
       "AllClass": [
         {
+          "ClassName": "Format",
+          "AllFunc": [],
+          "AllProperty": [
+            {
+              "PropertyName": "Black",
+              "Description": "接下来的文字为 黑色 §0",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "DarkBlue",
+              "Description": "接下来的文字为 深蓝色 §1",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "DarkGreen",
+              "Description": "接下来的文字为 深绿色 §2",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "DarkAqua",
+              "Description": "接下来的文字为 湖蓝色 §3",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "DarkRed",
+              "Description": "接下来的文字为 深红色 §4",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "DarkPurple",
+              "Description": "接下来的文字为 紫色 §5",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Gold",
+              "Description": "接下来的文字为 金色 §6",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Gray",
+              "Description": "接下来的文字为 灰色 §7",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "DarkGray",
+              "Description": "接下来的文字为 深灰色 §8",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Blue",
+              "Description": "接下来的文字为 蓝色§9",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Green",
+              "Description": "接下来的文字为 浅绿色 §a",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Aqua",
+              "Description": "接下来的文字为 天蓝色 §b",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Red",
+              "Description": "接下来的文字为 浅红色 §c",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "LightPurple",
+              "Description": "接下来的文字为 浅紫色 §d",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Yellow",
+              "Description": "接下来的文字为 浅黄色 §e",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "White",
+              "Description": "接下来的文字为 白色 §f",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "MinecoinGold ",
+              "Description": "接下来的文字为 硬币金色 §g",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Bold",
+              "Description": "接下来的文字 加粗 §l",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Italics",
+              "Description": "接下来的文字 意大利体（俗称斜体）§o",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Underline",
+              "Description": "接下来的文字 下划线 §n",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "StrikeThrough",
+              "Description": "接下来的文字 删除线 §m",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Random",
+              "Description": "接下来的文字 随机闪烁的乱码字符 §k",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Clear",
+              "Description": "接下来的文字 清除所有格式§r",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            }
+          ],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": "格式化代码实用工具类"
+        },
+        {
           "ClassName": "logger",
           "AllFunc": [
             {
@@ -4433,176 +4603,6 @@
           "IsStatic": true,
           "IsInterface": false,
           "Description": "💡 插件加载相关 API"
-        },
-        {
-          "ClassName": "Text",
-          "AllFunc": [],
-          "AllProperty": [
-            {
-              "PropertyName": "Black",
-              "Description": "接下来的文字为 黑色 §0",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "DarkBlue",
-              "Description": "接下来的文字为 深蓝色 §1",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "DarkGreen",
-              "Description": "接下来的文字为 深绿色 §2",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "DarkAqua",
-              "Description": "接下来的文字为 湖蓝色 §3",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "DarkRed",
-              "Description": "接下来的文字为 深红色 §4",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "DarkPurple",
-              "Description": "接下来的文字为 紫色 §5",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "Gold",
-              "Description": "接下来的文字为 金色 §6",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "Gray",
-              "Description": "接下来的文字为 灰色 §7",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "DarkGray",
-              "Description": "接下来的文字为 深灰色 §8",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "Blue",
-              "Description": "接下来的文字为 蓝色§9",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "Green",
-              "Description": "接下来的文字为 浅绿色 §a",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "Aqua",
-              "Description": "接下来的文字为 天蓝色 §b",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "Red",
-              "Description": "接下来的文字为 浅红色 §c",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "LightPurple",
-              "Description": "接下来的文字为 浅紫色 §d",
-              "PropertyType": "",
-              "IsReadonly": false,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "Yellow",
-              "Description": "接下来的文字为 浅黄色 §e",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "White",
-              "Description": "接下来的文字为 白色 §f",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "MinecoinGold ",
-              "Description": "接下来的文字为 硬币金色 §g",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "Bold",
-              "Description": "接下来的文字 加粗 §l",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "Italics",
-              "Description": "接下来的文字 意大利体（俗称斜体）§o",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "Underline",
-              "Description": "接下来的文字 下划线 §n",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "StrikeThrough",
-              "Description": "接下来的文字 删除线 §m",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "Random",
-              "Description": "接下来的文字 随机闪烁的乱码字符 §k",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            },
-            {
-              "PropertyName": "Clear",
-              "Description": "接下来的文字 清除所有格式§r",
-              "PropertyType": "",
-              "IsReadonly": true,
-              "IsStatic": true
-            }
-          ],
-          "IsStatic": true,
-          "IsInterface": false,
-          "Description": "格式化代码实用工具类"
         }
       ]
     },
