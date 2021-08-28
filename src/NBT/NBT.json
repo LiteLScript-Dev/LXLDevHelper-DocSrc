@@ -97,77 +97,77 @@
   ],
   "AllProperty": [
     {
-      "PropertyName": "NBT.End",
+      "PropertyName": "End",
       "Description": "NbtValue",
       "PropertyType": "NbtValue",
       "IsReadonly": false,
       "IsStatic": true
     },
     {
-      "PropertyName": "NBT.Byte",
+      "PropertyName": "Byte",
       "Description": "NbtValue",
       "PropertyType": "NbtValue",
       "IsReadonly": false,
       "IsStatic": true
     },
     {
-      "PropertyName": "NBT.Short",
+      "PropertyName": "Short",
       "Description": "NbtValue",
       "PropertyType": "NbtValue",
       "IsReadonly": false,
       "IsStatic": true
     },
     {
-      "PropertyName": "NBT.Int",
+      "PropertyName": "Int",
       "Description": "NbtValue",
       "PropertyType": "NbtValue",
       "IsReadonly": false,
       "IsStatic": true
     },
     {
-      "PropertyName": "NBT.Long",
+      "PropertyName": "Long",
       "Description": "NbtValue",
       "PropertyType": "NbtValue",
       "IsReadonly": false,
       "IsStatic": true
     },
     {
-      "PropertyName": "NBT.Float",
+      "PropertyName": "Float",
       "Description": "NbtValue",
       "PropertyType": "NbtValue",
       "IsReadonly": false,
       "IsStatic": true
     },
     {
-      "PropertyName": "NBT.Double",
+      "PropertyName": "Double",
       "Description": "NbtValue",
       "PropertyType": "NbtValue",
       "IsReadonly": false,
       "IsStatic": true
     },
     {
-      "PropertyName": "NBT.ByteArray",
+      "PropertyName": "ByteArray",
       "Description": "ByteArray",
       "PropertyType": "NbtValue",
       "IsReadonly": false,
       "IsStatic": true
     },
     {
-      "PropertyName": "NBT.String",
+      "PropertyName": "String",
       "Description": "NbtValue",
       "PropertyType": "NbtValue",
       "IsReadonly": false,
       "IsStatic": true
     },
     {
-      "PropertyName": "NBT.List",
+      "PropertyName": "List",
       "Description": "NbtList",
       "PropertyType": "NbtList",
       "IsReadonly": false,
       "IsStatic": true
     },
     {
-      "PropertyName": "NBT.Compound",
+      "PropertyName": "Compound",
       "Description": "NbtCompound",
       "PropertyType": "NbtCompound",
       "IsReadonly": false,
