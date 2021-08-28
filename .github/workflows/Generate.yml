@@ -65,6 +65,7 @@ jobs:
         git config --global user.name moxicat
         git add *
         git commit -m "update" -a
+        git pull origin main
     - name: Push change
       uses: ad-m/github-push-action@master
       with:
