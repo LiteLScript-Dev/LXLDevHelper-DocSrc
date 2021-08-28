@@ -41,7 +41,7 @@ jobs:
       uses: carlosperate/download-file-action@v1.0.3
       with:
        file-url: "https://github.com/LiteLDev-LXL/LXLDevHelper-DocSrc/raw/main/raw.json"
-       file-name: raw.json"
+       file-name: "raw.json"
     - name: Run jar
       run: |
         rm -rf Library/
