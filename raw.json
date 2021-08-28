@@ -2398,6 +2398,741 @@
       ]
     },
     {
+      "DirName": "Data&Conf",
+      "AllClass": [
+        {
+          "ClassName": "Conf",
+          "AllFunc": [
+            {
+              "Description": "读取布尔项(ini)",
+              "FuncName": "getBool",
+              "ReturnDescription": "指定配置项的数据",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项键名",
+                  "ParamType": "String",
+                  "ParamName": "section",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）当读取失败时返回的默认值",
+                  "ParamType": "Boolean",
+                  "ParamName": "default_cfg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "读取浮点数项(ini)",
+              "FuncName": "getFloat",
+              "ReturnDescription": "指定配置项的数据",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项键名",
+                  "ParamType": "String",
+                  "ParamName": "section",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）当读取失败时返回的默认值",
+                  "ParamType": "Float",
+                  "ParamName": "default_cfg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Float"
+            },
+            {
+              "Description": "读取字符串项(ini)",
+              "FuncName": "getStr",
+              "ReturnDescription": "指定配置项的数据",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项键名",
+                  "ParamType": "String",
+                  "ParamName": "section",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）当读取失败时返回的默认值",
+                  "ParamType": "String",
+                  "ParamName": "default_cfg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "读取整数项(ini)",
+              "FuncName": "getInt",
+              "ReturnDescription": "指定配置项的数据",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项键名",
+                  "ParamType": "String",
+                  "ParamName": "section",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）当读取失败时返回的默认值",
+                  "ParamType": "Integer",
+                  "ParamName": "default_cfg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "写入配置项(ini)",
+              "FuncName": "set",
+              "ReturnDescription": "是否写入成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项键名",
+                  "ParamType": "String",
+                  "ParamName": "section",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的配置数据。允许的数据类型有：Integer Float String Boolean",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "删除配置项(json)",
+              "FuncName": "delete",
+              "ReturnDescription": "是否删除成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "读取配置项(json)",
+              "FuncName": "get",
+              "ReturnDescription": "指定配置项的数据",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "可选参数）当读取失败时返回的默认值",
+                  "ParamType": "Any",
+                  "ParamName": "default_cfg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "写入配置项(json)",
+              "FuncName": "set",
+              "ReturnDescription": "是否写入成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "删除配置项(ini)",
+              "FuncName": "delete",
+              "ReturnDescription": "是否删除成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "配置项键名",
+                  "ParamType": "String",
+                  "ParamName": "section",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "重新加载文件中的配置项",
+              "FuncName": "reload",
+              "ReturnDescription": "是否成功加载",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": ""
+            },
+            {
+              "Description": "关闭配置文件\r\n配置文件关闭之后，请勿继续使用！",
+              "FuncName": "close",
+              "ReturnDescription": "是否成功关闭",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": ""
+            },
+            {
+              "Description": "获取配置文件路径",
+              "FuncName": "getPath",
+              "ReturnDescription": "当前配置文件的文件路径",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "读取整个配置文件的内容",
+              "FuncName": "read",
+              "ReturnDescription": "当前配置文件的所有内容",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "写入整个配置文件的内容",
+              "FuncName": "write",
+              "ReturnDescription": "是否写入成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "写入的内容",
+                  "ParamType": "String",
+                  "ParamName": "content",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": ""
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "Conf类"
+        },
+        {
+          "ClassName": "data",
+          "AllFunc": [
+            {
+              "Description": "创建 / 打开一个配置文件",
+              "FuncName": "openConfig",
+              "ReturnDescription": "打开 / 创建的配置文件对象，如果返回值为Null，则代表创建 / 打开失败",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置文件所在路径，以BDS根目录为基准\n如果配置文件路径中的目录尚不存在，接口会自动创建，不需要手动调用file.createDir",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）配置文件的格式，字符串形式。可选项有：json  或  ini",
+                  "ParamType": "String",
+                  "ParamName": "format",
+                  "Optional": true
+                },
+                {
+                  "Description": "（可选参数）配置文件的默认内容。\n如果初始化时目标文件不存在，引擎将新建一个配置文件并将此处的默认内容写入文件中。\n如果不传入此参数，新建时的配置文件将为空",
+                  "ParamType": "String",
+                  "ParamName": "default_cfg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Conf"
+            },
+            {
+              "Description": "创建 / 打开数据库\r\n在使用数据库之前，你先需要给出一个数据库路径，LXL将打开/创建指定的数据库并返回一个数据库对象。\r\n一个leveldb数据库是由多个文件组成的，所以你需要传入一个文件夹的路径，数据库文件会被储存于这个文件夹当中。\r\n如果这个目录已含有一个数据库，LXL会将它打开，否则会新建一个。",
+              "FuncName": "openDB",
+              "ReturnDescription": "打开 / 创建的数据库对象，如果返回值为Null，则代表创建 / 打开失败",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "数据库的储存目录路径，以BDS根目录为基准",
+                  "ParamType": "String",
+                  "ParamName": "dir",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "DB"
+            },
+            {
+              "Description": "变量转换为Json字符串",
+              "FuncName": "toJson",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "要转换为Json字符串的变量。允许进行转换的数据类型有：\nInteger Float String Boolean Array Object \n其中，Array 和 Object 内部仅能嵌套上面出现的这些元素",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）如果要格式化输出的字符串，则传入此参数\n代表每个缩进的空格数量，这样输出的Json串更适合人阅读\n此参数默认为0，即不对输出字符串进行格式化",
+                  "ParamType": "Integer",
+                  "ParamName": "space",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "Json字符串解析为变量",
+              "FuncName": "parseJson",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "Json_str",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "字符串转MD5",
+              "FuncName": "toMD5",
+              "ReturnDescription": "转换的结果",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "string",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "字符串转SHA1",
+              "FuncName": "toSHA1",
+              "ReturnDescription": "转换的结果",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "string",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "String"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": "data类"
+        },
+        {
+          "ClassName": "DB",
+          "AllFunc": [
+            {
+              "Description": "写入数据项",
+              "FuncName": "set",
+              "ReturnDescription": "",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "读取数据项",
+              "FuncName": "get",
+              "ReturnDescription": "",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "删除数据项",
+              "FuncName": "delete",
+              "ReturnDescription": "",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "获取所有数据项名字",
+              "FuncName": "listKey",
+              "ReturnDescription": "",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Array@String"
+            },
+            {
+              "Description": "关闭数据库",
+              "FuncName": "close",
+              "ReturnDescription": "是否成功关闭",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": ""
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "获取所有数据项名字"
+        },
+        {
+          "ClassName": "file",
+          "AllFunc": [
+            {
+              "Description": "",
+              "FuncName": "readFrom",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "",
+              "FuncName": "writeTo",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "text",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "writeLine",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "text",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "open",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                },
+                {
+                  "Description": "文件的打开模式",
+                  "ParamType": "Any",
+                  "ParamName": "mode",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "Boolean",
+                  "ParamName": "isBinary",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "File"
+            },
+            {
+              "Description": "创建文件夹",
+              "FuncName": "createDir",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "目标文件夹的路径。可以直接创建多层，不需要逐层创建",
+                  "ParamType": "String",
+                  "ParamName": "dir",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "创建文件夹",
+              "FuncName": "mkdir",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "目标文件夹的路径。可以直接创建多层，不需要逐层创建",
+                  "ParamType": "String",
+                  "ParamName": "dir",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "exists",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "copy",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "from",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "to",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "move",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "from",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "to",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "rename",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "old",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "new",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "getFileSize",
+              "ReturnDescription": "文件的大小（字节）",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "判断指定路径是否是文件夹",
+              "FuncName": "checkIsDir",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "列出指定文件夹下的所有文件 / 文件夹",
+              "FuncName": "getFilesList",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "",
+                  "ParamName": "dir",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Array@String"
+            }
+          ],
+          "AllProperty": [
+            {
+              "PropertyName": "readMode",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "writeMode",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "appendMode",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": true
+            }
+          ],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": ""
+        }
+      ]
+    },
+    {
       "DirName": "Event",
       "AllClass": [
         {
@@ -3135,14 +3870,7 @@
               "FuncName": "setTitle",
               "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
               "IsStatic": false,
-              "Params": [
-                {
-                  "Description": "标题",
-                  "ParamType": "String",
-                  "ParamName": "text",
-                  "Optional": false
-                }
-              ],
+              "Params": [],
               "ReturnType": "CustomForm"
             },
             {
@@ -3340,14 +4068,7 @@
               "FuncName": "setTitle",
               "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
               "IsStatic": false,
-              "Params": [
-                {
-                  "Description": "标题",
-                  "ParamType": "String",
-                  "ParamName": "text",
-                  "Optional": false
-                }
-              ],
+              "Params": [],
               "ReturnType": "SimpleForm"
             },
             {
@@ -3404,168 +4125,168 @@
             {
               "PropertyName": "Black",
               "Description": "接下来的文字为 黑色 §0",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "DarkBlue",
               "Description": "接下来的文字为 深蓝色 §1",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "DarkGreen",
               "Description": "接下来的文字为 深绿色 §2",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "DarkAqua",
               "Description": "接下来的文字为 湖蓝色 §3",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "DarkRed",
               "Description": "接下来的文字为 深红色 §4",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "DarkPurple",
               "Description": "接下来的文字为 紫色 §5",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Gold",
               "Description": "接下来的文字为 金色 §6",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Gray",
               "Description": "接下来的文字为 灰色 §7",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "DarkGray",
               "Description": "接下来的文字为 深灰色 §8",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Blue",
               "Description": "接下来的文字为 蓝色§9",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Green",
               "Description": "接下来的文字为 浅绿色 §a",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Aqua",
               "Description": "接下来的文字为 天蓝色 §b",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Red",
               "Description": "接下来的文字为 浅红色 §c",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "LightPurple",
               "Description": "接下来的文字为 浅紫色 §d",
-              "PropertyType": "String",
+              "PropertyType": "",
               "IsReadonly": false,
               "IsStatic": true
             },
             {
               "PropertyName": "Yellow",
               "Description": "接下来的文字为 浅黄色 §e",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "White",
               "Description": "接下来的文字为 白色 §f",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "MinecoinGold ",
               "Description": "接下来的文字为 硬币金色 §g",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Bold",
               "Description": "接下来的文字 加粗 §l",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Italics",
               "Description": "接下来的文字 意大利体（俗称斜体）§o",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Underline",
               "Description": "接下来的文字 下划线 §n",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "StrikeThrough",
               "Description": "接下来的文字 删除线 §m",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Random",
               "Description": "接下来的文字 随机闪烁的乱码字符 §k",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Clear",
               "Description": "接下来的文字 清除所有格式§r",
-              "PropertyType": "String",
-              "IsReadonly": false,
+              "PropertyType": "",
+              "IsReadonly": true,
               "IsStatic": true
             }
           ],
           "IsStatic": true,
           "IsInterface": false,
-          "Description": "格式化代码实用工具"
+          "Description": "格式化代码实用工具类"
         },
         {
           "ClassName": "logger",
@@ -3886,6 +4607,173 @@
       ]
     },
     {
+      "DirName": "Money",
+      "AllClass": [
+        {
+          "ClassName": "money",
+          "AllFunc": [
+            {
+              "Description": "设置玩家的存款金额",
+              "FuncName": "set",
+              "ReturnDescription": "是否设置成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid",
+                  "Optional": false
+                },
+                {
+                  "Description": "要设置的金额",
+                  "ParamType": "Integer",
+                  "ParamName": "money",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "获取玩家的存款金额",
+              "FuncName": "get",
+              "ReturnDescription": "玩家的资金数值",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid",
+                  "Optional": false
+                },
+                {
+                  "Description": "玩家的资金数值",
+                  "ParamType": "Integer",
+                  "ParamName": "money",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "增加玩家的存款",
+              "FuncName": "add",
+              "ReturnDescription": "是否设置成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid",
+                  "Optional": false
+                },
+                {
+                  "Description": "要增加的金额",
+                  "ParamType": "Integer",
+                  "ParamName": "money",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "减少玩家的存款",
+              "FuncName": "reduce",
+              "ReturnDescription": "是否设置成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid",
+                  "Optional": false
+                },
+                {
+                  "Description": "要减小的金额",
+                  "ParamType": "Integer",
+                  "ParamName": "money",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "进行一笔转账",
+              "FuncName": "trans",
+              "ReturnDescription": "是否转账成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "付款的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid_plf",
+                  "Optional": false
+                },
+                {
+                  "Description": "收款的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid_pl2",
+                  "Optional": false
+                },
+                {
+                  "Description": "要支付的金额",
+                  "ParamType": "Integer",
+                  "ParamName": "money",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）给这笔转账附加一些文字说明",
+                  "ParamType": "String",
+                  "ParamName": "node",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "查询历史账单",
+              "FuncName": "getHistory",
+              "ReturnDescription": "查询结果对象的数组",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid",
+                  "Optional": false
+                },
+                {
+                  "Description": "查询从现在开始往前time秒的记录",
+                  "ParamType": "Integer",
+                  "ParamName": "time",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Array@ObjectTransHistory"
+            },
+            {
+              "Description": "删除账单历史记录",
+              "FuncName": "clearHistory",
+              "ReturnDescription": "是否删除成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "删除从现在开始往前time秒的记录",
+                  "ParamType": "Integer",
+                  "ParamName": "time",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": ""
+        }
+      ]
+    },
+    {
       "DirName": "NBT",
       "AllClass": [
         {
@@ -3990,77 +4878,77 @@
               "PropertyName": "End",
               "Description": "NbtValue",
               "PropertyType": "NbtValue",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Byte",
               "Description": "NbtValue",
               "PropertyType": "NbtValue",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Short",
               "Description": "NbtValue",
               "PropertyType": "NbtValue",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Int",
               "Description": "NbtValue",
               "PropertyType": "NbtValue",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Long",
               "Description": "NbtValue",
               "PropertyType": "NbtValue",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Float",
               "Description": "NbtValue",
               "PropertyType": "NbtValue",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Double",
               "Description": "NbtValue",
               "PropertyType": "NbtValue",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "ByteArray",
               "Description": "ByteArray",
               "PropertyType": "NbtValue",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "String",
               "Description": "NbtValue",
               "PropertyType": "NbtValue",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "List",
               "Description": "NbtList",
               "PropertyType": "NbtList",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": true
             },
             {
               "PropertyName": "Compound",
               "Description": "NbtCompound",
               "PropertyType": "NbtCompound",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": true
             }
           ],
@@ -4823,6 +5711,50 @@
           "IsStatic": true,
           "IsInterface": false,
           "Description": "mc.runcmdEx的返回结果"
+        },
+        {
+          "ClassName": "ObjectTransHistory",
+          "AllFunc": [],
+          "AllProperty": [
+            {
+              "PropertyName": "from",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "to",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "money",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "time",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "note",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": false
+            }
+          ],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "历史账单"
         },
         {
           "ClassName": "ObjectVersion",
