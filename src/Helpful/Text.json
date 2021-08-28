@@ -166,5 +166,5 @@
   ],
   "IsStatic": true,
   "IsInterface": false,
-  "Description": "格式化代码实用工具"
+  "Description": "格式化代码实用工具类"
 }
