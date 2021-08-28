@@ -16,24 +16,10 @@ jobs:
     - name: Generate Rawout
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: |
-        ./LXLDevHelperBuilder.exe src rawout//raw.json tsout
+        ./LXLDevHelperBuilder.exe src raw.json tsout
       shell: bash
-    - name: commit
-      run: |
-        git config --global user.email 3601594248@qq.com
-        git config --global user.name moxicat
-        git add rawout*
-        git commit -m "update" -a
-    - name: Push change
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+    - name: Add & Commit
+      uses: stefanzweifel/git-auto-commit-action@v4
 
   generate:
     needs: build
@@ -53,9 +39,7 @@ jobs:
        file-name: "Generate.jar"
     - name: Run jar
       run: |
-        rm -rf Library/*
-        mv rawout/* .
-        rm -rf rawout
+        rm -rf Library/
         java -jar Generate.jar
     - name: ls
       run: ls
@@ -72,19 +56,5 @@ jobs:
         rm -rf Library
         rm -rf raw.json
 
-    - name: commit
-      run: |
-        git config --global user.email 3601594248@qq.com
-        git config --global user.name moxicat
-        git add *
-        git commit -m "update" -a
-    - name: Push change
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+    - name: Add & Commit
+      uses: stefanzweifel/git-auto-commit-action@v4
