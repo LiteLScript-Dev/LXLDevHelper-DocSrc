@@ -39,6 +39,7 @@ jobs:
        file-name: "Generate.jar"
     - name: Run jar
       run: |
+        ls
         rm -rf Library/
         java -jar Generate.jar
     - name: ls
