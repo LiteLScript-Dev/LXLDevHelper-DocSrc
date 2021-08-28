@@ -2407,7 +2407,7 @@
               "Description": "读取布尔项(ini)",
               "FuncName": "getBool",
               "ReturnDescription": "指定配置项的数据",
-              "IsStatic": true,
+              "IsStatic": false,
               "Params": [
                 {
                   "Description": "配置项键名",
@@ -2434,7 +2434,7 @@
               "Description": "读取浮点数项(ini)",
               "FuncName": "getFloat",
               "ReturnDescription": "指定配置项的数据",
-              "IsStatic": true,
+              "IsStatic": false,
               "Params": [
                 {
                   "Description": "配置项键名",
@@ -2461,7 +2461,7 @@
               "Description": "读取字符串项(ini)",
               "FuncName": "getStr",
               "ReturnDescription": "指定配置项的数据",
-              "IsStatic": true,
+              "IsStatic": false,
               "Params": [
                 {
                   "Description": "配置项键名",
@@ -2488,7 +2488,7 @@
               "Description": "读取整数项(ini)",
               "FuncName": "getInt",
               "ReturnDescription": "指定配置项的数据",
-              "IsStatic": true,
+              "IsStatic": false,
               "Params": [
                 {
                   "Description": "配置项键名",
@@ -2515,7 +2515,7 @@
               "Description": "写入配置项(ini)",
               "FuncName": "set",
               "ReturnDescription": "是否写入成功",
-              "IsStatic": true,
+              "IsStatic": false,
               "Params": [
                 {
                   "Description": "配置项键名",
@@ -2542,7 +2542,7 @@
               "Description": "删除配置项(json)",
               "FuncName": "delete",
               "ReturnDescription": "是否删除成功",
-              "IsStatic": true,
+              "IsStatic": false,
               "Params": [
                 {
                   "Description": "配置项名字",
@@ -2557,7 +2557,7 @@
               "Description": "读取配置项(json)",
               "FuncName": "get",
               "ReturnDescription": "指定配置项的数据",
-              "IsStatic": true,
+              "IsStatic": false,
               "Params": [
                 {
                   "Description": "配置项名字",
@@ -2578,7 +2578,7 @@
               "Description": "写入配置项(json)",
               "FuncName": "set",
               "ReturnDescription": "是否写入成功",
-              "IsStatic": true,
+              "IsStatic": false,
               "Params": [
                 {
                   "Description": "配置项名字",
@@ -3916,7 +3916,7 @@
                 {
                   "Description": "（可选参数）输入框中默认存在的内容",
                   "ParamType": "String",
-                  "ParamName": "default_text",
+                  "ParamName": "Defaultext",
                   "Optional": true
                 }
               ],
@@ -3937,7 +3937,7 @@
                 {
                   "Description": "（可选参数）开关的默认状态 开 / 关",
                   "ParamType": "Boolean",
-                  "ParamName": "default",
+                  "ParamName": "Default",
                   "Optional": true
                 }
               ],
@@ -3964,7 +3964,7 @@
                 {
                   "Description": "可选参数）下拉菜单默认选中的列表项序号。",
                   "ParamType": "Integer",
-                  "ParamName": "default",
+                  "ParamName": "Default",
                   "Optional": true
                 }
               ],
@@ -4003,7 +4003,7 @@
                 {
                   "Description": "（可选参数）游标滑块默认初始格数，数值必须在最小和最大格数之间。",
                   "ParamType": "Integer",
-                  "ParamName": "default",
+                  "ParamName": "Default",
                   "Optional": true
                 }
               ],
@@ -4030,7 +4030,7 @@
                 {
                   "Description": "（可选参数）步进滑块默认初始选项。序号从0开始编号",
                   "ParamType": "Integer",
-                  "ParamName": "default",
+                  "ParamName": "Default",
                   "Optional": true
                 }
               ],
