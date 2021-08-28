@@ -1,0 +1,63 @@
+{
+  "ClassName": "NbtValue",
+  "AllFunc": [
+    {
+      "Description": "获取NBT对象储存的数据类型",
+      "FuncName": "getType",
+      "ReturnDescription": "此NBT对象储存的数据类型",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": ""
+    },
+    {
+      "Description": "将NBT对象转换为字符串",
+      "FuncName": "toString",
+      "ReturnDescription": "对应的Json字符串",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "（可选参数）如果要格式化输出的字符串，则传入此参数",
+          "ParamType": "Integer",
+          "ParamName": "space",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "String"
+    },
+    {
+      "Description": "清理此NBT对象",
+      "FuncName": "destroy",
+      "ReturnDescription": "是否成功清理",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "设置对象的数据",
+      "FuncName": "set",
+      "ReturnDescription": "是否成功写入",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "根据这个NBT对象的数据类型，写入对应类型的数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "读取对象的数据",
+      "FuncName": "get",
+      "ReturnDescription": "对象中储存的数据",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Any"
+    }
+  ],
+  "AllProperty": [],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": ""
+}

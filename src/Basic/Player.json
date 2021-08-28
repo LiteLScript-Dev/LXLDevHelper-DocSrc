@@ -491,6 +491,147 @@
         }
       ],
       "ReturnType": "Boolean"
+    },
+    {
+      "Description": "向玩家发送模式表单，模式表单包含一个标题、一个文本显示框以及两个按钮",
+      "FuncName": "sendModalForm",
+      "ReturnDescription": "发送的表单ID",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "表单标题",
+          "ParamType": "String",
+          "ParamName": "title",
+          "Optional": false
+        },
+        {
+          "Description": "表单内容",
+          "ParamType": "String",
+          "ParamName": "content",
+          "Optional": false
+        },
+        {
+          "Description": "按钮1文本的字符串",
+          "ParamType": "String",
+          "ParamName": "button1",
+          "Optional": false
+        },
+        {
+          "Description": "按钮2文本的字符串",
+          "ParamType": "String",
+          "ParamName": "button2",
+          "Optional": false
+        },
+        {
+          "Description": "玩家点击按钮之后被调用的回调函数。",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"id\",\"Optional\":false}],\"ReturnType\":\"void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Integer"
+    },
+    {
+      "Description": "向玩家发送普通表单\r\n普通表单包含一个标题、一个文本显示框以及若干按钮，可以设置按钮上显示的图标",
+      "FuncName": "sendSimpleForm",
+      "ReturnDescription": "发送的表单ID",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "表单标题",
+          "ParamType": "String",
+          "ParamName": "title",
+          "Optional": false
+        },
+        {
+          "Description": "表单内容",
+          "ParamType": "String",
+          "ParamName": "content",
+          "Optional": false
+        },
+        {
+          "Description": "各个按钮文本的字符串数组",
+          "ParamType": "Array@String",
+          "ParamName": "buttons",
+          "Optional": false
+        },
+        {
+          "Description": "各个按钮对应的图片路径\n对于表单上的每个按钮，如下设置对应的图标\n 1. 如果使用材质包路径，图片路径应该形如 textures/items/apple\n 2. 如果使用URL路径，那么在这里放入完整的URL即可，形如 https://www.baidu.com/img/flexible/logo/pc/result.png\n 3. 如果这个按钮你不需要显示图片，那将对应的图片路径设置为空字符串即可",
+          "ParamType": "Array@String",
+          "ParamName": "images",
+          "Optional": false
+        },
+        {
+          "Description": "玩家点击按钮之后被调用的回调函数",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"id\",\"Optional\":false}],\"ReturnType\":\"void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Integer"
+    },
+    {
+      "Description": "向玩家发送自定义表单（Json格式）",
+      "FuncName": "sendCustomForm",
+      "ReturnDescription": "发送的表单ID",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "自定义表单json字符串",
+          "ParamType": "String",
+          "ParamName": "json_data",
+          "Optional": false
+        },
+        {
+          "Description": "玩家提交表单之后被调用的回调函数。",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Array@any\",\"ParamName\":\"data\",\"Optional\":false}],\"ReturnType\":\"void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Integer"
+    },
+    {
+      "Description": "",
+      "FuncName": "sendForm",
+      "ReturnDescription": "",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "配置好的表单对象",
+          "ParamType": "SimpleForm",
+          "ParamName": "form",
+          "Optional": false
+        },
+        {
+          "Description": "玩家提交表单之后被调用的回调函数。",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Null\",\"ParamName\":\"id\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": ""
+    },
+    {
+      "Description": "",
+      "FuncName": "sendForm",
+      "ReturnDescription": "",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "配置好的表单对象",
+          "ParamType": "CustomForm",
+          "ParamName": "form",
+          "Optional": false
+        },
+        {
+          "Description": "玩家提交表单之后被调用的回调函数。",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Any[]\",\"ParamName\":\"data\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": ""
     }
   ],
   "AllProperty": [
@@ -498,91 +639,105 @@
       "PropertyName": "name",
       "Description": "玩家名",
       "PropertyType": "String",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "pos",
       "Description": "玩家所在坐标",
       "PropertyType": "FloatPos",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "realName",
       "Description": "玩家的真实名字",
       "PropertyType": "String",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "xuid",
       "Description": "玩家Xuid字符串",
       "PropertyType": "String",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "uuid",
       "Description": "玩家Uuid字符串",
       "PropertyType": "String",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "permLevel",
       "Description": "玩家的操作权限等级（0 - 4）",
       "PropertyType": "Integer",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "gameMode",
       "Description": "玩家的游戏模式（0 - 3",
       "PropertyType": "Integer",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "maxHealth",
       "Description": "玩家最大生命值",
       "PropertyType": "Integer",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "health",
       "Description": "玩家当前生命值",
       "PropertyType": "Integer",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "inAir",
       "Description": "玩家当前是否悬空",
       "PropertyType": "Boolean",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "sneaking ",
       "Description": "玩家当前是否正在潜行",
       "PropertyType": "Boolean",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "speed",
       "Description": "玩家当前速度",
       "PropertyType": "Float",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "direction",
       "Description": "玩家当前朝向（0 - 4）",
       "PropertyType": "Integer",
-      "IsReadonly": false,
+      "IsReadonly": true,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "blockPos",
+      "Description": "玩家所在的方块坐标",
+      "PropertyType": "IntPos",
+      "IsReadonly": true,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "inWater",
+      "Description": "玩家当前是否在水中",
+      "PropertyType": "Boolean",
+      "IsReadonly": true,
       "IsStatic": false
     }
   ],

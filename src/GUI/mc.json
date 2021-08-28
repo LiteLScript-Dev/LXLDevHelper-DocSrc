@@ -1,0 +1,25 @@
+{
+  "ClassName": "mc",
+  "AllFunc": [
+    {
+      "Description": "创建表单对象",
+      "FuncName": "newCustomForm",
+      "ReturnDescription": "新创建的空白表单对象",
+      "IsStatic": true,
+      "Params": [],
+      "ReturnType": "CustomForm"
+    },
+    {
+      "Description": "创建表单对象",
+      "FuncName": "newSimpleForm",
+      "ReturnDescription": "新创建的空白表单对象",
+      "IsStatic": true,
+      "Params": [],
+      "ReturnType": "SimpleForm"
+    }
+  ],
+  "AllProperty": [],
+  "IsStatic": true,
+  "IsInterface": false,
+  "Description": "mc通用接口"
+}

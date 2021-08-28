@@ -1,0 +1,241 @@
+{
+  "ClassName": "NbtCompound",
+  "AllFunc": [
+    {
+      "Description": "获取NBT对象储存的数据类型",
+      "FuncName": "getType",
+      "ReturnDescription": "此NBT对象储存的数据类型",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": ""
+    },
+    {
+      "Description": "将NBT对象转换为字符串",
+      "FuncName": "toString",
+      "ReturnDescription": "对应的Json字符串",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "（可选参数）如果要格式化输出的字符串，则传入此参数",
+          "ParamType": "Integer",
+          "ParamName": "space",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "String"
+    },
+    {
+      "Description": "NBT对象序列化为SNBT",
+      "FuncName": "toSNBT",
+      "ReturnDescription": "对应的SNBT字符串",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "String"
+    },
+    {
+      "Description": "NBT对象序列化为二进制NBT",
+      "FuncName": "toBinary",
+      "ReturnDescription": "对应的二进制NBT数据",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "ByteBuffer"
+    },
+    {
+      "Description": "清理此NBT对象",
+      "FuncName": "destroy",
+      "ReturnDescription": "是否成功清理",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setEnd",
+      "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的键名",
+          "ParamType": "String",
+          "ParamName": "key",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setByte",
+      "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的键名",
+          "ParamType": "String",
+          "ParamName": "key",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setShort",
+      "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的键名",
+          "ParamType": "String",
+          "ParamName": "key",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setInt",
+      "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的键名",
+          "ParamType": "String",
+          "ParamName": "key",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setLong",
+      "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的键名",
+          "ParamType": "String",
+          "ParamName": "key",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setFloat",
+      "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的键名",
+          "ParamType": "String",
+          "ParamName": "key",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setDouble",
+      "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的键名",
+          "ParamType": "String",
+          "ParamName": "key",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setString",
+      "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的键名",
+          "ParamType": "String",
+          "ParamName": "key",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "读取键对应的值的具体数据",
+      "FuncName": "getData",
+      "ReturnDescription": "键对应的值的具体数据",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的键名",
+          "ParamType": "String",
+          "ParamName": "key",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "将Compound类型转换为Object",
+      "FuncName": "toObject",
+      "ReturnDescription": "对应的对象 / 表",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Object"
+    }
+  ],
+  "AllProperty": [],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": ""
+}

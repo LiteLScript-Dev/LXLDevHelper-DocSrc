@@ -1,0 +1,180 @@
+{
+  "ClassName": "NBT",
+  "AllFunc": [
+    {
+      "Description": "根据你提供的数据，来创建新的NBT对象",
+      "FuncName": "createTag",
+      "ReturnDescription": "生成的NBT对象",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "你要创建的NBT对象的数据类型",
+          "ParamType": "NbtValue",
+          "ParamName": "type",
+          "Optional": false
+        },
+        {
+          "Description": "根据你要创建的对象类型设置初始数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtValue"
+    },
+    {
+      "Description": "从 SNBT 字符串生成 NBT 对象",
+      "FuncName": "parseSNBT",
+      "ReturnDescription": "生成的NBT对象",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "你要解析的SNBT字符串",
+          "ParamType": "String",
+          "ParamName": "snbt",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "从二进制 NBT 数据生成 NBT 对象",
+      "FuncName": "parseBinaryNBT",
+      "ReturnDescription": "生成的NBT对象",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "你要解析的二进制 NBT 数据",
+          "ParamType": "ByteBuffer",
+          "ParamName": "nbt",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "根据你提供的数据，来创建新的NBT对象",
+      "FuncName": "createTag",
+      "ReturnDescription": "生成的NBT对象",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "你要创建的NBT对象的数据类型",
+          "ParamType": "NbtList",
+          "ParamName": "type",
+          "Optional": false
+        },
+        {
+          "Description": "根据你要创建的对象类型设置初始数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtList"
+    },
+    {
+      "Description": "根据你提供的数据，来创建新的NBT对象",
+      "FuncName": "createTag",
+      "ReturnDescription": "生成的NBT对象",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "你要创建的NBT对象的数据类型",
+          "ParamType": "NbtCompound",
+          "ParamName": "type",
+          "Optional": false
+        },
+        {
+          "Description": "根据你要创建的对象类型设置初始数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtCompound"
+    }
+  ],
+  "AllProperty": [
+    {
+      "PropertyName": "NBT.End",
+      "Description": "NbtValue",
+      "PropertyType": "NbtValue",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "NBT.Byte",
+      "Description": "NbtValue",
+      "PropertyType": "NbtValue",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "NBT.Short",
+      "Description": "NbtValue",
+      "PropertyType": "NbtValue",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "NBT.Int",
+      "Description": "NbtValue",
+      "PropertyType": "NbtValue",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "NBT.Long",
+      "Description": "NbtValue",
+      "PropertyType": "NbtValue",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "NBT.Float",
+      "Description": "NbtValue",
+      "PropertyType": "NbtValue",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "NBT.Double",
+      "Description": "NbtValue",
+      "PropertyType": "NbtValue",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "NBT.ByteArray",
+      "Description": "ByteArray",
+      "PropertyType": "NbtValue",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "NBT.String",
+      "Description": "NbtValue",
+      "PropertyType": "NbtValue",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "NBT.List",
+      "Description": "NbtList",
+      "PropertyType": "NbtList",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "NBT.Compound",
+      "Description": "NbtCompound",
+      "PropertyType": "NbtCompound",
+      "IsReadonly": false,
+      "IsStatic": true
+    }
+  ],
+  "IsStatic": true,
+  "IsInterface": false,
+  "Description": "NBT"
+}

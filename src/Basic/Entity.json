@@ -187,6 +187,29 @@
         }
       ],
       "ReturnType": "Boolean"
+    },
+    {
+      "Description": "对实体造成伤害\r\n注意，此处造成的伤害为真实伤害，无法被盔甲等保护装备减免",
+      "FuncName": "hurt",
+      "ReturnDescription": "是否造成伤害",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "对实体造成的伤害数值",
+          "ParamType": "Integer",
+          "ParamName": "damage",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "刷新生物物品栏、盔甲栏",
+      "FuncName": "refreshItems",
+      "ReturnDescription": "",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
     }
   ],
   "AllProperty": [
@@ -194,63 +217,70 @@
       "PropertyName": "name",
       "Description": "实体名称",
       "PropertyType": "String",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "type",
       "Description": "实体标准类型名",
       "PropertyType": "String",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "id",
       "Description": "实体的游戏内id",
       "PropertyType": "Integer",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "pos",
       "Description": "实体所在坐标",
       "PropertyType": "FloatPos",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "blockPos",
       "Description": "实体所在的方块坐标",
       "PropertyType": "IntPos",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "maxHealth",
       "Description": "实体最大生命值",
       "PropertyType": "Integer",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "health",
       "Description": "实体当前生命值",
       "PropertyType": "Integer",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "inAir",
       "Description": "实体当前是否悬空",
       "PropertyType": "Boolean",
-      "IsReadonly": false,
+      "IsReadonly": true,
       "IsStatic": false
     },
     {
       "PropertyName": "speed",
       "Description": "实体当前速度",
       "PropertyType": "Float",
-      "IsReadonly": false,
+      "IsReadonly": true,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "inWater",
+      "Description": "实体当前是否在水中",
+      "PropertyType": "Boolean",
+      "IsReadonly": true,
       "IsStatic": false
     }
   ],

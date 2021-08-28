@@ -1,0 +1,173 @@
+{
+  "ClassName": "CustomForm",
+  "AllFunc": [
+    {
+      "Description": "设置表单的标题",
+      "FuncName": "setTitle",
+      "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "CustomForm"
+    },
+    {
+      "Description": "向表单内增加一行文本",
+      "FuncName": "addLabel",
+      "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "一行文本",
+          "ParamType": "String",
+          "ParamName": "text",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "CustomForm"
+    },
+    {
+      "Description": "向表单内增加一行输入框",
+      "FuncName": "addInput",
+      "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "输入框描述文本",
+          "ParamType": "String",
+          "ParamName": "title",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）输入框内的提示字符",
+          "ParamType": "String",
+          "ParamName": "placeholder",
+          "Optional": true
+        },
+        {
+          "Description": "（可选参数）输入框中默认存在的内容",
+          "ParamType": "String",
+          "ParamName": "default_text",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "CustomForm"
+    },
+    {
+      "Description": "向表单内增加一行开关选项",
+      "FuncName": "addSwitch",
+      "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "开关选项描述文本",
+          "ParamType": "String",
+          "ParamName": "title",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）开关的默认状态 开 / 关",
+          "ParamType": "Boolean",
+          "ParamName": "default",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "CustomForm"
+    },
+    {
+      "Description": "向表单内增加一行下拉菜单",
+      "FuncName": "addDropdown",
+      "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "下拉菜单描述文本",
+          "ParamType": "String",
+          "ParamName": "title",
+          "Optional": false
+        },
+        {
+          "Description": "下拉菜单中的选项文本列表",
+          "ParamType": "Array@String",
+          "ParamName": "items",
+          "Optional": false
+        },
+        {
+          "Description": "可选参数）下拉菜单默认选中的列表项序号。",
+          "ParamType": "Integer",
+          "ParamName": "default",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "CustomForm"
+    },
+    {
+      "Description": "向表单内增加一行游标滑块",
+      "FuncName": "addSlider",
+      "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "游标滑块描述文本",
+          "ParamType": "String",
+          "ParamName": "title",
+          "Optional": false
+        },
+        {
+          "Description": "游标滑块最小值",
+          "ParamType": "Integer",
+          "ParamName": "min",
+          "Optional": false
+        },
+        {
+          "Description": "游标滑块最大值",
+          "ParamType": "Integer",
+          "ParamName": "max",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）游标滑块调整的最小分度值，默认为1",
+          "ParamType": "Integer",
+          "ParamName": "step",
+          "Optional": true
+        },
+        {
+          "Description": "（可选参数）游标滑块默认初始格数，数值必须在最小和最大格数之间。",
+          "ParamType": "Integer",
+          "ParamName": "default",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "CustomForm"
+    },
+    {
+      "Description": "向表单内增加一行步进滑块",
+      "FuncName": "addStepSlider",
+      "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "步进滑块描述文本",
+          "ParamType": "String",
+          "ParamName": "title",
+          "Optional": false
+        },
+        {
+          "Description": "步进滑块的选项文本列表",
+          "ParamType": "Array@String",
+          "ParamName": "items",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）步进滑块默认初始选项。序号从0开始编号",
+          "ParamType": "Integer",
+          "ParamName": "default",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "CustomForm"
+    }
+  ],
+  "AllProperty": [],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "自定义表单类型"
+}
