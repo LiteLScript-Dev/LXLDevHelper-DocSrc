@@ -1,16 +1,16 @@
 ---NBT
 ---@class NBT 
----@field NBT.End NbtValue NbtValue
----@field NBT.Byte NbtValue NbtValue
----@field NBT.Short NbtValue NbtValue
----@field NBT.Int NbtValue NbtValue
----@field NBT.Long NbtValue NbtValue
----@field NBT.Float NbtValue NbtValue
----@field NBT.Double NbtValue NbtValue
----@field NBT.ByteArray NbtValue NbtValue
----@field NBT.String NbtValue NbtValue
----@field NBT.List NbtList NbtList
----@field NBT.Compound NbtCompound NbtCompound
+---@field End NbtValue NbtValue
+---@field Byte NbtValue NbtValue
+---@field Short NbtValue NbtValue
+---@field Int NbtValue NbtValue
+---@field Long NbtValue NbtValue
+---@field Float NbtValue NbtValue
+---@field Double NbtValue NbtValue
+---@field ByteArray NbtValue NbtValue
+---@field String NbtValue NbtValue
+---@field List NbtList NbtList
+---@field Compound NbtCompound NbtCompound
  NBT = {}
 
 ---根据你提供的数据，来创建新的NBT对象

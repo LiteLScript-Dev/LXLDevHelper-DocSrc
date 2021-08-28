@@ -7,57 +7,57 @@ class NBT {
  * NbtValue
  * @type NbtValue
  */ 
- NBT.End;
+ End;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- NBT.Byte;
+ Byte;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- NBT.Short;
+ Short;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- NBT.Int;
+ Int;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- NBT.Long;
+ Long;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- NBT.Float;
+ Float;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- NBT.Double;
+ Double;
 /**
  * ByteArray
  * @type NbtValue
  */ 
- NBT.ByteArray;
+ ByteArray;
 /**
  * NbtValue
  * @type NbtValue
  */ 
- NBT.String;
+ String;
 /**
  * NbtList
  * @type NbtList
  */ 
- NBT.List;
+ List;
 /**
  * NbtCompound
  * @type NbtCompound
  */ 
- NBT.Compound;
+ Compound;
   
   
 
