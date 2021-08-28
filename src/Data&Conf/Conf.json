@@ -1,0 +1,269 @@
+{
+  "ClassName": "Conf",
+  "AllFunc": [
+    {
+      "Description": "读取布尔项(ini)",
+      "FuncName": "getBool",
+      "ReturnDescription": "指定配置项的数据",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "配置项键名",
+          "ParamType": "String",
+          "ParamName": "section",
+          "Optional": false
+        },
+        {
+          "Description": "配置项名字",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）当读取失败时返回的默认值",
+          "ParamType": "Boolean",
+          "ParamName": "default_cfg",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "读取浮点数项(ini)",
+      "FuncName": "getFloat",
+      "ReturnDescription": "指定配置项的数据",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "配置项键名",
+          "ParamType": "String",
+          "ParamName": "section",
+          "Optional": false
+        },
+        {
+          "Description": "配置项名字",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）当读取失败时返回的默认值",
+          "ParamType": "Float",
+          "ParamName": "default_cfg",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Float"
+    },
+    {
+      "Description": "读取字符串项(ini)",
+      "FuncName": "getStr",
+      "ReturnDescription": "指定配置项的数据",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "配置项键名",
+          "ParamType": "String",
+          "ParamName": "section",
+          "Optional": false
+        },
+        {
+          "Description": "配置项名字",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）当读取失败时返回的默认值",
+          "ParamType": "String",
+          "ParamName": "default_cfg",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "String"
+    },
+    {
+      "Description": "读取整数项(ini)",
+      "FuncName": "getInt",
+      "ReturnDescription": "指定配置项的数据",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "配置项键名",
+          "ParamType": "String",
+          "ParamName": "section",
+          "Optional": false
+        },
+        {
+          "Description": "配置项名字",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）当读取失败时返回的默认值",
+          "ParamType": "Integer",
+          "ParamName": "default_cfg",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Integer"
+    },
+    {
+      "Description": "写入配置项(ini)",
+      "FuncName": "set",
+      "ReturnDescription": "是否写入成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "配置项键名",
+          "ParamType": "String",
+          "ParamName": "section",
+          "Optional": false
+        },
+        {
+          "Description": "配置项名字",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的配置数据。允许的数据类型有：Integer Float String Boolean",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "删除配置项(json)",
+      "FuncName": "delete",
+      "ReturnDescription": "是否删除成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "配置项名字",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "读取配置项(json)",
+      "FuncName": "get",
+      "ReturnDescription": "指定配置项的数据",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "配置项名字",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        },
+        {
+          "Description": "可选参数）当读取失败时返回的默认值",
+          "ParamType": "Any",
+          "ParamName": "default_cfg",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "写入配置项(json)",
+      "FuncName": "set",
+      "ReturnDescription": "是否写入成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "配置项名字",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        },
+        {
+          "Description": "配置项名字",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "删除配置项(ini)",
+      "FuncName": "delete",
+      "ReturnDescription": "是否删除成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "配置项键名",
+          "ParamType": "String",
+          "ParamName": "section",
+          "Optional": false
+        },
+        {
+          "Description": "配置项名字",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "重新加载文件中的配置项",
+      "FuncName": "reload",
+      "ReturnDescription": "是否成功加载",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": ""
+    },
+    {
+      "Description": "关闭配置文件\r\n配置文件关闭之后，请勿继续使用！",
+      "FuncName": "close",
+      "ReturnDescription": "是否成功关闭",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": ""
+    },
+    {
+      "Description": "获取配置文件路径",
+      "FuncName": "getPath",
+      "ReturnDescription": "当前配置文件的文件路径",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "String"
+    },
+    {
+      "Description": "读取整个配置文件的内容",
+      "FuncName": "read",
+      "ReturnDescription": "当前配置文件的所有内容",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "String"
+    },
+    {
+      "Description": "写入整个配置文件的内容",
+      "FuncName": "write",
+      "ReturnDescription": "是否写入成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "写入的内容",
+          "ParamType": "String",
+          "ParamName": "content",
+          "Optional": false
+        }
+      ],
+      "ReturnType": ""
+    }
+  ],
+  "AllProperty": [],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "Conf类"
+}

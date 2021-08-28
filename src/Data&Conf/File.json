@@ -1,0 +1,268 @@
+{
+  "ClassName": "file",
+  "AllFunc": [
+    {
+      "Description": "",
+      "FuncName": "readFrom",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "String"
+    },
+    {
+      "Description": "",
+      "FuncName": "writeTo",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        },
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "text",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "",
+      "FuncName": "writeLine",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        },
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "text",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "",
+      "FuncName": "open",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        },
+        {
+          "Description": "文件的打开模式",
+          "ParamType": "Any",
+          "ParamName": "mode",
+          "Optional": false
+        },
+        {
+          "Description": "",
+          "ParamType": "Boolean",
+          "ParamName": "isBinary",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "File"
+    },
+    {
+      "Description": "创建文件夹",
+      "FuncName": "createDir",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "目标文件夹的路径。可以直接创建多层，不需要逐层创建",
+          "ParamType": "String",
+          "ParamName": "dir",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "创建文件夹",
+      "FuncName": "mkdir",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "目标文件夹的路径。可以直接创建多层，不需要逐层创建",
+          "ParamType": "String",
+          "ParamName": "dir",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "",
+      "FuncName": "exists",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "",
+      "FuncName": "copy",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "from",
+          "Optional": false
+        },
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "to",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "",
+      "FuncName": "move",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "from",
+          "Optional": false
+        },
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "to",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "",
+      "FuncName": "rename",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "old",
+          "Optional": false
+        },
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "new",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "",
+      "FuncName": "getFileSize",
+      "ReturnDescription": "文件的大小（字节）",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Integer"
+    },
+    {
+      "Description": "判断指定路径是否是文件夹",
+      "FuncName": "checkIsDir",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "列出指定文件夹下的所有文件 / 文件夹",
+      "FuncName": "getFilesList",
+      "ReturnDescription": "",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "",
+          "ParamName": "dir",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Array@String"
+    }
+  ],
+  "AllProperty": [
+    {
+      "PropertyName": "readMode",
+      "Description": "",
+      "PropertyType": "",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "writeMode",
+      "Description": "",
+      "PropertyType": "",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "appendMode",
+      "Description": "",
+      "PropertyType": "",
+      "IsReadonly": false,
+      "IsStatic": true
+    }
+  ],
+  "IsStatic": true,
+  "IsInterface": false,
+  "Description": ""
+}
