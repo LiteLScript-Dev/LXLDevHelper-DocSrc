@@ -3,8 +3,9 @@
  CustomForm = {}
 
 ---设置表单的标题
+---@param text string 标题
 ---@return CustomForm 处理完毕的表单对象（便于连锁进行其他操作）
-function CustomForm:setTitle()
+function CustomForm:setTitle(text)
 end
 
 ---向表单内增加一行文本
