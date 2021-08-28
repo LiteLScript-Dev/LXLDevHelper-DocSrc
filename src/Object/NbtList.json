@@ -1,0 +1,314 @@
+{
+  "ClassName": "NbtList",
+  "AllFunc": [
+    {
+      "Description": "获取NBT对象储存的数据类型",
+      "FuncName": "getType",
+      "ReturnDescription": "此NBT对象储存的数据类型",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": ""
+    },
+    {
+      "Description": "将NBT对象转换为字符串",
+      "FuncName": "toString",
+      "ReturnDescription": "对应的Json字符串",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "（可选参数）如果要格式化输出的字符串，则传入此参数",
+          "ParamType": "Integer",
+          "ParamName": "space",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "String"
+    },
+    {
+      "Description": "清理此NBT对象",
+      "FuncName": "destroy",
+      "ReturnDescription": "是否成功清理",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取列表长度",
+      "FuncName": "getSize",
+      "ReturnDescription": "此列表的长度",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Integer"
+    },
+    {
+      "Description": "获取某个下标位置储存的数据类型",
+      "FuncName": "getTypeOf",
+      "ReturnDescription": "此坐标处储存的NBT的数据类型",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要查询的目标下标",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "设置某个下标位置的NBT对象",
+      "FuncName": "setTag",
+      "ReturnDescription": "写入完毕的NBT列表",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的目标下标",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的 NBT 对象（它承载着具体的NBT数据）。\n写入对象的数据类型必须和下标位置储存的数据类型一致，且下标不能超出有效下标的最大值",
+          "ParamType": "Any",
+          "ParamName": "tag",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtList"
+    },
+    {
+      "Description": "读取某个下标位置的NBT对象",
+      "FuncName": "getTag",
+      "ReturnDescription": "下标位置的NBT对象。如果要读取的NBT不存在，将返回Null",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的目标下标",
+          "ParamType": "Any",
+          "ParamName": "index",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "往列表末尾追加一个NBT对象",
+      "FuncName": "addTag",
+      "ReturnDescription": "追加完毕的NBT列表（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要追加的 NBT 对象（它承载着具体的NBT数据）",
+          "ParamType": "Any",
+          "ParamName": "tag",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtList"
+    },
+    {
+      "Description": "删除某个下标位置的NBT对象",
+      "FuncName": "removeTag",
+      "ReturnDescription": "处理完毕的NBT列表（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要删除的目标下标，\n下标不能超出有效下标的最大值",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtList"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setEnd",
+      "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的目标下标",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtList"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setByte",
+      "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的目标下标",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtList"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setShort",
+      "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的目标下标",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtList"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setInt",
+      "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的目标下标",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtList"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setLong",
+      "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的目标下标",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtList"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setFloat",
+      "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的目标下标",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtList"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setDouble",
+      "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的目标下标",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtList"
+    },
+    {
+      "Description": "设置某个下标位置的具体数据",
+      "FuncName": "setString",
+      "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的目标下标",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的具体数据",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "NbtList"
+    },
+    {
+      "Description": "读取某个下标位置的具体数据",
+      "FuncName": "getData",
+      "ReturnDescription": "指定位置储存的具体数据",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的目标下标",
+          "ParamType": "Integer",
+          "ParamName": "index",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "将NbtList类型转换为Array",
+      "FuncName": "toArray",
+      "ReturnDescription": "对应的数组 / 列表",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Array@Any"
+    }
+  ],
+  "AllProperty": [],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": ""
+}

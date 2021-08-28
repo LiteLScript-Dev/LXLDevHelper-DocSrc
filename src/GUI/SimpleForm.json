@@ -1,0 +1,53 @@
+{
+  "ClassName": "SimpleForm",
+  "AllFunc": [
+    {
+      "Description": "设置表单的标题",
+      "FuncName": "setTitle",
+      "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "SimpleForm"
+    },
+    {
+      "Description": "设置表单的内容",
+      "FuncName": "setContent",
+      "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "表单的文本内容",
+          "ParamType": "String",
+          "ParamName": "content",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "SimpleForm"
+    },
+    {
+      "Description": "向表单内增加一行按钮",
+      "FuncName": "addButton",
+      "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "按钮文本的字符串",
+          "ParamType": "String",
+          "ParamName": "text",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）按钮图片所在路径\n图片路径参数 image 使用材质包路径或者URL来标识按钮对应的图标。\n对于表单上的每个按钮，如下设置对应的图标\n 1.如果使用材质包路径，图片路径应该形如 textures/items/apple\n 2.如果使用URL路径，那么在这里放入完整的URL即可，形如 https://www.baidu.com/img/flexible/logo/pc/result.png\n 3.如果这个按钮你不需要显示图片，那不传入此参数即可",
+          "ParamType": "String",
+          "ParamName": "image",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "SimpleForm"
+    }
+  ],
+  "AllProperty": [],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "简单表单类型"
+}

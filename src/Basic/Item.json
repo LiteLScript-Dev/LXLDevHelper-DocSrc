@@ -8,9 +8,156 @@
       "IsStatic": false,
       "Params": [],
       "ReturnType": "Item"
+    },
+    {
+      "Description": "判断物品对象是否为空",
+      "FuncName": "isNull",
+      "ReturnDescription": "这个物品对象是否为空",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "将此物品对象置为空（删除物品）",
+      "FuncName": "setNull",
+      "ReturnDescription": "是否删除成功",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "将此物品对象设置为另一个物品",
+      "FuncName": "set",
+      "ReturnDescription": "是否赋值成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要赋值的物品对象",
+          "ParamType": "Item",
+          "ParamName": "item",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "根据物品对象，在指定的位置生成一个同样内容的掉落物实体",
+      "FuncName": "spawnItem",
+      "ReturnDescription": "生成的掉落物实体对象\r\n如返回值为 Null 则表示生成失败",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "生成掉落物实体所使用的物品对象",
+          "ParamType": "Item",
+          "ParamName": "item",
+          "Optional": false
+        },
+        {
+          "Description": "生成掉落物实体的位置的坐标对象（或者使用x, y, z, dimid来确定生成位置）",
+          "ParamType": "FloatPos",
+          "ParamName": "pos",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Entity"
+    },
+    {
+      "Description": "获取物品对应的NBT对象\r\n",
+      "FuncName": "getNbt",
+      "ReturnDescription": "物品的NBT对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "写入物品对应的NBT对象",
+      "FuncName": "setNbt",
+      "ReturnDescription": "是否成功写入",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "NbtCompound",
+          "ParamName": "nbt",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "",
+      "FuncName": "setLore",
+      "ReturnDescription": "",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "Array@String",
+          "ParamName": "lore",
+          "Optional": false
+        }
+      ],
+      "ReturnType": ""
+    },
+    {
+      "Description": "根据物品对象，在指定的位置生成一个同样内容的掉落物实体",
+      "FuncName": "spawnItem",
+      "ReturnDescription": "生成的掉落物实体对象\r\n如返回值为 Null 则表示生成失败",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "生成掉落物实体所使用的物品对象",
+          "ParamType": "Item",
+          "ParamName": "item",
+          "Optional": false
+        },
+        {
+          "Description": "生成掉落物实体的位置的坐标对象（或者使用x, y, z, dimid来确定生成位置）",
+          "ParamType": "IntPos",
+          "ParamName": "pos",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Entity"
     }
   ],
-  "AllProperty": [],
+  "AllProperty": [
+    {
+      "PropertyName": "name",
+      "Description": "游戏内显示的物品名称",
+      "PropertyType": "String",
+      "IsReadonly": true,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "type",
+      "Description": "物品标准类型名",
+      "PropertyType": "String",
+      "IsReadonly": true,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "id",
+      "Description": "物品的游戏内id",
+      "PropertyType": "Integer",
+      "IsReadonly": true,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "count",
+      "Description": "这个物品对象堆叠的个数",
+      "PropertyType": "Integer",
+      "IsReadonly": true,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "aux",
+      "Description": "物品附加值（如羊毛颜色）",
+      "PropertyType": "String",
+      "IsReadonly": true,
+      "IsStatic": false
+    }
+  ],
   "IsStatic": false,
   "IsInterface": false,
   "Description": "🧰 物品对象 API\r\n在LXL中，使用「物品对象」来操作和获取某一个物品栏物品的相关信息"
