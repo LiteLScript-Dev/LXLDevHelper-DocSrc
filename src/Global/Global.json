@@ -9,20 +9,8 @@
       "Params": [
         {
           "Description": "",
-          "ParamType": "Any",
-          "ParamName": "data1",
-          "Optional": true
-        },
-        {
-          "Description": "",
-          "ParamType": "Any",
-          "ParamName": "data2",
-          "Optional": true
-        },
-        {
-          "Description": "",
-          "ParamType": "",
-          "ParamName": "data3",
+          "ParamType": "ParamArray@Any",
+          "ParamName": "datas",
           "Optional": true
         }
       ],
@@ -42,14 +30,8 @@
         },
         {
           "Description": "",
-          "ParamType": "Any",
-          "ParamName": "data1",
-          "Optional": true
-        },
-        {
-          "Description": "",
-          "ParamType": "Any",
-          "ParamName": "data2",
+          "ParamType": "ParamArray@Any",
+          "ParamName": "datas",
           "Optional": true
         }
       ],
