@@ -467,6 +467,29 @@
                 }
               ],
               "ReturnType": "Boolean"
+            },
+            {
+              "Description": "对实体造成伤害\r\n注意，此处造成的伤害为真实伤害，无法被盔甲等保护装备减免",
+              "FuncName": "hurt",
+              "ReturnDescription": "是否造成伤害",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "对实体造成的伤害数值",
+                  "ParamType": "Integer",
+                  "ParamName": "damage",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "刷新生物物品栏、盔甲栏",
+              "FuncName": "refreshItems",
+              "ReturnDescription": "",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Boolean"
             }
           ],
           "AllProperty": [
@@ -474,63 +497,70 @@
               "PropertyName": "name",
               "Description": "实体名称",
               "PropertyType": "String",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "type",
               "Description": "实体标准类型名",
               "PropertyType": "String",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "id",
               "Description": "实体的游戏内id",
               "PropertyType": "Integer",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "pos",
               "Description": "实体所在坐标",
               "PropertyType": "FloatPos",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "blockPos",
               "Description": "实体所在的方块坐标",
               "PropertyType": "IntPos",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "maxHealth",
               "Description": "实体最大生命值",
               "PropertyType": "Integer",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "health",
               "Description": "实体当前生命值",
               "PropertyType": "Integer",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "inAir",
               "Description": "实体当前是否悬空",
               "PropertyType": "Boolean",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "speed",
               "Description": "实体当前速度",
               "PropertyType": "Float",
-              "IsReadonly": false,
+              "IsReadonly": true,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "inWater",
+              "Description": "实体当前是否在水中",
+              "PropertyType": "Boolean",
+              "IsReadonly": true,
               "IsStatic": false
             }
           ],
@@ -636,9 +666,156 @@
               "IsStatic": false,
               "Params": [],
               "ReturnType": "Item"
+            },
+            {
+              "Description": "判断物品对象是否为空",
+              "FuncName": "isNull",
+              "ReturnDescription": "这个物品对象是否为空",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "将此物品对象置为空（删除物品）",
+              "FuncName": "setNull",
+              "ReturnDescription": "是否删除成功",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "将此物品对象设置为另一个物品",
+              "FuncName": "set",
+              "ReturnDescription": "是否赋值成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要赋值的物品对象",
+                  "ParamType": "Item",
+                  "ParamName": "item",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "根据物品对象，在指定的位置生成一个同样内容的掉落物实体",
+              "FuncName": "spawnItem",
+              "ReturnDescription": "生成的掉落物实体对象\r\n如返回值为 Null 则表示生成失败",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "生成掉落物实体所使用的物品对象",
+                  "ParamType": "Item",
+                  "ParamName": "item",
+                  "Optional": false
+                },
+                {
+                  "Description": "生成掉落物实体的位置的坐标对象（或者使用x, y, z, dimid来确定生成位置）",
+                  "ParamType": "FloatPos",
+                  "ParamName": "pos",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Entity"
+            },
+            {
+              "Description": "获取物品对应的NBT对象\r\n",
+              "FuncName": "getNbt",
+              "ReturnDescription": "物品的NBT对象",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "NbtCompound"
+            },
+            {
+              "Description": "写入物品对应的NBT对象",
+              "FuncName": "setNbt",
+              "ReturnDescription": "是否成功写入",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "NbtCompound",
+                  "ParamName": "nbt",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "setLore",
+              "ReturnDescription": "",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "Array@String",
+                  "ParamName": "lore",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": ""
+            },
+            {
+              "Description": "根据物品对象，在指定的位置生成一个同样内容的掉落物实体",
+              "FuncName": "spawnItem",
+              "ReturnDescription": "生成的掉落物实体对象\r\n如返回值为 Null 则表示生成失败",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "生成掉落物实体所使用的物品对象",
+                  "ParamType": "Item",
+                  "ParamName": "item",
+                  "Optional": false
+                },
+                {
+                  "Description": "生成掉落物实体的位置的坐标对象（或者使用x, y, z, dimid来确定生成位置）",
+                  "ParamType": "IntPos",
+                  "ParamName": "pos",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Entity"
             }
           ],
-          "AllProperty": [],
+          "AllProperty": [
+            {
+              "PropertyName": "name",
+              "Description": "游戏内显示的物品名称",
+              "PropertyType": "String",
+              "IsReadonly": true,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "type",
+              "Description": "物品标准类型名",
+              "PropertyType": "String",
+              "IsReadonly": true,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "id",
+              "Description": "物品的游戏内id",
+              "PropertyType": "Integer",
+              "IsReadonly": true,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "count",
+              "Description": "这个物品对象堆叠的个数",
+              "PropertyType": "Integer",
+              "IsReadonly": true,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "aux",
+              "Description": "物品附加值（如羊毛颜色）",
+              "PropertyType": "String",
+              "IsReadonly": true,
+              "IsStatic": false
+            }
+          ],
           "IsStatic": false,
           "IsInterface": false,
           "Description": "🧰 物品对象 API\r\n在LXL中，使用「物品对象」来操作和获取某一个物品栏物品的相关信息"
@@ -1261,6 +1438,209 @@
                 }
               ],
               "ReturnType": "Item"
+            },
+            {
+              "Description": "生成一个整数类型坐标对象",
+              "FuncName": "newIntPos",
+              "ReturnDescription": "整数坐标对象",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "x 坐标",
+                  "ParamType": "Integer",
+                  "ParamName": "x",
+                  "Optional": false
+                },
+                {
+                  "Description": "y 坐标",
+                  "ParamType": "Integer",
+                  "ParamName": "y",
+                  "Optional": false
+                },
+                {
+                  "Description": "z 坐标",
+                  "ParamType": "Integer",
+                  "ParamName": "z",
+                  "Optional": false
+                },
+                {
+                  "Description": "维度ID：0 代表主世界，1 代表下界，2 代表末地",
+                  "ParamType": "Integer",
+                  "ParamName": "dimid ",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "IntPos"
+            },
+            {
+              "Description": "生成新生物并获取",
+              "FuncName": "spawnMob",
+              "ReturnDescription": "生成的实体对象，如返回值为 Null 则表示生成失败",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "生物的命名空间名称，如 minectaft:creeper",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "生成生物的位置的坐标对象（或者使用x, y, z, dimid来确定生成位置）",
+                  "ParamType": "IntPos",
+                  "ParamName": "pos",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Entity"
+            },
+            {
+              "Description": "生成新生物并获取",
+              "FuncName": "spawnMob",
+              "ReturnDescription": "生成的实体对象，如返回值为 Null 则表示生成失败",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "Float",
+                  "ParamName": "x",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "Float",
+                  "ParamName": "y",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "Float",
+                  "ParamName": "z",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "Integer",
+                  "ParamName": "dimid",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Entity"
+            },
+            {
+              "Description": "生成新生物并获取",
+              "FuncName": "spawnMob",
+              "ReturnDescription": "生成的实体对象，如返回值为 Null 则表示生成失败",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "生物的命名空间名称，如 minectaft:creeper",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "生成生物的位置的坐标对象（或者使用x, y, z, dimid来确定生成位置）",
+                  "ParamType": "FloatPos",
+                  "ParamName": "pos",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Entity"
+            },
+            {
+              "Description": "创建一个新的计分项",
+              "FuncName": "newScoreObjective",
+              "ReturnDescription": "新增创建的计分项对象，如果返回Null，则代表创建失败",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "计分项名称",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "计分项显示名称",
+                  "ParamType": "String",
+                  "ParamName": "displayName",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Objective"
+            },
+            {
+              "Description": "获取某个已存在的计分项",
+              "FuncName": "getScoreObjective",
+              "ReturnDescription": "对应的计分项对象，如果返回Null，则代表计分项不存在",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "要获取的计分项名称",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Objective"
+            },
+            {
+              "Description": "获取所有计分项",
+              "FuncName": "getAllScoreObjectives",
+              "ReturnDescription": "计分板系统记录的所有计分项的对象数组",
+              "IsStatic": true,
+              "Params": [],
+              "ReturnType": "Array<Objective>"
+            },
+            {
+              "Description": "移除一个已存在的计分项",
+              "FuncName": "removeScoreObjective",
+              "ReturnDescription": "是否移除成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "计分项名称",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "获取某个处于显示状态的计分项",
+              "FuncName": "getDisplayObjectives",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "显示槽位名称字符串，可以为\"sidebar\"/\"belowname\"/\"list\"",
+                  "ParamType": "String",
+                  "ParamName": "slot",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Objective"
+            },
+            {
+              "Description": "使计分项停止显示",
+              "FuncName": "clearDisplayObjective",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "显示槽位名称字符串，可以为\"sidebar\"/\"belowname\"/\"list\"",
+                  "ParamType": "String",
+                  "ParamName": "solt",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
             }
           ],
           "AllProperty": [],
@@ -1761,6 +2141,147 @@
                 }
               ],
               "ReturnType": "Boolean"
+            },
+            {
+              "Description": "向玩家发送模式表单，模式表单包含一个标题、一个文本显示框以及两个按钮",
+              "FuncName": "sendModalForm",
+              "ReturnDescription": "发送的表单ID",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "表单标题",
+                  "ParamType": "String",
+                  "ParamName": "title",
+                  "Optional": false
+                },
+                {
+                  "Description": "表单内容",
+                  "ParamType": "String",
+                  "ParamName": "content",
+                  "Optional": false
+                },
+                {
+                  "Description": "按钮1文本的字符串",
+                  "ParamType": "String",
+                  "ParamName": "button1",
+                  "Optional": false
+                },
+                {
+                  "Description": "按钮2文本的字符串",
+                  "ParamType": "String",
+                  "ParamName": "button2",
+                  "Optional": false
+                },
+                {
+                  "Description": "玩家点击按钮之后被调用的回调函数。",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"id\",\"Optional\":false}],\"ReturnType\":\"void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "向玩家发送普通表单\r\n普通表单包含一个标题、一个文本显示框以及若干按钮，可以设置按钮上显示的图标",
+              "FuncName": "sendSimpleForm",
+              "ReturnDescription": "发送的表单ID",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "表单标题",
+                  "ParamType": "String",
+                  "ParamName": "title",
+                  "Optional": false
+                },
+                {
+                  "Description": "表单内容",
+                  "ParamType": "String",
+                  "ParamName": "content",
+                  "Optional": false
+                },
+                {
+                  "Description": "各个按钮文本的字符串数组",
+                  "ParamType": "Array@String",
+                  "ParamName": "buttons",
+                  "Optional": false
+                },
+                {
+                  "Description": "各个按钮对应的图片路径\n对于表单上的每个按钮，如下设置对应的图标\n 1. 如果使用材质包路径，图片路径应该形如 textures/items/apple\n 2. 如果使用URL路径，那么在这里放入完整的URL即可，形如 https://www.baidu.com/img/flexible/logo/pc/result.png\n 3. 如果这个按钮你不需要显示图片，那将对应的图片路径设置为空字符串即可",
+                  "ParamType": "Array@String",
+                  "ParamName": "images",
+                  "Optional": false
+                },
+                {
+                  "Description": "玩家点击按钮之后被调用的回调函数",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"id\",\"Optional\":false}],\"ReturnType\":\"void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "向玩家发送自定义表单（Json格式）",
+              "FuncName": "sendCustomForm",
+              "ReturnDescription": "发送的表单ID",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "自定义表单json字符串",
+                  "ParamType": "String",
+                  "ParamName": "json_data",
+                  "Optional": false
+                },
+                {
+                  "Description": "玩家提交表单之后被调用的回调函数。",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Array@any\",\"ParamName\":\"data\",\"Optional\":false}],\"ReturnType\":\"void\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "",
+              "FuncName": "sendForm",
+              "ReturnDescription": "",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "配置好的表单对象",
+                  "ParamType": "SimpleForm",
+                  "ParamName": "form",
+                  "Optional": false
+                },
+                {
+                  "Description": "玩家提交表单之后被调用的回调函数。",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Null\",\"ParamName\":\"id\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": ""
+            },
+            {
+              "Description": "",
+              "FuncName": "sendForm",
+              "ReturnDescription": "",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "配置好的表单对象",
+                  "ParamType": "CustomForm",
+                  "ParamName": "form",
+                  "Optional": false
+                },
+                {
+                  "Description": "玩家提交表单之后被调用的回调函数。",
+                  "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Any[]\",\"ParamName\":\"data\",\"Optional\":false}],\"ReturnType\":\"\"}}",
+                  "ParamName": "callback",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": ""
             }
           ],
           "AllProperty": [
@@ -1768,97 +2289,846 @@
               "PropertyName": "name",
               "Description": "玩家名",
               "PropertyType": "String",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "pos",
               "Description": "玩家所在坐标",
               "PropertyType": "FloatPos",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "realName",
               "Description": "玩家的真实名字",
               "PropertyType": "String",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "xuid",
               "Description": "玩家Xuid字符串",
               "PropertyType": "String",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "uuid",
               "Description": "玩家Uuid字符串",
               "PropertyType": "String",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "permLevel",
               "Description": "玩家的操作权限等级（0 - 4）",
               "PropertyType": "Integer",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "gameMode",
               "Description": "玩家的游戏模式（0 - 3",
               "PropertyType": "Integer",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "maxHealth",
               "Description": "玩家最大生命值",
               "PropertyType": "Integer",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "health",
               "Description": "玩家当前生命值",
               "PropertyType": "Integer",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "inAir",
               "Description": "玩家当前是否悬空",
               "PropertyType": "Boolean",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "sneaking ",
               "Description": "玩家当前是否正在潜行",
               "PropertyType": "Boolean",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "speed",
               "Description": "玩家当前速度",
               "PropertyType": "Float",
-              "IsReadonly": false,
+              "IsReadonly": true,
               "IsStatic": false
             },
             {
               "PropertyName": "direction",
               "Description": "玩家当前朝向（0 - 4）",
               "PropertyType": "Integer",
-              "IsReadonly": false,
+              "IsReadonly": true,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "blockPos",
+              "Description": "玩家所在的方块坐标",
+              "PropertyType": "IntPos",
+              "IsReadonly": true,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "inWater",
+              "Description": "玩家当前是否在水中",
+              "PropertyType": "Boolean",
+              "IsReadonly": true,
               "IsStatic": false
             }
           ],
           "IsStatic": false,
           "IsInterface": false,
           "Description": "玩家对象"
+        }
+      ]
+    },
+    {
+      "DirName": "Data&Conf",
+      "AllClass": [
+        {
+          "ClassName": "Conf",
+          "AllFunc": [
+            {
+              "Description": "读取布尔项(ini)",
+              "FuncName": "getBool",
+              "ReturnDescription": "指定配置项的数据",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项键名",
+                  "ParamType": "String",
+                  "ParamName": "section",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）当读取失败时返回的默认值",
+                  "ParamType": "Boolean",
+                  "ParamName": "default_cfg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "读取浮点数项(ini)",
+              "FuncName": "getFloat",
+              "ReturnDescription": "指定配置项的数据",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项键名",
+                  "ParamType": "String",
+                  "ParamName": "section",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）当读取失败时返回的默认值",
+                  "ParamType": "Float",
+                  "ParamName": "default_cfg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Float"
+            },
+            {
+              "Description": "读取字符串项(ini)",
+              "FuncName": "getStr",
+              "ReturnDescription": "指定配置项的数据",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项键名",
+                  "ParamType": "String",
+                  "ParamName": "section",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）当读取失败时返回的默认值",
+                  "ParamType": "String",
+                  "ParamName": "default_cfg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "读取整数项(ini)",
+              "FuncName": "getInt",
+              "ReturnDescription": "指定配置项的数据",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项键名",
+                  "ParamType": "String",
+                  "ParamName": "section",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）当读取失败时返回的默认值",
+                  "ParamType": "Integer",
+                  "ParamName": "default_cfg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "写入配置项(ini)",
+              "FuncName": "set",
+              "ReturnDescription": "是否写入成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项键名",
+                  "ParamType": "String",
+                  "ParamName": "section",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的配置数据。允许的数据类型有：Integer Float String Boolean",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "删除配置项(json)",
+              "FuncName": "delete",
+              "ReturnDescription": "是否删除成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "读取配置项(json)",
+              "FuncName": "get",
+              "ReturnDescription": "指定配置项的数据",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "可选参数）当读取失败时返回的默认值",
+                  "ParamType": "Any",
+                  "ParamName": "default_cfg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "写入配置项(json)",
+              "FuncName": "set",
+              "ReturnDescription": "是否写入成功",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "删除配置项(ini)",
+              "FuncName": "delete",
+              "ReturnDescription": "是否删除成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "配置项键名",
+                  "ParamType": "String",
+                  "ParamName": "section",
+                  "Optional": false
+                },
+                {
+                  "Description": "配置项名字",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "重新加载文件中的配置项",
+              "FuncName": "reload",
+              "ReturnDescription": "是否成功加载",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": ""
+            },
+            {
+              "Description": "关闭配置文件\r\n配置文件关闭之后，请勿继续使用！",
+              "FuncName": "close",
+              "ReturnDescription": "是否成功关闭",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": ""
+            },
+            {
+              "Description": "获取配置文件路径",
+              "FuncName": "getPath",
+              "ReturnDescription": "当前配置文件的文件路径",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "读取整个配置文件的内容",
+              "FuncName": "read",
+              "ReturnDescription": "当前配置文件的所有内容",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "写入整个配置文件的内容",
+              "FuncName": "write",
+              "ReturnDescription": "是否写入成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "写入的内容",
+                  "ParamType": "String",
+                  "ParamName": "content",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": ""
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "Conf类"
+        },
+        {
+          "ClassName": "data",
+          "AllFunc": [
+            {
+              "Description": "创建 / 打开一个配置文件",
+              "FuncName": "openConfig",
+              "ReturnDescription": "打开 / 创建的配置文件对象，如果返回值为Null，则代表创建 / 打开失败",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "配置文件所在路径，以BDS根目录为基准\n如果配置文件路径中的目录尚不存在，接口会自动创建，不需要手动调用file.createDir",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）配置文件的格式，字符串形式。可选项有：json  或  ini",
+                  "ParamType": "String",
+                  "ParamName": "format",
+                  "Optional": true
+                },
+                {
+                  "Description": "（可选参数）配置文件的默认内容。\n如果初始化时目标文件不存在，引擎将新建一个配置文件并将此处的默认内容写入文件中。\n如果不传入此参数，新建时的配置文件将为空",
+                  "ParamType": "String",
+                  "ParamName": "default_cfg",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Conf"
+            },
+            {
+              "Description": "创建 / 打开数据库\r\n在使用数据库之前，你先需要给出一个数据库路径，LXL将打开/创建指定的数据库并返回一个数据库对象。\r\n一个leveldb数据库是由多个文件组成的，所以你需要传入一个文件夹的路径，数据库文件会被储存于这个文件夹当中。\r\n如果这个目录已含有一个数据库，LXL会将它打开，否则会新建一个。",
+              "FuncName": "openDB",
+              "ReturnDescription": "打开 / 创建的数据库对象，如果返回值为Null，则代表创建 / 打开失败",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "数据库的储存目录路径，以BDS根目录为基准",
+                  "ParamType": "String",
+                  "ParamName": "dir",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "DB"
+            },
+            {
+              "Description": "变量转换为Json字符串",
+              "FuncName": "toJson",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "要转换为Json字符串的变量。允许进行转换的数据类型有：\nInteger Float String Boolean Array Object \n其中，Array 和 Object 内部仅能嵌套上面出现的这些元素",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）如果要格式化输出的字符串，则传入此参数\n代表每个缩进的空格数量，这样输出的Json串更适合人阅读\n此参数默认为0，即不对输出字符串进行格式化",
+                  "ParamType": "Integer",
+                  "ParamName": "space",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "Json字符串解析为变量",
+              "FuncName": "parseJson",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "Json_str",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "字符串转MD5",
+              "FuncName": "toMD5",
+              "ReturnDescription": "转换的结果",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "string",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "字符串转SHA1",
+              "FuncName": "toSHA1",
+              "ReturnDescription": "转换的结果",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "string",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "String"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": "data类"
+        },
+        {
+          "ClassName": "DB",
+          "AllFunc": [
+            {
+              "Description": "写入数据项",
+              "FuncName": "set",
+              "ReturnDescription": "",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "读取数据项",
+              "FuncName": "get",
+              "ReturnDescription": "",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "删除数据项",
+              "FuncName": "delete",
+              "ReturnDescription": "",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "name",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "获取所有数据项名字",
+              "FuncName": "listKey",
+              "ReturnDescription": "",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Array@String"
+            },
+            {
+              "Description": "关闭数据库",
+              "FuncName": "close",
+              "ReturnDescription": "是否成功关闭",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": ""
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "获取所有数据项名字"
+        },
+        {
+          "ClassName": "file",
+          "AllFunc": [
+            {
+              "Description": "",
+              "FuncName": "readFrom",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "",
+              "FuncName": "writeTo",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "text",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "writeLine",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "text",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "open",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                },
+                {
+                  "Description": "文件的打开模式",
+                  "ParamType": "Any",
+                  "ParamName": "mode",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "Boolean",
+                  "ParamName": "isBinary",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "File"
+            },
+            {
+              "Description": "创建文件夹",
+              "FuncName": "createDir",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "目标文件夹的路径。可以直接创建多层，不需要逐层创建",
+                  "ParamType": "String",
+                  "ParamName": "dir",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "创建文件夹",
+              "FuncName": "mkdir",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "目标文件夹的路径。可以直接创建多层，不需要逐层创建",
+                  "ParamType": "String",
+                  "ParamName": "dir",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "exists",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "copy",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "from",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "to",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "move",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "from",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "to",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "rename",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "old",
+                  "Optional": false
+                },
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "new",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "",
+              "FuncName": "getFileSize",
+              "ReturnDescription": "文件的大小（字节）",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "判断指定路径是否是文件夹",
+              "FuncName": "checkIsDir",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "String",
+                  "ParamName": "path",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "列出指定文件夹下的所有文件 / 文件夹",
+              "FuncName": "getFilesList",
+              "ReturnDescription": "",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "",
+                  "ParamType": "",
+                  "ParamName": "dir",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Array@String"
+            }
+          ],
+          "AllProperty": [
+            {
+              "PropertyName": "readMode",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "writeMode",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "appendMode",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": true
+            }
+          ],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": ""
         }
       ]
     },
@@ -2436,8 +3706,20 @@
               "Params": [
                 {
                   "Description": "",
-                  "ParamType": "ParamArray@Any",
-                  "ParamName": "datas",
+                  "ParamType": "Any",
+                  "ParamName": "data1",
+                  "Optional": true
+                },
+                {
+                  "Description": "",
+                  "ParamType": "Any",
+                  "ParamName": "data2",
+                  "Optional": true
+                },
+                {
+                  "Description": "",
+                  "ParamType": "",
+                  "ParamName": "data3",
                   "Optional": true
                 }
               ],
@@ -2457,8 +3739,14 @@
                 },
                 {
                   "Description": "",
-                  "ParamType": "ParamArray@Any",
-                  "ParamName": "datas",
+                  "ParamType": "Any",
+                  "ParamName": "data1",
+                  "Optional": true
+                },
+                {
+                  "Description": "",
+                  "ParamType": "Any",
+                  "ParamName": "data2",
                   "Optional": true
                 }
               ],
@@ -2568,6 +3856,262 @@
           "IsStatic": true,
           "IsInterface": false,
           "Description": "全局方法、属性"
+        }
+      ]
+    },
+    {
+      "DirName": "GUI",
+      "AllClass": [
+        {
+          "ClassName": "CustomForm",
+          "AllFunc": [
+            {
+              "Description": "设置表单的标题",
+              "FuncName": "setTitle",
+              "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "CustomForm"
+            },
+            {
+              "Description": "向表单内增加一行文本",
+              "FuncName": "addLabel",
+              "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "一行文本",
+                  "ParamType": "String",
+                  "ParamName": "text",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "CustomForm"
+            },
+            {
+              "Description": "向表单内增加一行输入框",
+              "FuncName": "addInput",
+              "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "输入框描述文本",
+                  "ParamType": "String",
+                  "ParamName": "title",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）输入框内的提示字符",
+                  "ParamType": "String",
+                  "ParamName": "placeholder",
+                  "Optional": true
+                },
+                {
+                  "Description": "（可选参数）输入框中默认存在的内容",
+                  "ParamType": "String",
+                  "ParamName": "default_text",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "CustomForm"
+            },
+            {
+              "Description": "向表单内增加一行开关选项",
+              "FuncName": "addSwitch",
+              "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "开关选项描述文本",
+                  "ParamType": "String",
+                  "ParamName": "title",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）开关的默认状态 开 / 关",
+                  "ParamType": "Boolean",
+                  "ParamName": "default",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "CustomForm"
+            },
+            {
+              "Description": "向表单内增加一行下拉菜单",
+              "FuncName": "addDropdown",
+              "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "下拉菜单描述文本",
+                  "ParamType": "String",
+                  "ParamName": "title",
+                  "Optional": false
+                },
+                {
+                  "Description": "下拉菜单中的选项文本列表",
+                  "ParamType": "Array@String",
+                  "ParamName": "items",
+                  "Optional": false
+                },
+                {
+                  "Description": "可选参数）下拉菜单默认选中的列表项序号。",
+                  "ParamType": "Integer",
+                  "ParamName": "default",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "CustomForm"
+            },
+            {
+              "Description": "向表单内增加一行游标滑块",
+              "FuncName": "addSlider",
+              "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "游标滑块描述文本",
+                  "ParamType": "String",
+                  "ParamName": "title",
+                  "Optional": false
+                },
+                {
+                  "Description": "游标滑块最小值",
+                  "ParamType": "Integer",
+                  "ParamName": "min",
+                  "Optional": false
+                },
+                {
+                  "Description": "游标滑块最大值",
+                  "ParamType": "Integer",
+                  "ParamName": "max",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）游标滑块调整的最小分度值，默认为1",
+                  "ParamType": "Integer",
+                  "ParamName": "step",
+                  "Optional": true
+                },
+                {
+                  "Description": "（可选参数）游标滑块默认初始格数，数值必须在最小和最大格数之间。",
+                  "ParamType": "Integer",
+                  "ParamName": "default",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "CustomForm"
+            },
+            {
+              "Description": "向表单内增加一行步进滑块",
+              "FuncName": "addStepSlider",
+              "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "步进滑块描述文本",
+                  "ParamType": "String",
+                  "ParamName": "title",
+                  "Optional": false
+                },
+                {
+                  "Description": "步进滑块的选项文本列表",
+                  "ParamType": "Array@String",
+                  "ParamName": "items",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）步进滑块默认初始选项。序号从0开始编号",
+                  "ParamType": "Integer",
+                  "ParamName": "default",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "CustomForm"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "自定义表单类型"
+        },
+        {
+          "ClassName": "mc",
+          "AllFunc": [
+            {
+              "Description": "创建表单对象",
+              "FuncName": "newCustomForm",
+              "ReturnDescription": "新创建的空白表单对象",
+              "IsStatic": true,
+              "Params": [],
+              "ReturnType": "CustomForm"
+            },
+            {
+              "Description": "创建表单对象",
+              "FuncName": "newSimpleForm",
+              "ReturnDescription": "新创建的空白表单对象",
+              "IsStatic": true,
+              "Params": [],
+              "ReturnType": "SimpleForm"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": "mc通用接口"
+        },
+        {
+          "ClassName": "SimpleForm",
+          "AllFunc": [
+            {
+              "Description": "设置表单的标题",
+              "FuncName": "setTitle",
+              "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "SimpleForm"
+            },
+            {
+              "Description": "设置表单的内容",
+              "FuncName": "setContent",
+              "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "表单的文本内容",
+                  "ParamType": "String",
+                  "ParamName": "content",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "SimpleForm"
+            },
+            {
+              "Description": "向表单内增加一行按钮",
+              "FuncName": "addButton",
+              "ReturnDescription": "处理完毕的表单对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "按钮文本的字符串",
+                  "ParamType": "String",
+                  "ParamName": "text",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）按钮图片所在路径\n图片路径参数 image 使用材质包路径或者URL来标识按钮对应的图标。\n对于表单上的每个按钮，如下设置对应的图标\n 1.如果使用材质包路径，图片路径应该形如 textures/items/apple\n 2.如果使用URL路径，那么在这里放入完整的URL即可，形如 https://www.baidu.com/img/flexible/logo/pc/result.png\n 3.如果这个按钮你不需要显示图片，那不传入此参数即可",
+                  "ParamType": "String",
+                  "ParamName": "image",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "SimpleForm"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "简单表单类型"
         }
       ]
     },
@@ -2889,6 +4433,528 @@
           "IsStatic": true,
           "IsInterface": false,
           "Description": "💡 插件加载相关 API"
+        },
+        {
+          "ClassName": "Text",
+          "AllFunc": [],
+          "AllProperty": [
+            {
+              "PropertyName": "Black",
+              "Description": "接下来的文字为 黑色 §0",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "DarkBlue",
+              "Description": "接下来的文字为 深蓝色 §1",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "DarkGreen",
+              "Description": "接下来的文字为 深绿色 §2",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "DarkAqua",
+              "Description": "接下来的文字为 湖蓝色 §3",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "DarkRed",
+              "Description": "接下来的文字为 深红色 §4",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "DarkPurple",
+              "Description": "接下来的文字为 紫色 §5",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Gold",
+              "Description": "接下来的文字为 金色 §6",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Gray",
+              "Description": "接下来的文字为 灰色 §7",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "DarkGray",
+              "Description": "接下来的文字为 深灰色 §8",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Blue",
+              "Description": "接下来的文字为 蓝色§9",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Green",
+              "Description": "接下来的文字为 浅绿色 §a",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Aqua",
+              "Description": "接下来的文字为 天蓝色 §b",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Red",
+              "Description": "接下来的文字为 浅红色 §c",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "LightPurple",
+              "Description": "接下来的文字为 浅紫色 §d",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Yellow",
+              "Description": "接下来的文字为 浅黄色 §e",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "White",
+              "Description": "接下来的文字为 白色 §f",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "MinecoinGold ",
+              "Description": "接下来的文字为 硬币金色 §g",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Bold",
+              "Description": "接下来的文字 加粗 §l",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Italics",
+              "Description": "接下来的文字 意大利体（俗称斜体）§o",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Underline",
+              "Description": "接下来的文字 下划线 §n",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "StrikeThrough",
+              "Description": "接下来的文字 删除线 §m",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Random",
+              "Description": "接下来的文字 随机闪烁的乱码字符 §k",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Clear",
+              "Description": "接下来的文字 清除所有格式§r",
+              "PropertyType": "",
+              "IsReadonly": true,
+              "IsStatic": true
+            }
+          ],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": "格式化代码实用工具类"
+        }
+      ]
+    },
+    {
+      "DirName": "Money",
+      "AllClass": [
+        {
+          "ClassName": "money",
+          "AllFunc": [
+            {
+              "Description": "设置玩家的存款金额",
+              "FuncName": "set",
+              "ReturnDescription": "是否设置成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid",
+                  "Optional": false
+                },
+                {
+                  "Description": "要设置的金额",
+                  "ParamType": "Integer",
+                  "ParamName": "money",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "获取玩家的存款金额",
+              "FuncName": "get",
+              "ReturnDescription": "玩家的资金数值",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid",
+                  "Optional": false
+                },
+                {
+                  "Description": "玩家的资金数值",
+                  "ParamType": "Integer",
+                  "ParamName": "money",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "增加玩家的存款",
+              "FuncName": "add",
+              "ReturnDescription": "是否设置成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid",
+                  "Optional": false
+                },
+                {
+                  "Description": "要增加的金额",
+                  "ParamType": "Integer",
+                  "ParamName": "money",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "减少玩家的存款",
+              "FuncName": "reduce",
+              "ReturnDescription": "是否设置成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid",
+                  "Optional": false
+                },
+                {
+                  "Description": "要减小的金额",
+                  "ParamType": "Integer",
+                  "ParamName": "money",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "进行一笔转账",
+              "FuncName": "trans",
+              "ReturnDescription": "是否转账成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "付款的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid_plf",
+                  "Optional": false
+                },
+                {
+                  "Description": "收款的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid_pl2",
+                  "Optional": false
+                },
+                {
+                  "Description": "要支付的金额",
+                  "ParamType": "Integer",
+                  "ParamName": "money",
+                  "Optional": false
+                },
+                {
+                  "Description": "（可选参数）给这笔转账附加一些文字说明",
+                  "ParamType": "String",
+                  "ParamName": "node",
+                  "Optional": true
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "查询历史账单",
+              "FuncName": "getHistory",
+              "ReturnDescription": "查询结果对象的数组",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的玩家的Xuid标识符",
+                  "ParamType": "String",
+                  "ParamName": "xuid",
+                  "Optional": false
+                },
+                {
+                  "Description": "查询从现在开始往前time秒的记录",
+                  "ParamType": "Integer",
+                  "ParamName": "time",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Array@ObjectTransHistory"
+            },
+            {
+              "Description": "删除账单历史记录",
+              "FuncName": "clearHistory",
+              "ReturnDescription": "是否删除成功",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "删除从现在开始往前time秒的记录",
+                  "ParamType": "Integer",
+                  "ParamName": "time",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "DirName": "NBT",
+      "AllClass": [
+        {
+          "ClassName": "NBT",
+          "AllFunc": [
+            {
+              "Description": "根据你提供的数据，来创建新的NBT对象",
+              "FuncName": "createTag",
+              "ReturnDescription": "生成的NBT对象",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "你要创建的NBT对象的数据类型",
+                  "ParamType": "NbtValue",
+                  "ParamName": "type",
+                  "Optional": false
+                },
+                {
+                  "Description": "根据你要创建的对象类型设置初始数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtValue"
+            },
+            {
+              "Description": "从 SNBT 字符串生成 NBT 对象",
+              "FuncName": "parseSNBT",
+              "ReturnDescription": "生成的NBT对象",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "你要解析的SNBT字符串",
+                  "ParamType": "String",
+                  "ParamName": "snbt",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtCompound"
+            },
+            {
+              "Description": "从二进制 NBT 数据生成 NBT 对象",
+              "FuncName": "parseBinaryNBT",
+              "ReturnDescription": "生成的NBT对象",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "你要解析的二进制 NBT 数据",
+                  "ParamType": "ByteBuffer",
+                  "ParamName": "nbt",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtCompound"
+            },
+            {
+              "Description": "根据你提供的数据，来创建新的NBT对象",
+              "FuncName": "createTag",
+              "ReturnDescription": "生成的NBT对象",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "你要创建的NBT对象的数据类型",
+                  "ParamType": "NbtList",
+                  "ParamName": "type",
+                  "Optional": false
+                },
+                {
+                  "Description": "根据你要创建的对象类型设置初始数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtList"
+            },
+            {
+              "Description": "根据你提供的数据，来创建新的NBT对象",
+              "FuncName": "createTag",
+              "ReturnDescription": "生成的NBT对象",
+              "IsStatic": true,
+              "Params": [
+                {
+                  "Description": "你要创建的NBT对象的数据类型",
+                  "ParamType": "NbtCompound",
+                  "ParamName": "type",
+                  "Optional": false
+                },
+                {
+                  "Description": "根据你要创建的对象类型设置初始数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtCompound"
+            }
+          ],
+          "AllProperty": [
+            {
+              "PropertyName": "End",
+              "Description": "NbtValue",
+              "PropertyType": "NbtValue",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Byte",
+              "Description": "NbtValue",
+              "PropertyType": "NbtValue",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Short",
+              "Description": "NbtValue",
+              "PropertyType": "NbtValue",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Int",
+              "Description": "NbtValue",
+              "PropertyType": "NbtValue",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Long",
+              "Description": "NbtValue",
+              "PropertyType": "NbtValue",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Float",
+              "Description": "NbtValue",
+              "PropertyType": "NbtValue",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Double",
+              "Description": "NbtValue",
+              "PropertyType": "NbtValue",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "ByteArray",
+              "Description": "ByteArray",
+              "PropertyType": "NbtValue",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "String",
+              "Description": "NbtValue",
+              "PropertyType": "NbtValue",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "List",
+              "Description": "NbtList",
+              "PropertyType": "NbtList",
+              "IsReadonly": true,
+              "IsStatic": true
+            },
+            {
+              "PropertyName": "Compound",
+              "Description": "NbtCompound",
+              "PropertyType": "NbtCompound",
+              "IsReadonly": true,
+              "IsStatic": true
+            }
+          ],
+          "IsStatic": true,
+          "IsInterface": false,
+          "Description": "NBT"
         }
       ]
     },
@@ -3006,6 +5072,624 @@
           "Description": "float"
         },
         {
+          "ClassName": "NbtCompound",
+          "AllFunc": [
+            {
+              "Description": "获取NBT对象储存的数据类型",
+              "FuncName": "getType",
+              "ReturnDescription": "此NBT对象储存的数据类型",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": ""
+            },
+            {
+              "Description": "将NBT对象转换为字符串",
+              "FuncName": "toString",
+              "ReturnDescription": "对应的Json字符串",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "（可选参数）如果要格式化输出的字符串，则传入此参数",
+                  "ParamType": "Integer",
+                  "ParamName": "space",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "NBT对象序列化为SNBT",
+              "FuncName": "toSNBT",
+              "ReturnDescription": "对应的SNBT字符串",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "NBT对象序列化为二进制NBT",
+              "FuncName": "toBinary",
+              "ReturnDescription": "对应的二进制NBT数据",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "ByteBuffer"
+            },
+            {
+              "Description": "清理此NBT对象",
+              "FuncName": "destroy",
+              "ReturnDescription": "是否成功清理",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setEnd",
+              "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的键名",
+                  "ParamType": "String",
+                  "ParamName": "key",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtCompound"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setByte",
+              "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的键名",
+                  "ParamType": "String",
+                  "ParamName": "key",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtCompound"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setShort",
+              "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的键名",
+                  "ParamType": "String",
+                  "ParamName": "key",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtCompound"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setInt",
+              "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的键名",
+                  "ParamType": "String",
+                  "ParamName": "key",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtCompound"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setLong",
+              "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的键名",
+                  "ParamType": "String",
+                  "ParamName": "key",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtCompound"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setFloat",
+              "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的键名",
+                  "ParamType": "String",
+                  "ParamName": "key",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtCompound"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setDouble",
+              "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的键名",
+                  "ParamType": "String",
+                  "ParamName": "key",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtCompound"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setString",
+              "ReturnDescription": "写入完毕的NBT对象（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的键名",
+                  "ParamType": "String",
+                  "ParamName": "key",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtCompound"
+            },
+            {
+              "Description": "读取键对应的值的具体数据",
+              "FuncName": "getData",
+              "ReturnDescription": "键对应的值的具体数据",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的键名",
+                  "ParamType": "String",
+                  "ParamName": "key",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "将Compound类型转换为Object",
+              "FuncName": "toObject",
+              "ReturnDescription": "对应的对象 / 表",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Object"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": ""
+        },
+        {
+          "ClassName": "NbtList",
+          "AllFunc": [
+            {
+              "Description": "获取NBT对象储存的数据类型",
+              "FuncName": "getType",
+              "ReturnDescription": "此NBT对象储存的数据类型",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": ""
+            },
+            {
+              "Description": "将NBT对象转换为字符串",
+              "FuncName": "toString",
+              "ReturnDescription": "对应的Json字符串",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "（可选参数）如果要格式化输出的字符串，则传入此参数",
+                  "ParamType": "Integer",
+                  "ParamName": "space",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "清理此NBT对象",
+              "FuncName": "destroy",
+              "ReturnDescription": "是否成功清理",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "获取列表长度",
+              "FuncName": "getSize",
+              "ReturnDescription": "此列表的长度",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Integer"
+            },
+            {
+              "Description": "获取某个下标位置储存的数据类型",
+              "FuncName": "getTypeOf",
+              "ReturnDescription": "此坐标处储存的NBT的数据类型",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要查询的目标下标",
+                  "ParamType": "Integer",
+                  "ParamName": "index",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "设置某个下标位置的NBT对象",
+              "FuncName": "setTag",
+              "ReturnDescription": "写入完毕的NBT列表",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的目标下标",
+                  "ParamType": "Integer",
+                  "ParamName": "index",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的 NBT 对象（它承载着具体的NBT数据）。\n写入对象的数据类型必须和下标位置储存的数据类型一致，且下标不能超出有效下标的最大值",
+                  "ParamType": "Any",
+                  "ParamName": "tag",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtList"
+            },
+            {
+              "Description": "读取某个下标位置的NBT对象",
+              "FuncName": "getTag",
+              "ReturnDescription": "下标位置的NBT对象。如果要读取的NBT不存在，将返回Null",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的目标下标",
+                  "ParamType": "Any",
+                  "ParamName": "index",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "往列表末尾追加一个NBT对象",
+              "FuncName": "addTag",
+              "ReturnDescription": "追加完毕的NBT列表（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要追加的 NBT 对象（它承载着具体的NBT数据）",
+                  "ParamType": "Any",
+                  "ParamName": "tag",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtList"
+            },
+            {
+              "Description": "删除某个下标位置的NBT对象",
+              "FuncName": "removeTag",
+              "ReturnDescription": "处理完毕的NBT列表（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要删除的目标下标，\n下标不能超出有效下标的最大值",
+                  "ParamType": "Integer",
+                  "ParamName": "index",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtList"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setEnd",
+              "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的目标下标",
+                  "ParamType": "Integer",
+                  "ParamName": "index",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtList"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setByte",
+              "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的目标下标",
+                  "ParamType": "Integer",
+                  "ParamName": "index",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtList"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setShort",
+              "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的目标下标",
+                  "ParamType": "Integer",
+                  "ParamName": "index",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtList"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setInt",
+              "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的目标下标",
+                  "ParamType": "Integer",
+                  "ParamName": "index",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtList"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setLong",
+              "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的目标下标",
+                  "ParamType": "Integer",
+                  "ParamName": "index",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtList"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setFloat",
+              "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的目标下标",
+                  "ParamType": "Integer",
+                  "ParamName": "index",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtList"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setDouble",
+              "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的目标下标",
+                  "ParamType": "Integer",
+                  "ParamName": "index",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtList"
+            },
+            {
+              "Description": "设置某个下标位置的具体数据",
+              "FuncName": "setString",
+              "ReturnDescription": "写入完毕的NBT列表（便于连锁进行其他操作）",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的目标下标",
+                  "ParamType": "Integer",
+                  "ParamName": "index",
+                  "Optional": false
+                },
+                {
+                  "Description": "要写入的具体数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "NbtList"
+            },
+            {
+              "Description": "读取某个下标位置的具体数据",
+              "FuncName": "getData",
+              "ReturnDescription": "指定位置储存的具体数据",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "要操作的目标下标",
+                  "ParamType": "Integer",
+                  "ParamName": "index",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Any"
+            },
+            {
+              "Description": "将NbtList类型转换为Array",
+              "FuncName": "toArray",
+              "ReturnDescription": "对应的数组 / 列表",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Array@Any"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": ""
+        },
+        {
+          "ClassName": "NbtValue",
+          "AllFunc": [
+            {
+              "Description": "获取NBT对象储存的数据类型",
+              "FuncName": "getType",
+              "ReturnDescription": "此NBT对象储存的数据类型",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": ""
+            },
+            {
+              "Description": "将NBT对象转换为字符串",
+              "FuncName": "toString",
+              "ReturnDescription": "对应的Json字符串",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "（可选参数）如果要格式化输出的字符串，则传入此参数",
+                  "ParamType": "Integer",
+                  "ParamName": "space",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "String"
+            },
+            {
+              "Description": "清理此NBT对象",
+              "FuncName": "destroy",
+              "ReturnDescription": "是否成功清理",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "设置对象的数据",
+              "FuncName": "set",
+              "ReturnDescription": "是否成功写入",
+              "IsStatic": false,
+              "Params": [
+                {
+                  "Description": "根据这个NBT对象的数据类型，写入对应类型的数据",
+                  "ParamType": "Any",
+                  "ParamName": "data",
+                  "Optional": false
+                }
+              ],
+              "ReturnType": "Boolean"
+            },
+            {
+              "Description": "读取对象的数据",
+              "FuncName": "get",
+              "ReturnDescription": "对象中储存的数据",
+              "IsStatic": false,
+              "Params": [],
+              "ReturnType": "Any"
+            }
+          ],
+          "AllProperty": [],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": ""
+        },
+        {
           "ClassName": "ObjectRuncmdEx",
           "AllFunc": [],
           "AllProperty": [
@@ -3027,6 +5711,50 @@
           "IsStatic": true,
           "IsInterface": false,
           "Description": "mc.runcmdEx的返回结果"
+        },
+        {
+          "ClassName": "ObjectTransHistory",
+          "AllFunc": [],
+          "AllProperty": [
+            {
+              "PropertyName": "from",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "to",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "money",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "time",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": false
+            },
+            {
+              "PropertyName": "note",
+              "Description": "",
+              "PropertyType": "",
+              "IsReadonly": false,
+              "IsStatic": false
+            }
+          ],
+          "IsStatic": false,
+          "IsInterface": false,
+          "Description": "历史账单"
         },
         {
           "ClassName": "ObjectVersion",
