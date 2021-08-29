@@ -14,7 +14,7 @@ class network {
  * @param {(status:number,result:string)any} callback 当请求返回时执行的回调函数，用于回传HTTP(s)响应结果
  * @returns {boolean} 是否成功发送请求
  */
- httpGet(url,callback)
+ static httpGet(url,callback)
 
 /**
  * 发送一个异步HTTP(s) Post请求
@@ -24,13 +24,13 @@ class network {
  * @param {(status:number,result:string)any} callback 当请求返回时执行的回调函数，用于回传HTTP(s)响应结果
  * @returns {boolean} 是否成功发送请求
  */
- httpPost(url,data,type,callback)
+ static httpPost(url,data,type,callback)
 
 /**
  * 获取一个WebSocket 客户端对象
  * @returns {WSClient} 一个新的websocket对象
  */
- newWebSocket()  
+ static newWebSocket()  
 
 
 

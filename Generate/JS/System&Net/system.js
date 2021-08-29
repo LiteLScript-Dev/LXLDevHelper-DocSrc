@@ -15,7 +15,7 @@ class system {
  * @param {number} timeLimit? （可选参数）命令运行的最长时限，单位为毫秒
  * @returns {boolean} 是否成功启动命令
  */
- cmd(cmd,callback,timeLimit)
+ static cmd(cmd,callback,timeLimit)
 
 /**
  * 运行指定位置程序
@@ -24,25 +24,25 @@ class system {
  * @param {number} timeLimit? （可选参数）程序进程运行的最长时限，单位为毫秒
  * @returns {boolean} 是否成功启动进程
  */
- newProcess(process,callback,timeLimit)
+ static newProcess(process,callback,timeLimit)
 
 /**
  * 获取当前时间字符串
  * @returns {string} 当前的时间字符串，使用当地时区和24小时制。
  */
- getTimeStr()
+ static getTimeStr()
 
 /**
  * 获取当前的时间对象
  * @returns {TimeObject} 当前的时间对象
  */
- getTimeObj()
+ static getTimeObj()
 
 /**
  * 随机生成一个 GUID 字符串
  * @returns {string} 一个随机生成的唯一标识符GUID
  */
- randomGuid()  
+ static randomGuid()  
 
 
 
