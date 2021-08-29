@@ -276,3 +276,22 @@ end
 ---@return  
 function Player:sendForm(form,callback)
 end
+
+---储存玩家绑定数据
+---@param name string 要储存到绑定数据的名字
+---@param data any 你要储存的绑定数据，可以是nil
+---@return boolean 是否成功储存
+function Player:setExtraData(name,data)
+end
+
+---获取玩家绑定数据
+---@param name string 要读取的绑定数据的名字
+---@return any 储存的绑定数据
+function Player:getExtraData(name)
+end
+
+---删除玩家绑定数据
+---@param name string 要删除的绑定数据的名字
+---@return boolean 是否删除成功
+function Player:getExtraData(name)
+end

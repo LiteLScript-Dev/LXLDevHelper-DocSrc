@@ -14,7 +14,7 @@ class Conf {
  * @param {boolean} default_cfg? （可选参数）当读取失败时返回的默认值
  * @returns {boolean} 指定配置项的数据
  */
- static getBool(section,name,default_cfg)
+ getBool(section,name,default_cfg)
 
 /**
  * 读取浮点数项(ini)
@@ -23,7 +23,7 @@ class Conf {
  * @param {Float} default_cfg? （可选参数）当读取失败时返回的默认值
  * @returns {Float} 指定配置项的数据
  */
- static getFloat(section,name,default_cfg)
+ getFloat(section,name,default_cfg)
 
 /**
  * 读取字符串项(ini)
@@ -32,7 +32,7 @@ class Conf {
  * @param {string} default_cfg? （可选参数）当读取失败时返回的默认值
  * @returns {string} 指定配置项的数据
  */
- static getStr(section,name,default_cfg)
+ getStr(section,name,default_cfg)
 
 /**
  * 读取整数项(ini)
@@ -41,7 +41,7 @@ class Conf {
  * @param {number} default_cfg? （可选参数）当读取失败时返回的默认值
  * @returns {number} 指定配置项的数据
  */
- static getInt(section,name,default_cfg)
+ getInt(section,name,default_cfg)
 
 /**
  * 写入配置项(ini)
@@ -50,14 +50,14 @@ class Conf {
  * @param {any} data 要写入的配置数据。允许的数据类型有：number Float string boolean
  * @returns {boolean} 是否写入成功
  */
- static set(section,name,data)
+ set(section,name,data)
 
 /**
  * 删除配置项(json)
  * @param {string} name 配置项名字
  * @returns {boolean} 是否删除成功
  */
- static delete(name)
+ delete(name)
 
 /**
  * 读取配置项(json)
@@ -65,7 +65,7 @@ class Conf {
  * @param {any} default_cfg? 可选参数）当读取失败时返回的默认值
  * @returns {any} 指定配置项的数据
  */
- static get(name,default_cfg)
+ get(name,default_cfg)
 
 /**
  * 写入配置项(json)
@@ -73,7 +73,7 @@ class Conf {
  * @param {any} data 配置项名字
  * @returns {boolean} 是否写入成功
  */
- static set(name,data)
+ set(name,data)
 
 /**
  * 删除配置项(ini)
@@ -85,14 +85,14 @@ class Conf {
 
 /**
  * 重新加载文件中的配置项
- * @returns {} 是否成功加载
+ * @returns {boolean} 是否成功加载
  */
  reload()
 
 /**
  * 关闭配置文件
 配置文件关闭之后，请勿继续使用！
- * @returns {} 是否成功关闭
+ * @returns {boolean} 是否成功关闭
  */
  close()
 
@@ -111,7 +111,7 @@ class Conf {
 /**
  * 写入整个配置文件的内容
  * @param {string} content 写入的内容
- * @returns {} 是否写入成功
+ * @returns {boolean} 是否写入成功
  */
  write(content)  
 

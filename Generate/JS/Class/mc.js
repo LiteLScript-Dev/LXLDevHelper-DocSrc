@@ -19,12 +19,6 @@ class mc {
  static newFloatPos(x,y,z,dimid )
 
 /**
- * 获取BDS服务端版本号
- * @returns {string} 服务端版本号字符串，格式形如v1.17.10
- */
- static getBDSVersion()
-
-/**
  * 执行一条后台命令
  * @param {string} cmd 待执行的命令
  * @returns {boolean} 是否执行成功
@@ -309,19 +303,25 @@ class mc {
  */
  static clearDisplayObjective(solt)
 
+/**
+ * 设置服务器Motd字符串
+ * @param {string} motd 目标Motd字符串
+ * @returns {boolean} 是否设置成功
+ */
+ static setMotd(motd)
+
+/**
+ * 获取BDS服务端版本号
+ * @returns {string} 服务端版本号字符串，格式形如v1.17.10
+ */
+ static getBDSVersion()
+
 
 
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onPreJoin"} event 玩家开始连接服务器
  * @param {(player:Player)function} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -330,14 +330,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onJoin"} event 玩家进入游戏（加载世界完成）
  * @param {(player:Player)function} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -346,14 +339,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onLeft"} event 玩家离开游戏
  * @param {(player:Player)function} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -362,14 +348,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onRespawn"} event 玩家重生
  * @param {(player:Player)function} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -378,14 +357,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onPlayerDie"} event 玩家死亡
  * @param {(player:Player)function} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -394,14 +366,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onPlayerCmd"} event 玩家执行命令
  * @param {(player:Player,cmd:string)boolean} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -410,14 +375,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onChat"} event 玩家发送聊天信息
  * @param {(player:Player,msg:string)boolean} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -426,14 +384,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onChangeDim"} event 玩家切换维度
  * @param {(player:Player)function} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -442,14 +393,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onJump"} event 玩家跳跃
  * @param {(player:Player)function} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -458,14 +402,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onSneak"} event 玩家切换潜行状态
  * @param {(player:Player,isSneaking:boolean)function} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -474,14 +411,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onAttack"} event 玩家攻击实体
  * @param {(player:Player,entity:Entity)boolean} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -490,14 +420,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onUseItem"} event 玩家使用物品
  * @param {(player:Player,item:Item)boolean} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -506,14 +429,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onUseItemOn"} event 玩家对方块使用物品（点击右键）
  * @param {(player:Player,item:Item,block:Block)boolean} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -522,14 +438,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onTakeItem"} event 玩家捡起物品
  * @param {(player:Player,entity:Entity)boolean} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -538,14 +447,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onDropItem"} event 玩家丢出物品
  * @param {(player:Player,item:Item)boolean} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -554,14 +456,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onEat"} event 玩家食用食物
  * @param {(player:Player,item:Item)function} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -570,14 +465,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onStartDestroyBlock"} event 玩家开始破坏方块 / 点击左键
  * @param {(player:Player,block:Block)function} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -586,14 +474,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onDestroyBlock"} event 玩家破坏方块完成
  * @param {(player:Player,block:Block)boolean} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -602,14 +483,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onPlaceBlock"} event 玩家放置方块
  * @param {(player:Player,block:Block)boolean} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -618,14 +492,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onOpenContainer"} event 玩家打开容器方块
  * @param {(player:Player,block:Block)boolean} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -634,14 +501,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onCloseContainer"} event 玩家关闭容器方块
  * @param {(player:Player,block:Block)boolean} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -650,14 +510,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onInventoryChange"} event 玩家物品栏变化
  * @param {(player:Player,slotNum:number,oldItem:Item,newItem:Item)function} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -666,14 +519,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onMove"} event 玩家移动
  * @param {(player:Player,pos:FloatPos)function} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -682,14 +528,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onSetArmor"} event 玩家改变盔甲栏
  * @param {(player:Player,slotNum:number,item:Item)function} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -698,14 +537,7 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onUseRespawnAnchor"} event 玩家使用重生锚
  * @param {(player:Player,pos:IntPos)boolean} callback 事件回调
  * @returns {boolean} 是否添加成功
@@ -714,16 +546,252 @@ class mc {
 
 /**
  * 新增监听器
-拦截事件
-在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。
-举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息
-不过，拦截事件仅对BDS有效。
-也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。
-避开误区
-有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生
-举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
  * @param {"onOpenContainerScreen"} event 玩家打开容器类GUI
  * @param {(player:Player)boolean} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onMobHurt"} event 生物受伤（包括玩家）
+ * @param {(mob:Entity,source:Entity,damage:number)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onExplode"} event  发生由实体引起的爆炸
+ * @param {(source:Entity,pos:FloatPos,power:Float,range:Float,isDestroy:boolean,isFire:boolean)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onProjectileHitEntity"} event 实体被弹射物击中
+ * @param {(entity:Entity,source:Entity)function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onWitherBossDestroy"} event 凋零破坏方块
+ * @param {(witherBoss:Entity,AAbb:IntPos,aaBB:IntPos)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onRide"} event 生物骑乘
+ * @param {(entity1:Entity,entity2:Entity)function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onStepOnPressurePlate"} event 生物踩压力板
+ * @param {(entity:Entity,pressurePlate:Block)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onSpawnProjectile"} event 弹射物创建
+ * @param {(shooter:Entity,type:string)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onNpcCmd"} event NPC执行命令
+ * @param {(npc:Entity,pl:Player)function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onScoreChanged"} event 玩家计分板数值改变
+ * @param {(player:Player,num:number,name:string,disName:string)function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onFireSpread"} event 火焰蔓延
+ * @param {(pos:IntPos)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onServerStarted"} event  服务器启动完毕
+ * @param {} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onConsoleCmd"} event 服务端执行后台命令
+ * @param {(cmd:string)function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onConsoleOutput"} event 控制台产生命令输出
+ * @param {(cmd:string)function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onBlockInteracted"} event 方块接受玩家互动
+ * @param {(player:Player,block:Block)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onBedExplode"} event 发生由床引起的爆炸
+ * @param {(pos:IntPos)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onRespawnAnchorExplode"} event 发生由重生锚引起的爆炸
+ * @param {(pos:IntPos,player:Player)function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onBlockExploded"} event 方块被爆炸破坏
+ * @param {(block:Block,source:Entity)function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onCmdBlockExecute"} event  命令方块执行命令
+ * @param {(cmd:string,pos:IntPos)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onContainerChange"} event 容器内容改变
+ * @param {(player:Player,container:Block,slotNum:number,oldItem:Item,newItem:Item)function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onProjectileHitBlock"} event 方块被弹射物击中
+ * @param {(block:Block,source:Entity)function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onRedStoneUpdate"} event 发生红石更新
+ * @param {(block:Block,level:number,isActive:boolean)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onHopperSearchItem"} event 漏斗（漏斗矿车）检测可否吸取物品
+ * @param {(pos:FloatPos)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onHopperPushOut"} event 漏斗（漏斗矿车）输出物品
+ * @param {(pos:FloatPos)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onPistonPush"} event 活塞推动
+ * @param {(pistonPos:IntPos,block:Block)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onFarmLandDecay"} event 耕地退化
+ * @param {(pos:IntPos,entity:Entity)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onUseFrameBlock"} event 操作物品展示框
+ * @param {(player:Player,block:Block)boolean|function} callback 事件回调
+ * @returns {boolean} 是否添加成功
+ */
+ static listen(event,callback)
+
+/**
+ * 新增监听器
+事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码
+ * @param {"onLiquidFlow"} event 液体方块流动
+ * @param {(from:Block,to:IntPos)boolean|function} callback 事件回调
  * @returns {boolean} 是否添加成功
  */
  static listen(event,callback)

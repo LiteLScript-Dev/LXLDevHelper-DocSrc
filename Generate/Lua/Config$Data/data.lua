@@ -29,24 +29,38 @@ number Float string boolean {} Object
 ---@param space? number （可选参数）如果要格式化输出的字符串，则传入此参数
 代表每个缩进的空格数量，这样输出的Json串更适合人阅读
 此参数默认为0，即不对输出字符串进行格式化
----@return string 
+---@return string 转换成的Json字符串
 function data.toJson(data,space)
 end
 
 ---Json字符串解析为变量
----@param Json_str string 
----@return any 
+---@param Json_str string 要转换为变量的Json字符串
+---@return any 转换成的变量
 function data.parseJson(Json_str)
 end
 
 ---字符串转MD5
----@param string string 
+---@param string string 要转换为MD5的字符串
 ---@return string 转换的结果
 function data.toMD5(string)
 end
 
 ---字符串转SHA1
----@param string string 
+---@param string string 要转换为SHA1的字符串
 ---@return string 转换的结果
 function data.toSHA1(string)
+end
+
+---根据玩家名查询Xuid
+---@param name string 要查询的玩家名
+---@return string 玩家的Xuid
+---如果返回值为nil，则代表查询失败
+function data.name2xuid(name)
+end
+
+---根据Xuid查询玩家名
+---@param xuid string 要查询的玩家Xuid
+---@return string 玩家名
+---如果返回值为nil，则代表查询失败
+function data.xuid2name(xuid)
 end
