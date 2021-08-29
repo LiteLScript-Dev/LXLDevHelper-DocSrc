@@ -220,7 +220,7 @@
       "ReturnDescription": "是否成功加载",
       "IsStatic": false,
       "Params": [],
-      "ReturnType": ""
+      "ReturnType": "Boolean"
     },
     {
       "Description": "关闭配置文件\r\n配置文件关闭之后，请勿继续使用！",
@@ -228,7 +228,7 @@
       "ReturnDescription": "是否成功关闭",
       "IsStatic": false,
       "Params": [],
-      "ReturnType": ""
+      "ReturnType": "Boolean"
     },
     {
       "Description": "获取配置文件路径",
@@ -259,7 +259,7 @@
           "Optional": false
         }
       ],
-      "ReturnType": ""
+      "ReturnType": "Boolean"
     }
   ],
   "AllProperty": [],

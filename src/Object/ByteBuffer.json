@@ -1,0 +1,8 @@
+{
+  "ClassName": "ByteBuffer",
+  "AllFunc": [],
+  "AllProperty": [],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "二进制数据"
+}

@@ -62,6 +62,30 @@
       "IsStatic": false,
       "Params": [],
       "ReturnType": "Container"
+    },
+    {
+      "Description": "判断方块是否拥有方块实体",
+      "FuncName": "hasBlockEntity",
+      "ReturnDescription": "这个方块是否拥有方块实体",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取方块所拥有的方块实体",
+      "FuncName": "getBlockEntity",
+      "ReturnDescription": "这个方块所拥有的方块实体",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "BlockEntity"
+    },
+    {
+      "Description": "删除方块所拥有的方块实体",
+      "FuncName": "removeBlockEntity",
+      "ReturnDescription": "是否成功删除",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
     }
   ],
   "AllProperty": [

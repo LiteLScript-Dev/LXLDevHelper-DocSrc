@@ -1,0 +1,161 @@
+{
+  "ClassName": "File",
+  "AllFunc": [
+    {
+      "Description": "从文件读取文本 / 二进制数据",
+      "FuncName": "readSync",
+      "ReturnDescription": "读取的字符串内容 / 二进制数据",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要读取的字符数 / 字节数",
+          "ParamType": "Integer",
+          "ParamName": "cnt",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "String|ByteBuffer"
+    },
+    {
+      "Description": "从文件读取一行文本",
+      "FuncName": "readLineSync",
+      "ReturnDescription": "读取的字符串内容\r\n如返回值为 Null 则表示读取失败",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "String"
+    },
+    {
+      "Description": "从文件读取所有内容",
+      "FuncName": "readAllSync",
+      "ReturnDescription": "读取的字符串内容 / 二进制数据",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "String|ByteBuffer"
+    },
+    {
+      "Description": "写入文本 / 二进制数据到文件",
+      "FuncName": "writeSync",
+      "ReturnDescription": "是否成功写入",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要写入的内容",
+          "ParamType": "String|ByteBuffer",
+          "ParamName": "str",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "写入一行文本到文件",
+      "FuncName": "writeLineSync",
+      "ReturnDescription": "是否成功写入",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要写入的内容",
+          "ParamType": "String",
+          "ParamName": "str",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "移动文件指针",
+      "FuncName": "seekTo",
+      "ReturnDescription": "是否移动成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "文件指针要移动到的位置",
+          "ParamType": "Integer",
+          "ParamName": "pos",
+          "Optional": false
+        },
+        {
+          "Description": "是否是相对当前文件指针位置移动",
+          "ParamType": "Boolean",
+          "ParamName": "isRelative",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "设定文件大小",
+      "FuncName": "setSize",
+      "ReturnDescription": "是否设定成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要设定的目标大小",
+          "ParamType": "Integer",
+          "ParamName": "size",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "关闭文件",
+      "FuncName": "close",
+      "ReturnDescription": "是否成功关闭",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "文件指针是否位于文件尾",
+      "FuncName": "isEOF",
+      "ReturnDescription": "文件指针是否处于文件尾",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "刷新文件缓冲区",
+      "FuncName": "flush",
+      "ReturnDescription": "是否成功刷新",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取错误码",
+      "FuncName": "errorCode",
+      "ReturnDescription": "上一次IO操作产生的错误码",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Integer"
+    },
+    {
+      "Description": "清除错误状态",
+      "FuncName": "clear",
+      "ReturnDescription": "是否成功清除",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    }
+  ],
+  "AllProperty": [
+    {
+      "PropertyName": "path",
+      "Description": "当前文件路径",
+      "PropertyType": "String",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "size",
+      "Description": "当前文件大小",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    }
+  ],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "文件对象"
+}

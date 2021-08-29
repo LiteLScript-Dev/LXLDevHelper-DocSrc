@@ -46,7 +46,7 @@
     {
       "Description": "变量转换为Json字符串",
       "FuncName": "toJson",
-      "ReturnDescription": "",
+      "ReturnDescription": "转换成的Json字符串",
       "IsStatic": true,
       "Params": [
         {
@@ -67,11 +67,11 @@
     {
       "Description": "Json字符串解析为变量",
       "FuncName": "parseJson",
-      "ReturnDescription": "",
+      "ReturnDescription": "转换成的变量",
       "IsStatic": true,
       "Params": [
         {
-          "Description": "",
+          "Description": "要转换为变量的Json字符串",
           "ParamType": "String",
           "ParamName": "Json_str",
           "Optional": false
@@ -86,7 +86,7 @@
       "IsStatic": true,
       "Params": [
         {
-          "Description": "",
+          "Description": "要转换为MD5的字符串",
           "ParamType": "String",
           "ParamName": "string",
           "Optional": false
@@ -101,9 +101,39 @@
       "IsStatic": true,
       "Params": [
         {
-          "Description": "",
+          "Description": "要转换为SHA1的字符串",
           "ParamType": "String",
           "ParamName": "string",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "String"
+    },
+    {
+      "Description": "根据玩家名查询Xuid",
+      "FuncName": "name2xuid",
+      "ReturnDescription": "玩家的Xuid\r\n如果返回值为Null，则代表查询失败",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "要查询的玩家名",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "String"
+    },
+    {
+      "Description": "根据Xuid查询玩家名",
+      "FuncName": "xuid2name",
+      "ReturnDescription": "玩家名\r\n如果返回值为Null，则代表查询失败",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "要查询的玩家Xuid",
+          "ParamType": "String",
+          "ParamName": "xuid",
           "Optional": false
         }
       ],

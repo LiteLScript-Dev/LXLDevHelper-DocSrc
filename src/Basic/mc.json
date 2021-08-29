@@ -35,14 +35,6 @@
       "ReturnType": "FloatPos"
     },
     {
-      "Description": "获取BDS服务端版本号",
-      "FuncName": "getBDSVersion",
-      "ReturnDescription": "服务端版本号字符串，格式形如v1.17.10",
-      "IsStatic": true,
-      "Params": [],
-      "ReturnType": "String"
-    },
-    {
       "Description": "执行一条后台命令",
       "FuncName": "runcmd",
       "ReturnDescription": "是否执行成功",
@@ -819,6 +811,29 @@
         }
       ],
       "ReturnType": "Boolean"
+    },
+    {
+      "Description": "设置服务器Motd字符串",
+      "FuncName": "setMotd",
+      "ReturnDescription": "是否设置成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "目标Motd字符串",
+          "ParamType": "String",
+          "ParamName": "motd",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取BDS服务端版本号",
+      "FuncName": "getBDSVersion",
+      "ReturnDescription": "服务端版本号字符串，格式形如v1.17.10",
+      "IsStatic": true,
+      "Params": [],
+      "ReturnType": "String"
     }
   ],
   "AllProperty": [],

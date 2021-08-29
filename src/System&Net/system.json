@@ -1,0 +1,87 @@
+{
+  "ClassName": "system",
+  "AllFunc": [
+    {
+      "Description": "调用shell执行指定系统命令",
+      "FuncName": "cmd",
+      "ReturnDescription": "是否成功启动命令",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "执行的系统命令",
+          "ParamType": "String",
+          "ParamName": "cmd",
+          "Optional": false
+        },
+        {
+          "Description": "shell进程结束之后返回数据使用的回调函数",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Integer\",\"ParamName\":\"exitcode\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"output\",\"Optional\":false}],\"ReturnType\":\"Any\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）命令运行的最长时限，单位为毫秒",
+          "ParamType": "Integer",
+          "ParamName": "timeLimit",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "运行指定位置程序",
+      "FuncName": "newProcess",
+      "ReturnDescription": "是否成功启动进程",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "运行的程序路径（与命令行参数）",
+          "ParamType": "String",
+          "ParamName": "process",
+          "Optional": false
+        },
+        {
+          "Description": "程序进程结束之后返回数据使用的回调函数",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Integer\",\"ParamName\":\"exitcode\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"output\",\"Optional\":false}],\"ReturnType\":\"Any\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）程序进程运行的最长时限，单位为毫秒",
+          "ParamType": "Integer",
+          "ParamName": "timeLimit",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取当前时间字符串",
+      "FuncName": "getTimeStr",
+      "ReturnDescription": "当前的时间字符串，使用当地时区和24小时制。",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "String"
+    },
+    {
+      "Description": "获取当前的时间对象",
+      "FuncName": "getTimeObj",
+      "ReturnDescription": "当前的时间对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "TimeObject"
+    },
+    {
+      "Description": "随机生成一个 GUID 字符串",
+      "FuncName": "randomGuid",
+      "ReturnDescription": "一个随机生成的唯一标识符GUID",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "String"
+    }
+  ],
+  "AllProperty": [],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "📡 系统调用 API\r\n这些API提供了执行一些系统调用的接口"
+}

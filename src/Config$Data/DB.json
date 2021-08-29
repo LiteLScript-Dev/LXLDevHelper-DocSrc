@@ -4,17 +4,17 @@
     {
       "Description": "写入数据项",
       "FuncName": "set",
-      "ReturnDescription": "",
+      "ReturnDescription": "是否写入成功",
       "IsStatic": false,
       "Params": [
         {
-          "Description": "",
+          "Description": "数据项名字",
           "ParamType": "String",
           "ParamName": "name",
           "Optional": false
         },
         {
-          "Description": "",
+          "Description": "要写入的数据",
           "ParamType": "Any",
           "ParamName": "data",
           "Optional": false
@@ -25,11 +25,11 @@
     {
       "Description": "读取数据项",
       "FuncName": "get",
-      "ReturnDescription": "",
+      "ReturnDescription": "数据库中储存的这个项的数据",
       "IsStatic": false,
       "Params": [
         {
-          "Description": "",
+          "Description": "数据项名字",
           "ParamType": "String",
           "ParamName": "name",
           "Optional": false
@@ -40,11 +40,11 @@
     {
       "Description": "删除数据项",
       "FuncName": "delete",
-      "ReturnDescription": "",
+      "ReturnDescription": "是否成功删除",
       "IsStatic": false,
       "Params": [
         {
-          "Description": "",
+          "Description": "数据项名字",
           "ParamType": "String",
           "ParamName": "name",
           "Optional": false
@@ -55,7 +55,7 @@
     {
       "Description": "获取所有数据项名字",
       "FuncName": "listKey",
-      "ReturnDescription": "",
+      "ReturnDescription": "所有的数据项名字数组",
       "IsStatic": false,
       "Params": [],
       "ReturnType": "Array@String"
@@ -66,7 +66,7 @@
       "ReturnDescription": "是否成功关闭",
       "IsStatic": false,
       "Params": [],
-      "ReturnType": ""
+      "ReturnType": "Boolean"
     }
   ],
   "AllProperty": [],

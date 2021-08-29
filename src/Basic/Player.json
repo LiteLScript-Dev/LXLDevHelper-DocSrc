@@ -632,6 +632,57 @@
         }
       ],
       "ReturnType": ""
+    },
+    {
+      "Description": "储存玩家绑定数据",
+      "FuncName": "setExtraData",
+      "ReturnDescription": "是否成功储存",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要储存到绑定数据的名字",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        },
+        {
+          "Description": "你要储存的绑定数据，可以是Null",
+          "ParamType": "Any",
+          "ParamName": "data",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取玩家绑定数据",
+      "FuncName": "getExtraData",
+      "ReturnDescription": "储存的绑定数据",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要读取的绑定数据的名字",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Any"
+    },
+    {
+      "Description": "删除玩家绑定数据",
+      "FuncName": "getExtraData",
+      "ReturnDescription": "是否删除成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要删除的绑定数据的名字",
+          "ParamType": "String",
+          "ParamName": "name",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
     }
   ],
   "AllProperty": [

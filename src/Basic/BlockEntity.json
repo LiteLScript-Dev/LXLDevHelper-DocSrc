@@ -1,0 +1,55 @@
+{
+  "ClassName": "BlockEntity",
+  "AllFunc": [
+    {
+      "Description": "获取方块实体对应的NBT对象",
+      "FuncName": "getNbt",
+      "ReturnDescription": "方块实体的NBT对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "写入方块实体对应的NBT对象",
+      "FuncName": "setNbt",
+      "ReturnDescription": "是否成功写入",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "",
+          "ParamType": "NbtCompound",
+          "ParamName": "nbt",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取方块实体对应的方块对象",
+      "FuncName": "getBlock",
+      "ReturnDescription": "方块实体对应的方块对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Block"
+    }
+  ],
+  "AllProperty": [
+    {
+      "PropertyName": "pos",
+      "Description": "方块实体对应方块所在的坐标",
+      "PropertyType": "IntPos",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "type",
+      "Description": "方块实体对象的类型ID",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    }
+  ],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "📮 方块实体对象 API\r\n在LXL中，使用「方块实体对象」来操作和获取与特定方块关联的附加数据。"
+}

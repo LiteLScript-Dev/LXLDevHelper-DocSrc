@@ -2,7 +2,7 @@
   "ClassName": "mc",
   "AllFunc": [
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -23,7 +23,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -44,7 +44,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -65,7 +65,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -86,7 +86,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -107,7 +107,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -128,7 +128,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -149,7 +149,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -170,7 +170,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -191,7 +191,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -212,7 +212,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -233,7 +233,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -254,7 +254,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -275,7 +275,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -296,7 +296,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -317,7 +317,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -338,7 +338,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -359,7 +359,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -380,7 +380,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -401,7 +401,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -422,7 +422,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -443,7 +443,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -464,7 +464,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -485,7 +485,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -506,7 +506,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -527,7 +527,7 @@
       "ReturnType": "Boolean"
     },
     {
-      "Description": "新增监听器\r\n拦截事件\r\n在LXL的事件监听系统中，一般你可以通过return false来拦截某个可以被拦截的事件。拦截事件意味着在脚本拦截之后BDS将不再处理这个事件，就像他从没发生过一样。\r\n举例：拦截某条聊天事件，会造成所有人都看不到这条聊天消息\r\n不过，拦截事件仅对BDS有效。\r\n也就是说，拦截事件并不影响其他有对应监听的LXL脚本处理这个事件，只是BDS无法再接收到它。\r\n避开误区\r\n有些时候，在某些事件监听内部调用特定的API会造成死循环崩服，请务必避免这些情况的发生\r\n举例：在onConsoleCmd事件监听中调用mc.runcmd(Ex)系列函数执行后台指令，将导致死循环",
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
       "FuncName": "listen",
       "ReturnDescription": "是否添加成功",
       "IsStatic": true,
@@ -541,6 +541,573 @@
         {
           "Description": "事件回调",
           "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Boolean\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "生物受伤（包括玩家）",
+          "ParamType": "\"onMobHurt\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Entity\",\"ParamName\":\"mob\",\"Optional\":false},{\"ParamType\":\"Entity\",\"ParamName\":\"source\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"damage\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": " 发生由实体引起的爆炸",
+          "ParamType": "\"onExplode\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Entity\",\"ParamName\":\"source\",\"Optional\":false},{\"ParamType\":\"FloatPos\",\"ParamName\":\"pos\",\"Optional\":false},{\"ParamType\":\"Float\",\"ParamName\":\"power\",\"Optional\":false},{\"ParamType\":\"Float\",\"ParamName\":\"range\",\"Optional\":false},{\"ParamType\":\"Boolean\",\"ParamName\":\"isDestroy\",\"Optional\":false},{\"ParamType\":\"Boolean\",\"ParamName\":\"isFire\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "实体被弹射物击中",
+          "ParamType": "\"onProjectileHitEntity\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Entity\",\"ParamName\":\"entity\",\"Optional\":false},{\"ParamType\":\"Entity\",\"ParamName\":\"source\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "凋零破坏方块",
+          "ParamType": "\"onWitherBossDestroy\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Entity\",\"ParamName\":\"witherBoss\",\"Optional\":false},{\"ParamType\":\"IntPos\",\"ParamName\":\"AAbb\",\"Optional\":false},{\"ParamType\":\"IntPos\",\"ParamName\":\"aaBB\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "生物骑乘",
+          "ParamType": "\"onRide\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Entity\",\"ParamName\":\"entity1\",\"Optional\":false},{\"ParamType\":\"Entity\",\"ParamName\":\"entity2\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "生物踩压力板",
+          "ParamType": "\"onStepOnPressurePlate\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Entity\",\"ParamName\":\"entity\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"pressurePlate\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "弹射物创建",
+          "ParamType": "\"onSpawnProjectile\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Entity\",\"ParamName\":\"shooter\",\"Optional\":false},{\"ParamType\":\"String\",\"ParamName\":\"type\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "NPC执行命令",
+          "ParamType": "\"onNpcCmd\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Entity\",\"ParamName\":\"npc\",\"Optional\":false},{\"ParamType\":\"Player\",\"ParamName\":\"pl\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "玩家计分板数值改变",
+          "ParamType": "\"onScoreChanged\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"num\",\"Optional\":false},{\"ParamType\":\"String\",\"ParamName\":\"name\",\"Optional\":false},{\"ParamType\":\"String\",\"ParamName\":\"disName\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "火焰蔓延",
+          "ParamType": "\"onFireSpread\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"IntPos\",\"ParamName\":\"pos\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": " 服务器启动完毕",
+          "ParamType": "\"onServerStarted\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "服务端执行后台命令",
+          "ParamType": "\"onConsoleCmd\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"String\",\"ParamName\":\"cmd\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "控制台产生命令输出",
+          "ParamType": "\"onConsoleOutput\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"String\",\"ParamName\":\"cmd\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "方块接受玩家互动",
+          "ParamType": "\"onBlockInteracted\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "发生由床引起的爆炸",
+          "ParamType": "\"onBedExplode\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"IntPos\",\"ParamName\":\"pos\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "发生由重生锚引起的爆炸",
+          "ParamType": "\"onRespawnAnchorExplode\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"IntPos\",\"ParamName\":\"pos\",\"Optional\":false},{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "方块被爆炸破坏",
+          "ParamType": "\"onBlockExploded\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false},{\"ParamType\":\"Entity\",\"ParamName\":\"source\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": " 命令方块执行命令",
+          "ParamType": "\"onCmdBlockExecute\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"String\",\"ParamName\":\"cmd\",\"Optional\":false},{\"ParamType\":\"IntPos\",\"ParamName\":\"pos\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "容器内容改变",
+          "ParamType": "\"onContainerChange\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"container\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"slotNum\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"oldItem\",\"Optional\":false},{\"ParamType\":\"Item\",\"ParamName\":\"newItem\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "方块被弹射物击中",
+          "ParamType": "\"onProjectileHitBlock\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false},{\"ParamType\":\"Entity\",\"ParamName\":\"source\",\"Optional\":false}],\"ReturnType\":\"Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "发生红石更新",
+          "ParamType": "\"onRedStoneUpdate\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false},{\"ParamType\":\"Integer\",\"ParamName\":\"level\",\"Optional\":false},{\"ParamType\":\"Boolean\",\"ParamName\":\"isActive\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "漏斗（漏斗矿车）检测可否吸取物品",
+          "ParamType": "\"onHopperSearchItem\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"FloatPos\",\"ParamName\":\"pos\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "漏斗（漏斗矿车）输出物品",
+          "ParamType": "\"onHopperPushOut\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"FloatPos\",\"ParamName\":\"pos\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "活塞推动",
+          "ParamType": "\"onPistonPush\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"IntPos\",\"ParamName\":\"pistonPos\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "耕地退化",
+          "ParamType": "\"onFarmLandDecay\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"IntPos\",\"ParamName\":\"pos\",\"Optional\":false},{\"ParamType\":\"Entity\",\"ParamName\":\"entity\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "操作物品展示框",
+          "ParamType": "\"onUseFrameBlock\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Player\",\"ParamName\":\"player\",\"Optional\":false},{\"ParamType\":\"Block\",\"ParamName\":\"block\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "新增监听器\r\n事件系统让插件可以 响应 特定的游戏事件，让你可以在特定事件发生时执行代码",
+      "FuncName": "listen",
+      "ReturnDescription": "是否添加成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "液体方块流动",
+          "ParamType": "\"onLiquidFlow\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "事件回调",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Block\",\"ParamName\":\"from\",\"Optional\":false},{\"ParamType\":\"IntPos\",\"ParamName\":\"to\",\"Optional\":false}],\"ReturnType\":\"Boolean|Void\"}}",
           "ParamName": "callback",
           "Optional": false
         }

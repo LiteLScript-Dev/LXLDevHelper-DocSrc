@@ -1,0 +1,58 @@
+{
+  "ClassName": "TimeObject",
+  "AllFunc": [],
+  "AllProperty": [
+    {
+      "PropertyName": "Y",
+      "Description": "年份数值（4位）",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "M",
+      "Description": "月份数值",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "D",
+      "Description": "天数数值",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "h",
+      "Description": "小时数值（24小时制）",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "m",
+      "Description": "分钟数值",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "s",
+      "Description": "秒数值",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "ms",
+      "Description": "毫秒数值",
+      "PropertyType": "Integer",
+      "IsReadonly": false,
+      "IsStatic": false
+    }
+  ],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "时间对象"
+}

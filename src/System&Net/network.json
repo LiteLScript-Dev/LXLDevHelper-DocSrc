@@ -1,0 +1,71 @@
+{
+  "ClassName": "network",
+  "AllFunc": [
+    {
+      "Description": "发送一个异步HTTP(s) Get请求",
+      "FuncName": "httpGet",
+      "ReturnDescription": "是否成功发送请求",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "请求的目标地址（包括 Get 请求附带的参数）",
+          "ParamType": "String",
+          "ParamName": "url",
+          "Optional": false
+        },
+        {
+          "Description": "当请求返回时执行的回调函数，用于回传HTTP(s)响应结果",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Integer\",\"ParamName\":\"status\",\"Optional\":false},{\"ParamType\":\"String\",\"ParamName\":\"result\",\"Optional\":false}],\"ReturnType\":\"Any\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "发送一个异步HTTP(s) Post请求",
+      "FuncName": "httpPost",
+      "ReturnDescription": "是否成功发送请求",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "请求的目标地址（包括 Get 请求附带的参数）",
+          "ParamType": "String",
+          "ParamName": "url",
+          "Optional": false
+        },
+        {
+          "Description": "发送的数据",
+          "ParamType": "String",
+          "ParamName": "data",
+          "Optional": false
+        },
+        {
+          "Description": "发送的 Post 数据类型 形如 text/plain",
+          "ParamType": "String",
+          "ParamName": "type",
+          "Optional": false
+        },
+        {
+          "Description": "当请求返回时执行的回调函数，用于回传HTTP(s)响应结果",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Integer\",\"ParamName\":\"status\",\"Optional\":false},{\"ParamType\":\"String\",\"ParamName\":\"result\",\"Optional\":false}],\"ReturnType\":\"Any\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取一个WebSocket 客户端对象",
+      "FuncName": "newWebSocket",
+      "ReturnDescription": "一个新的websocket对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "WSClient"
+    }
+  ],
+  "AllProperty": [],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "🌏 网络接口 API\r\n如果有更复杂的需求，可以使用各自语言平台的网络库来完成任务"
+}

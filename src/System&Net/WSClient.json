@@ -1,0 +1,176 @@
+{
+  "ClassName": "WSClient",
+  "AllFunc": [
+    {
+      "Description": "创建连接",
+      "FuncName": "connect",
+      "ReturnDescription": "是否成功连接",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要连接的目标地址",
+          "ParamType": "String",
+          "ParamName": "target",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "发送文本 / 二进制消息",
+      "FuncName": "send",
+      "ReturnDescription": "是否成功发送",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要发送的文本 / 二进制数据",
+          "ParamType": "String|ByteBuffer",
+          "ParamName": "msg",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "监听WebSocket事件 收到文本消息",
+      "FuncName": "listen",
+      "ReturnDescription": "是否成功监听事件",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要监听的事件名",
+          "ParamType": "\"onTextReceived\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "注册的监听函数",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"String\",\"ParamName\":\"msg\",\"Optional\":false}],\"ReturnType\":\"Any\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "监听WebSocket事件 收到二进制消息",
+      "FuncName": "listen",
+      "ReturnDescription": "是否成功监听事件",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要监听的事件名",
+          "ParamType": "\"onBinaryReceived\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "注册的监听函数",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"ByteBuffer\",\"ParamName\":\"data\",\"Optional\":false}],\"ReturnType\":\"Any\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "监听WebSocket事件 发生错误",
+      "FuncName": "listen",
+      "ReturnDescription": "是否成功监听事件",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要监听的事件名",
+          "ParamType": "\"onError\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "注册的监听函数",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"String\",\"ParamName\":\"msg\",\"Optional\":false}],\"ReturnType\":\"Any\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "监听WebSocket事件  连接丢失",
+      "FuncName": "listen",
+      "ReturnDescription": "是否成功监听事件",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要监听的事件名",
+          "ParamType": "\"onLostConnection\"",
+          "ParamName": "event",
+          "Optional": false
+        },
+        {
+          "Description": "注册的监听函数",
+          "ParamType": "Function@{\"Func\":{\"Params\":[{\"ParamType\":\"Integer\",\"ParamName\":\"code\",\"Optional\":false}],\"ReturnType\":\"Any\"}}",
+          "ParamName": "callback",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "关闭连接\r\n在处于关闭状态时，请勿继续使用此客户端对象！",
+      "FuncName": "close",
+      "ReturnDescription": "Boolean",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "强制断开连接\r\n在处于关闭状态时，请勿继续使用此客户端对象！",
+      "FuncName": "shutdown",
+      "ReturnDescription": "是否成功断开连接",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取错误码",
+      "FuncName": "errorCode",
+      "ReturnDescription": "上一次错误产生的错误码",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Integer"
+    }
+  ],
+  "AllProperty": [
+    {
+      "PropertyName": "status",
+      "Description": "当前的连接状态",
+      "PropertyType": "Any",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "Open",
+      "Description": "处于正常连接中",
+      "PropertyType": "Any",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "Closing",
+      "Description": "正在断开连接",
+      "PropertyType": "Any",
+      "IsReadonly": false,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "Closed",
+      "Description": "未连接",
+      "PropertyType": "Any",
+      "IsReadonly": false,
+      "IsStatic": false
+    }
+  ],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "WebSocket 客户端对象"
+}
