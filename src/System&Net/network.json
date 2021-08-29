@@ -5,7 +5,7 @@
       "Description": "发送一个异步HTTP(s) Get请求",
       "FuncName": "httpGet",
       "ReturnDescription": "是否成功发送请求",
-      "IsStatic": false,
+      "IsStatic": true,
       "Params": [
         {
           "Description": "请求的目标地址（包括 Get 请求附带的参数）",
@@ -26,7 +26,7 @@
       "Description": "发送一个异步HTTP(s) Post请求",
       "FuncName": "httpPost",
       "ReturnDescription": "是否成功发送请求",
-      "IsStatic": false,
+      "IsStatic": true,
       "Params": [
         {
           "Description": "请求的目标地址（包括 Get 请求附带的参数）",
@@ -59,13 +59,13 @@
       "Description": "获取一个WebSocket 客户端对象",
       "FuncName": "newWebSocket",
       "ReturnDescription": "一个新的websocket对象",
-      "IsStatic": false,
+      "IsStatic": true,
       "Params": [],
       "ReturnType": "WSClient"
     }
   ],
   "AllProperty": [],
-  "IsStatic": false,
+  "IsStatic": true,
   "IsInterface": false,
   "Description": "🌏 网络接口 API\r\n如果有更复杂的需求，可以使用各自语言平台的网络库来完成任务"
 }
