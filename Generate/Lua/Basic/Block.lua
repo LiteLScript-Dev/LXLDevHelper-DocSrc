@@ -39,3 +39,18 @@ end
 ---@return Container 这个方块所拥有的容器对象
 function Block:getContainer()
 end
+
+---判断方块是否拥有方块实体
+---@return boolean 这个方块是否拥有方块实体
+function Block:hasBlockEntity()
+end
+
+---获取方块所拥有的方块实体
+---@return BlockEntity 这个方块所拥有的方块实体
+function Block:getBlockEntity()
+end
+
+---删除方块所拥有的方块实体
+---@return boolean 是否成功删除
+function Block:removeBlockEntity()
+end

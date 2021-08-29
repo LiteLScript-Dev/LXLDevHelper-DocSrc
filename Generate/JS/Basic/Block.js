@@ -65,7 +65,25 @@ class Block {
  * 获取方块所拥有的容器对象
  * @returns {Container} 这个方块所拥有的容器对象
  */
- getContainer()  
+ getContainer()
+
+/**
+ * 判断方块是否拥有方块实体
+ * @returns {boolean} 这个方块是否拥有方块实体
+ */
+ hasBlockEntity()
+
+/**
+ * 获取方块所拥有的方块实体
+ * @returns {BlockEntity} 这个方块所拥有的方块实体
+ */
+ getBlockEntity()
+
+/**
+ * 删除方块所拥有的方块实体
+ * @returns {boolean} 是否成功删除
+ */
+ removeBlockEntity()  
 
 
 

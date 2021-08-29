@@ -11,11 +11,6 @@
 function mc.newFloatPos(x,y,z,dimid )
 end
 
----获取BDS服务端版本号
----@return string 服务端版本号字符串，格式形如v1.17.10
-function mc.getBDSVersion()
-end
-
 ---执行一条后台命令
 ---@param cmd string 待执行的命令
 ---@return boolean 是否执行成功
@@ -267,4 +262,15 @@ end
 ---@param solt string 显示槽位名称字符串，可以为"sidebar"/"belowname"/"list"
 ---@return boolean 
 function mc.clearDisplayObjective(solt)
+end
+
+---设置服务器Motd字符串
+---@param motd string 目标Motd字符串
+---@return boolean 是否设置成功
+function mc.setMotd(motd)
+end
+
+---获取BDS服务端版本号
+---@return string 服务端版本号字符串，格式形如v1.17.10
+function mc.getBDSVersion()
 end

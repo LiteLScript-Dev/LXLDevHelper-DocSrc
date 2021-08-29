@@ -1,26 +1,26 @@
----格式化代码实用工具类
+---格式化代码实用工具
 ---@class Format 
----@field Black  
----@field DarkBlue  
----@field DarkGreen  
----@field DarkAqua  
----@field DarkRed  
----@field DarkPurple  
----@field Gold  
----@field Gray  
----@field DarkGray  
----@field Blue  
----@field Green  
----@field Aqua  
----@field Red  
----@field LightPurple  
----@field Yellow  
----@field White  
----@field MinecoinGold   
----@field Bold  
----@field Italics  
----@field Underline  
----@field StrikeThrough  
----@field Random  
----@field Clear  
+---@field Black String String
+---@field DarkBlue String String
+---@field DarkGreen String String
+---@field DarkAqua String String
+---@field DarkRed String String
+---@field DarkPurple String String
+---@field Gold String String
+---@field Gray String String
+---@field DarkGray String String
+---@field Blue String String
+---@field Green String String
+---@field Aqua String String
+---@field Red String String
+---@field LightPurple String String
+---@field Yellow String String
+---@field White String String
+---@field MinecoinGold  String String
+---@field Bold String String
+---@field Italics String String
+---@field Underline String String
+---@field StrikeThrough String String
+---@field Random String String
+---@field Clear String String
  Format = {}

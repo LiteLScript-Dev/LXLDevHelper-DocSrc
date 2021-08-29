@@ -382,7 +382,29 @@ class Player {
  * @param {(player:Player,data:any[])} callback 玩家提交表单之后被调用的回调函数。
  * @returns {} 
  */
- sendForm(form,callback)  
+ sendForm(form,callback)
+
+/**
+ * 储存玩家绑定数据
+ * @param {string} name 要储存到绑定数据的名字
+ * @param {any} data 你要储存的绑定数据，可以是null
+ * @returns {boolean} 是否成功储存
+ */
+ setExtraData(name,data)
+
+/**
+ * 获取玩家绑定数据
+ * @param {string} name 要读取的绑定数据的名字
+ * @returns {any} 储存的绑定数据
+ */
+ getExtraData(name)
+
+/**
+ * 删除玩家绑定数据
+ * @param {string} name 要删除的绑定数据的名字
+ * @returns {boolean} 是否删除成功
+ */
+ getExtraData(name)  
 
 
 

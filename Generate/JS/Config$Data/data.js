@@ -37,30 +37,46 @@ number Float string boolean Array Object
  * @param {number} space? （可选参数）如果要格式化输出的字符串，则传入此参数
 代表每个缩进的空格数量，这样输出的Json串更适合人阅读
 此参数默认为0，即不对输出字符串进行格式化
- * @returns {string} 
+ * @returns {string} 转换成的Json字符串
  */
  static toJson(data,space)
 
 /**
  * Json字符串解析为变量
- * @param {string} Json_str 
- * @returns {any} 
+ * @param {string} Json_str 要转换为变量的Json字符串
+ * @returns {any} 转换成的变量
  */
  static parseJson(Json_str)
 
 /**
  * 字符串转MD5
- * @param {string} string 
+ * @param {string} string 要转换为MD5的字符串
  * @returns {string} 转换的结果
  */
  static toMD5(string)
 
 /**
  * 字符串转SHA1
- * @param {string} string 
+ * @param {string} string 要转换为SHA1的字符串
  * @returns {string} 转换的结果
  */
- static toSHA1(string)  
+ static toSHA1(string)
+
+/**
+ * 根据玩家名查询Xuid
+ * @param {string} name 要查询的玩家名
+ * @returns {string} 玩家的Xuid
+如果返回值为null，则代表查询失败
+ */
+ static name2xuid(name)
+
+/**
+ * 根据Xuid查询玩家名
+ * @param {string} xuid 要查询的玩家Xuid
+ * @returns {string} 玩家名
+如果返回值为null，则代表查询失败
+ */
+ static xuid2name(xuid)  
 
 
 
