@@ -6803,7 +6803,7 @@
               "Description": "发送一个异步HTTP(s) Get请求",
               "FuncName": "httpGet",
               "ReturnDescription": "是否成功发送请求",
-              "IsStatic": false,
+              "IsStatic": true,
               "Params": [
                 {
                   "Description": "请求的目标地址（包括 Get 请求附带的参数）",
@@ -6824,7 +6824,7 @@
               "Description": "发送一个异步HTTP(s) Post请求",
               "FuncName": "httpPost",
               "ReturnDescription": "是否成功发送请求",
-              "IsStatic": false,
+              "IsStatic": true,
               "Params": [
                 {
                   "Description": "请求的目标地址（包括 Get 请求附带的参数）",
@@ -6857,13 +6857,13 @@
               "Description": "获取一个WebSocket 客户端对象",
               "FuncName": "newWebSocket",
               "ReturnDescription": "一个新的websocket对象",
-              "IsStatic": false,
+              "IsStatic": true,
               "Params": [],
               "ReturnType": "WSClient"
             }
           ],
           "AllProperty": [],
-          "IsStatic": false,
+          "IsStatic": true,
           "IsInterface": false,
           "Description": "🌏 网络接口 API\r\n如果有更复杂的需求，可以使用各自语言平台的网络库来完成任务"
         },
@@ -6874,7 +6874,7 @@
               "Description": "调用shell执行指定系统命令",
               "FuncName": "cmd",
               "ReturnDescription": "是否成功启动命令",
-              "IsStatic": false,
+              "IsStatic": true,
               "Params": [
                 {
                   "Description": "执行的系统命令",
@@ -6901,7 +6901,7 @@
               "Description": "运行指定位置程序",
               "FuncName": "newProcess",
               "ReturnDescription": "是否成功启动进程",
-              "IsStatic": false,
+              "IsStatic": true,
               "Params": [
                 {
                   "Description": "运行的程序路径（与命令行参数）",
@@ -6928,7 +6928,7 @@
               "Description": "获取当前时间字符串",
               "FuncName": "getTimeStr",
               "ReturnDescription": "当前的时间字符串，使用当地时区和24小时制。",
-              "IsStatic": false,
+              "IsStatic": true,
               "Params": [],
               "ReturnType": "String"
             },
@@ -6936,7 +6936,7 @@
               "Description": "获取当前的时间对象",
               "FuncName": "getTimeObj",
               "ReturnDescription": "当前的时间对象",
-              "IsStatic": false,
+              "IsStatic": true,
               "Params": [],
               "ReturnType": "TimeObject"
             },
@@ -6944,13 +6944,13 @@
               "Description": "随机生成一个 GUID 字符串",
               "FuncName": "randomGuid",
               "ReturnDescription": "一个随机生成的唯一标识符GUID",
-              "IsStatic": false,
+              "IsStatic": true,
               "Params": [],
               "ReturnType": "String"
             }
           ],
           "AllProperty": [],
-          "IsStatic": false,
+          "IsStatic": true,
           "IsInterface": false,
           "Description": "📡 系统调用 API\r\n这些API提供了执行一些系统调用的接口"
         },
