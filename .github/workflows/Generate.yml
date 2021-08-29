@@ -13,7 +13,7 @@ jobs:
    steps:
     - uses: actions/checkout@v2
     
-    - name: Generate rawout
+    - name: Generate rawouts
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: |
         ./LXLDevHelperBuilder.exe src raw.json tsout
